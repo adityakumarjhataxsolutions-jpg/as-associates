@@ -2,67 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A.S. & Associates | Tax, GST & Accounting Solutions</title>
+<title>GST, Income Tax, TDS & Accounting Services | A.S. & ASSOCIATES</title>
 
-<meta name="description" content="A.S. & Associates - Tax, GST, Accounting, Bookkeeping and Business Compliance Solutions.">
+<meta name="description" content="A.S. & ASSOCIATES provides GST registration, GST return filing, income tax return filing, TDS compliance, accounting, bookkeeping, financial statements, e-way bill and business compliance services.">
 
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="A.S. & ASSOCIATES">
+
+<meta name="keywords" content="GST registration, GST return filing, income tax return filing, ITR filing, TDS return, accounting services, bookkeeping services, GST consultant, income tax consultant, TDS consultant, e-way bill, financial statements, business compliance">
+
+<meta name="theme-color" content="#0b1f3a">
+
+<!-- Open Graph -->
+<meta property="og:title" content="A.S. & ASSOCIATES | Tax & Accounting Solutions">
+<meta property="og:description" content="GST, Income Tax, TDS, Accounting, Bookkeeping and Business Compliance Services.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A.S. & ASSOCIATES">
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
-    --bg:#050914;
-    --bg2:#080f20;
-    --card:#0c1529;
-    --card2:#101c35;
-    --border:#1b2b49;
-    --gold:#d4af62;
-    --gold2:#f0cf83;
-    --blue:#3b82f6;
-    --green:#25d366;
-    --white:#f8fafc;
-    --muted:#94a3b8;
-    --shadow:0 25px 70px rgba(0,0,0,.45);
-    --transition:.3s ease;
-}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    background:
-    radial-gradient(circle at 10% 10%,rgba(35,72,130,.16),transparent 30%),
-    radial-gradient(circle at 90% 20%,rgba(212,175,98,.08),transparent 25%),
-    var(--bg);
-    color:var(--white);
-    font-family:'Plus Jakarta Sans',sans-serif;
+    font-family:Inter,Arial,sans-serif;
+    background:#f7f9fc;
+    color:#182230;
     line-height:1.6;
-    overflow-x:hidden;
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    opacity:.025;
-    background-image:
-    linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
-    background-size:45px 45px;
-    z-index:-1;
 }
 
 a{
@@ -70,382 +52,225 @@ a{
     color:inherit;
 }
 
-button,input,textarea,select{
-    font-family:inherit;
-}
-
 .container{
-    width:min(1180px,92%);
+    width:min(1160px,92%);
     margin:auto;
 }
 
 /* HEADER */
 
 header{
-    position:fixed;
+    background:#ffffff;
+    border-bottom:1px solid #e7ebf0;
+    position:sticky;
     top:0;
-    left:0;
-    width:100%;
     z-index:1000;
-    background:rgba(5,9,20,.88);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(212,175,98,.12);
 }
 
-.navbar{
-    height:82px;
+.nav{
+    min-height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
 }
 
-.logo h1{
-    font-size:1.25rem;
-    letter-spacing:.8px;
-    font-weight:800;
-}
-
-.logo span{
-    display:block;
-    color:var(--gold);
-    font-size:.68rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-top:2px;
-}
-
-.nav-links{
+.logo{
     display:flex;
     align-items:center;
-    gap:27px;
-    list-style:none;
+    gap:12px;
 }
 
-.nav-links a{
-    color:#c5cedc;
-    font-size:.88rem;
-    transition:var(--transition);
+.logo-box{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#0b1f3a;
+    color:#d8aa45;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:17px;
 }
 
-.nav-links a:hover{
-    color:var(--gold2);
+.logo-text strong{
+    display:block;
+    font-family:"Plus Jakarta Sans",sans-serif;
+    font-size:17px;
+    color:#0b1f3a;
 }
 
-.btn-nav{
-    padding:10px 18px;
-    border-radius:7px;
-    background:linear-gradient(135deg,var(--gold2),var(--gold));
-    color:#101010!important;
+.logo-text span{
+    display:block;
+    font-size:10px;
+    letter-spacing:1.4px;
+    color:#9b761e;
     font-weight:700;
 }
 
-.hamburger{
-    display:none;
-    width:45px;
-    height:42px;
-    border:1px solid var(--border);
+nav{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+nav a{
+    font-size:13px;
+    font-weight:600;
+    color:#475467;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#0b1f3a;
+}
+
+.nav-btn{
+    background:#0b1f3a;
+    color:white!important;
+    padding:11px 17px;
     border-radius:8px;
-    background:var(--card);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:#0b1f3a;
     color:white;
-    font-size:1.2rem;
+    padding:9px 12px;
+    border-radius:7px;
+    font-size:18px;
 }
 
 /* HERO */
 
 .hero{
-    min-height:760px;
-    padding:170px 0 100px;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    right:-180px;
-    top:80px;
-    background:rgba(212,175,98,.08);
-    filter:blur(100px);
-    border-radius:50%;
-    pointer-events:none;
+    padding:82px 0 65px;
+    background:
+    linear-gradient(135deg,#f8fbff 0%,#ffffff 55%,#f6f8fb 100%);
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:70px;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
     align-items:center;
 }
 
-.eyebrow{
+.badge{
     display:inline-flex;
-    align-items:center;
-    gap:9px;
     padding:8px 13px;
-    border:1px solid rgba(212,175,98,.25);
-    background:rgba(212,175,98,.06);
     border-radius:30px;
-    color:var(--gold2);
-    font-size:.75rem;
+    background:#eef4fb;
+    color:#0b4d8d;
+    font-size:12px;
     font-weight:700;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-bottom:23px;
+    margin-bottom:18px;
 }
 
-.hero h2{
-    font-size:clamp(2.4rem,5vw,4.25rem);
+h1{
+    font-family:"Plus Jakarta Sans",sans-serif;
+    font-size:clamp(38px,5vw,62px);
     line-height:1.08;
+    color:#0b1f3a;
+    margin-bottom:20px;
     letter-spacing:-2px;
-    margin-bottom:24px;
-}
-
-.hero h2 span{
-    color:var(--gold2);
 }
 
 .hero p{
-    color:var(--muted);
+    color:#667085;
+    font-size:16px;
     max-width:650px;
-    font-size:1.08rem;
-    margin-bottom:32px;
+    margin-bottom:28px;
 }
 
 .hero-buttons{
     display:flex;
-    gap:13px;
+    gap:12px;
     flex-wrap:wrap;
 }
 
-.btn-primary{
+.btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:9px;
-    padding:14px 24px;
-    border:0;
-    border-radius:8px;
-    background:linear-gradient(135deg,var(--gold2),var(--gold));
-    color:#0b0d12;
-    font-weight:800;
-    cursor:pointer;
-    transition:var(--transition);
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(212,175,98,.2);
-}
-
-.btn-secondary{
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    padding:13px 23px;
-    border:1px solid var(--border);
-    border-radius:8px;
-    background:rgba(255,255,255,.02);
-    color:white;
-    font-weight:700;
-    cursor:pointer;
-    transition:var(--transition);
-}
-
-.btn-secondary:hover{
-    border-color:var(--gold);
-    color:var(--gold2);
-}
-
-/* DASHBOARD */
-
-.dashboard{
-    position:relative;
-    background:linear-gradient(145deg,#101b32,#091222);
-    border:1px solid #243758;
-    border-radius:20px;
-    padding:22px;
-    box-shadow:var(--shadow);
-    transform:perspective(1000px) rotateY(-3deg);
-}
-
-.dash-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:22px;
-}
-
-.dash-title{
-    font-size:.85rem;
-    color:var(--muted);
-}
-
-.dash-title strong{
-    display:block;
-    color:white;
-    font-size:1.1rem;
-    margin-top:3px;
-}
-
-.dash-status{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    color:#9fe8bd;
-    font-size:.7rem;
-    padding:6px 9px;
-    background:rgba(37,211,102,.08);
-    border:1px solid rgba(37,211,102,.15);
-    border-radius:20px;
-}
-
-.dash-status span{
-    width:6px;
-    height:6px;
-    background:#25d366;
-    border-radius:50%;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-}
-
-.stat{
-    padding:18px;
-    background:rgba(255,255,255,.035);
-    border:1px solid var(--border);
-    border-radius:12px;
-}
-
-.stat small{
-    color:var(--muted);
-    font-size:.7rem;
-}
-
-.stat strong{
-    display:block;
-    font-size:1.3rem;
-    margin-top:5px;
-}
-
-.stat i{
-    color:var(--gold);
-    float:right;
-}
-
-.chart{
-    margin-top:14px;
-    padding:20px;
-    background:rgba(255,255,255,.025);
-    border:1px solid var(--border);
-    border-radius:12px;
-}
-
-.chart-header{
-    display:flex;
-    justify-content:space-between;
-    color:var(--muted);
-    font-size:.72rem;
-    margin-bottom:15px;
-}
-
-.chart-bars{
-    height:105px;
-    display:flex;
-    align-items:end;
-    justify-content:space-around;
-    gap:9px;
-}
-
-.bar{
-    width:9%;
-    border-radius:5px 5px 2px 2px;
-    background:linear-gradient(to top,var(--gold),#f3d991);
-    opacity:.9;
-}
-
-.b1{height:38%}
-.b2{height:58%}
-.b3{height:47%}
-.b4{height:72%}
-.b5{height:65%}
-.b6{height:87%}
-.b7{height:76%}
-.b8{height:96%}
-
-.dashboard-footer{
-    margin-top:14px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-}
-
-.mini-box{
-    text-align:center;
-    padding:12px 5px;
-    border:1px solid var(--border);
+    padding:13px 20px;
     border-radius:9px;
-    background:rgba(255,255,255,.02);
+    font-size:14px;
+    font-weight:700;
+    border:1px solid #dce2ea;
 }
 
-.mini-box i{
-    color:var(--gold);
-    margin-bottom:5px;
+.btn-primary{
+    background:#0b1f3a;
+    color:white;
+    border-color:#0b1f3a;
 }
 
-.mini-box span{
+.btn-gold{
+    background:#c79a37;
+    color:white;
+    border-color:#c79a37;
+}
+
+.btn-light{
+    background:white;
+    color:#0b1f3a;
+}
+
+/* HERO CARD */
+
+.hero-card{
+    background:#0b1f3a;
+    border-radius:22px;
+    padding:30px;
+    color:white;
+    box-shadow:0 20px 50px rgba(11,31,58,.18);
+}
+
+.hero-card h3{
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.hero-card p{
+    color:#b8c5d6;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.progress-item{
+    margin:18px 0;
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    margin-bottom:7px;
+}
+
+.progress{
+    height:7px;
+    border-radius:10px;
+    background:#263c57;
+    overflow:hidden;
+}
+
+.progress span{
     display:block;
-    color:var(--muted);
-    font-size:.65rem;
-}
-
-/* SECTIONS */
-
-section{
-    padding:105px 0;
-}
-
-.section-dark{
-    background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.035));
-    border-top:1px solid rgba(255,255,255,.035);
-    border-bottom:1px solid rgba(255,255,255,.035);
-}
-
-.section-head{
-    text-align:center;
-    max-width:720px;
-    margin:0 auto 50px;
-}
-
-.section-tag{
-    color:var(--gold);
-    font-size:.72rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    font-weight:800;
-    margin-bottom:9px;
-}
-
-.section-head h2{
-    font-size:2.35rem;
-    line-height:1.2;
-    margin-bottom:13px;
-}
-
-.section-head p{
-    color:var(--muted);
+    height:100%;
+    background:#d2a548;
+    border-radius:10px;
 }
 
 /* TRUST */
 
 .trust{
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    background:#070d19;
+    background:white;
+    border-top:1px solid #e8edf3;
+    border-bottom:1px solid #e8edf3;
 }
 
 .trust-grid{
@@ -453,1057 +278,764 @@ section{
     grid-template-columns:repeat(4,1fr);
 }
 
-.trust-item{
-    padding:27px 20px;
+.trust-box{
+    padding:22px;
     text-align:center;
-    border-right:1px solid var(--border);
+    border-right:1px solid #edf0f4;
 }
 
-.trust-item:last-child{
+.trust-box:last-child{
     border-right:0;
 }
 
-.trust-item i{
-    color:var(--gold);
-    font-size:1.3rem;
-    margin-bottom:7px;
-}
-
-.trust-item strong{
+.trust-box strong{
     display:block;
-    font-size:.9rem;
+    color:#0b1f3a;
+    font-size:18px;
 }
 
-.trust-item span{
-    color:var(--muted);
-    font-size:.7rem;
+.trust-box span{
+    color:#7b8794;
+    font-size:11px;
 }
 
-/* SERVICES */
+/* SECTIONS */
 
-.search{
-    max-width:570px;
-    margin:0 auto 40px;
-    position:relative;
+section{
+    padding:78px 0;
 }
 
-.search input{
-    width:100%;
-    padding:16px 20px 16px 48px;
-    background:var(--card);
-    border:1px solid var(--border);
-    color:white;
-    border-radius:50px;
-    outline:none;
+.section-head{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 42px;
 }
 
-.search i{
-    position:absolute;
-    left:20px;
-    top:50%;
-    transform:translateY(-50%);
-    color:var(--gold);
+.section-head span{
+    color:#ad8025;
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
 }
 
-.services{
+.section-head h2{
+    font-family:"Plus Jakarta Sans",sans-serif;
+    color:#0b1f3a;
+    font-size:34px;
+    line-height:1.2;
+    margin:9px 0 12px;
+}
+
+.section-head p{
+    color:#6b7787;
+    font-size:14px;
+}
+
+/* SERVICE FEATURE */
+
+.feature{
+    background:white;
+}
+
+.feature-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
-.service{
-    position:relative;
-    overflow:hidden;
-    padding:28px 24px;
-    background:linear-gradient(145deg,#0d172b,#09111f);
-    border:1px solid var(--border);
-    border-radius:15px;
-    transition:var(--transition);
+.feature-card{
+    background:#fff;
+    border:1px solid #e4e9ef;
+    border-radius:16px;
+    padding:30px;
+    transition:.25s;
 }
 
-.service:hover{
-    transform:translateY(-7px);
-    border-color:rgba(212,175,98,.6);
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
+.feature-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(20,35,55,.08);
 }
 
-.service-icon{
+.icon{
     width:48px;
     height:48px;
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:11px;
-    background:rgba(212,175,98,.08);
-    border:1px solid rgba(212,175,98,.18);
-    color:var(--gold2);
-    font-size:1.2rem;
-    margin-bottom:19px;
-}
-
-.service h3{
-    font-size:1rem;
-    margin-bottom:9px;
-}
-
-.service p{
-    color:var(--muted);
-    font-size:.8rem;
-    line-height:1.7;
+    border-radius:12px;
+    background:#eef4fb;
+    color:#0b4d8d;
+    font-size:21px;
     margin-bottom:17px;
 }
 
-.service a{
-    color:var(--gold2);
-    font-size:.75rem;
-    font-weight:700;
+.feature-card h3{
+    color:#0b1f3a;
+    font-size:21px;
+    margin-bottom:10px;
 }
 
-/* ABOUT */
+.feature-card p{
+    color:#687586;
+    font-size:13px;
+    margin-bottom:15px;
+}
 
-.about-grid{
+.feature-card ul{
+    list-style:none;
+}
+
+.feature-card li{
+    font-size:13px;
+    color:#536172;
+    padding:6px 0;
+}
+
+.feature-card li:before{
+    content:"✓";
+    color:#bd8f2d;
+    font-weight:800;
+    margin-right:8px;
+}
+
+/* SERVICES */
+
+.services{
+    background:#f7f9fc;
+}
+
+.service-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
 }
 
-.about-text h2{
-    font-size:2.4rem;
-    margin-bottom:20px;
+.service-card{
+    background:white;
+    border:1px solid #e5e9ef;
+    border-radius:13px;
+    padding:23px 18px;
+    transition:.25s;
 }
 
-.about-text p{
-    color:var(--muted);
-    margin-bottom:17px;
+.service-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(15,35,60,.08);
 }
 
-.about-points{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin-top:25px;
+.service-card .icon{
+    width:40px;
+    height:40px;
+    font-size:17px;
+    margin-bottom:13px;
 }
 
-.about-point{
-    padding:14px;
-    border:1px solid var(--border);
-    border-radius:9px;
-    background:rgba(255,255,255,.02);
+.service-card h3{
+    font-size:15px;
+    color:#0b1f3a;
+    margin-bottom:6px;
 }
 
-.about-point i{
-    color:var(--gold);
-    margin-right:7px;
+.service-card p{
+    color:#788493;
+    font-size:12px;
 }
-
-.about-point span{
-    font-size:.78rem;
-}
-
-.about-panel{
-    padding:30px;
-    background:linear-gradient(145deg,#101c34,#091120);
-    border:1px solid var(--border);
-    border-radius:18px;
-    box-shadow:var(--shadow);
-}
-
-.about-panel-title{
-    color:var(--gold);
-    font-size:.75rem;
-    letter-spacing:1px;
-    margin-bottom:20px;
-}
-
-.progress{
-    margin-bottom:19px;
-}
-
-.progress-top{
-    display:flex;
-    justify-content:space-between;
-    font-size:.75rem;
-    margin-bottom:7px;
-}
-
-.progress-top span:last-child{
-    color:var(--gold);
-}
-
-.progress-line{
-    height:7px;
-    background:#17243b;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.progress-fill{
-    height:100%;
-    border-radius:20px;
-    background:linear-gradient(90deg,var(--gold),var(--gold2));
-}
-
-.fill1{width:92%}
-.fill2{width:86%}
-.fill3{width:95%}
-.fill4{width:89%}
 
 /* FOUNDERS */
 
 .founders{
+    background:white;
+}
+
+.founder-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .founder{
-    padding:35px 25px;
-    text-align:center;
-    background:linear-gradient(145deg,#0d172b,#09111f);
-    border:1px solid var(--border);
+    border:1px solid #e2e7ed;
+    background:#fff;
     border-radius:16px;
-    transition:var(--transition);
-}
-
-.founder:hover{
-    transform:translateY(-5px);
-    border-color:rgba(212,175,98,.5);
-}
-
-.founder.lead{
-    border-color:var(--gold);
-    box-shadow:0 15px 50px rgba(212,175,98,.08);
+    padding:28px;
+    text-align:center;
 }
 
 .avatar{
-    width:80px;
-    height:80px;
-    margin:0 auto 18px;
+    width:70px;
+    height:70px;
     border-radius:50%;
+    margin:0 auto 15px;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(145deg,#172746,#0c1528);
-    border:1px solid rgba(212,175,98,.3);
-    color:var(--gold2);
-    font-size:1.7rem;
+    background:#0b1f3a;
+    color:#d6a746;
+    font-weight:800;
+    font-size:20px;
 }
 
 .founder h3{
-    font-size:1.1rem;
-}
-
-.role{
-    color:var(--gold);
-    font-size:.75rem;
-    font-weight:700;
-    margin:5px 0 13px;
+    color:#0b1f3a;
+    font-size:17px;
 }
 
 .founder p{
-    color:var(--muted);
-    font-size:.78rem;
+    color:#ad8025;
+    font-size:12px;
+    font-weight:700;
+    margin-top:4px;
 }
 
 /* WHY */
 
 .why{
+    background:#f7f9fc;
+}
+
+.why-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:17px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
 .why-card{
+    background:white;
+    border:1px solid #e3e8ee;
+    border-radius:15px;
     padding:25px;
-    background:rgba(255,255,255,.025);
-    border:1px solid var(--border);
-    border-radius:13px;
-}
-
-.why-card i{
-    color:var(--gold);
-    font-size:1.3rem;
-    margin-bottom:15px;
 }
 
 .why-card h3{
-    font-size:.95rem;
-    margin-bottom:8px;
+    color:#0b1f3a;
+    margin-bottom:7px;
 }
 
 .why-card p{
-    color:var(--muted);
-    font-size:.76rem;
+    color:#697586;
+    font-size:13px;
 }
 
-/* STEPS */
+/* PROCESS */
 
-.steps{
+.process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    gap:16px;
 }
 
 .step{
-    text-align:center;
-    padding:28px 20px;
-    border:1px solid var(--border);
-    background:var(--card);
-    border-radius:14px;
+    background:#fff;
+    border:1px solid #e5e9ef;
+    border-radius:15px;
+    padding:24px;
 }
 
-.step-number{
-    color:var(--gold);
-    font-size:1.7rem;
+.step-num{
+    color:#c29335;
+    font-size:12px;
     font-weight:800;
-    margin-bottom:10px;
-}
-
-.step h3{
-    font-size:.95rem;
     margin-bottom:8px;
 }
 
+.step h3{
+    color:#0b1f3a;
+    font-size:16px;
+    margin-bottom:6px;
+}
+
 .step p{
-    color:var(--muted);
-    font-size:.75rem;
+    color:#718096;
+    font-size:12px;
 }
 
-/* KNOWLEDGE */
+/* CTA */
 
-.blog{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.cta{
+    background:#0b1f3a;
+    color:white;
 }
 
-.blog-card{
-    padding:28px;
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:linear-gradient(145deg,#0e182c,#09111f);
+.cta-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
 }
 
-.blog-label{
-    color:var(--gold);
-    font-size:.68rem;
-    font-weight:800;
-    letter-spacing:1px;
+.cta h2{
+    font-family:"Plus Jakarta Sans",sans-serif;
+    font-size:31px;
+    margin-bottom:7px;
 }
 
-.blog-card h3{
-    font-size:1rem;
-    margin:13px 0;
-}
-
-.blog-card p{
-    color:var(--muted);
-    font-size:.78rem;
+.cta p{
+    color:#b9c5d4;
+    font-size:13px;
 }
 
 /* CONTACT */
 
-.contact-box{
+.contact{
+    background:white;
+}
+
+.contact-grid{
     display:grid;
-    grid-template-columns:.85fr 1.15fr;
-    gap:45px;
-    padding:45px;
-    border:1px solid var(--border);
-    border-radius:20px;
-    background:linear-gradient(145deg,#0d172b,#09111f);
-    box-shadow:var(--shadow);
+    grid-template-columns:.8fr 1.2fr;
+    gap:35px;
+    align-items:start;
 }
 
-.contact-info h2{
-    font-size:2.1rem;
-    margin-bottom:15px;
+.contact-info{
+    background:#0b1f3a;
+    color:white;
+    border-radius:18px;
+    padding:30px;
 }
 
-.contact-info>p{
-    color:var(--muted);
-    margin-bottom:28px;
+.contact-info h3{
+    font-size:22px;
+    margin-bottom:10px;
 }
 
-.contact-item{
-    display:flex;
-    gap:14px;
-    align-items:center;
+.contact-info p{
+    color:#b9c5d4;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.info{
     margin:18px 0;
 }
 
-.contact-item i{
-    color:var(--gold);
-    width:20px;
+.info span{
+    display:block;
+    color:#9daec2;
+    font-size:11px;
 }
 
-.contact-item span{
-    font-size:.82rem;
+.info strong{
+    display:block;
+    font-size:14px;
+    margin-top:3px;
+}
+
+.contact-form{
+    border:1px solid #e1e6ec;
+    border-radius:18px;
+    padding:30px;
 }
 
 .form-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:15px;
+    gap:14px;
 }
 
-.form-group{
-    margin-bottom:15px;
+.field{
+    margin-bottom:14px;
 }
 
-.form-group.full{
+.field.full{
     grid-column:1/-1;
 }
 
 label{
     display:block;
-    color:var(--muted);
-    font-size:.72rem;
-    margin-bottom:7px;
+    font-size:12px;
+    color:#344054;
+    font-weight:700;
+    margin-bottom:6px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
     width:100%;
-    padding:13px 15px;
+    border:1px solid #d8dee7;
     border-radius:8px;
-    border:1px solid var(--border);
-    background:#060c18;
-    color:white;
+    padding:12px;
+    font-family:inherit;
+    font-size:13px;
     outline:none;
+    background:white;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#0b4d8d;
 }
 
 textarea{
+    min-height:110px;
     resize:vertical;
-    min-height:120px;
 }
 
-input:focus,select:focus,textarea:focus{
-    border-color:var(--gold);
+.thanks{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    border-radius:9px;
+    background:#edf9f1;
+    border:1px solid #bce4c8;
+    color:#21733b;
+    font-size:13px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#03060d;
-    border-top:1px solid var(--border);
-    padding:65px 0 25px;
+    background:#07172b;
+    color:white;
+    padding:35px 0 20px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:35px;
-    margin-bottom:45px;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:30px;
 }
 
-.footer-col h4{
-    color:var(--gold);
-    margin-bottom:16px;
-    font-size:.85rem;
+footer h3{
+    font-size:15px;
+    margin-bottom:10px;
 }
 
-.footer-col p,
-.footer-col a{
-    color:var(--muted);
-    font-size:.75rem;
-}
-
-.footer-col ul{
-    list-style:none;
-}
-
-.footer-col li{
-    margin:9px 0;
+footer p,
+footer a{
+    color:#aebccc;
+    font-size:12px;
+    display:block;
+    margin:5px 0;
 }
 
 .footer-bottom{
-    border-top:1px solid var(--border);
-    padding-top:22px;
+    margin-top:30px;
+    padding-top:18px;
+    border-top:1px solid #1b3048;
+    color:#8190a3;
+    font-size:11px;
     text-align:center;
-    color:#64748b;
-    font-size:.7rem;
 }
 
-/* FLOATING BUTTONS */
+/* FLOAT BUTTONS */
 
-.floating{
+.float{
     position:fixed;
-    right:20px;
-    bottom:20px;
+    right:18px;
+    bottom:18px;
     display:flex;
     flex-direction:column;
-    gap:10px;
-    z-index:900;
+    gap:9px;
+    z-index:999;
 }
 
-.float-btn{
-    width:53px;
-    height:53px;
-    border:0;
+.float a{
+    width:48px;
+    height:48px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     color:white;
-    font-size:1.3rem;
-    cursor:pointer;
-    box-shadow:0 8px 25px rgba(0,0,0,.4);
-    transition:var(--transition);
-}
-
-.float-btn:hover{
-    transform:scale(1.1);
+    font-size:18px;
+    box-shadow:0 8px 22px rgba(0,0,0,.18);
 }
 
 .whatsapp{
-    background:#25d366;
+    background:#20b858;
 }
 
 .call{
-    background:#2563eb;
-}
-
-/* DRAWER */
-
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    backdrop-filter:blur(5px);
-    opacity:0;
-    visibility:hidden;
-    z-index:1400;
-    transition:.3s;
-}
-
-.overlay.active{
-    opacity:1;
-    visibility:visible;
-}
-
-.drawer{
-    position:fixed;
-    top:0;
-    right:-330px;
-    width:310px;
-    height:100%;
-    background:#091225;
-    border-left:1px solid var(--border);
-    z-index:1500;
-    padding:28px 22px;
-    transition:.35s;
-}
-
-.drawer.active{
-    right:0;
-}
-
-.drawer-head{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding-bottom:20px;
-    border-bottom:1px solid var(--border);
-}
-
-.close{
-    background:none;
-    border:0;
-    color:white;
-    font-size:1.4rem;
-}
-
-.drawer-links{
-    list-style:none;
-    margin-top:25px;
-}
-
-.drawer-links li{
-    margin:20px 0;
-}
-
-.drawer-links a{
-    display:flex;
-    gap:12px;
-    color:#dbe4f0;
-}
-
-.drawer-links i{
-    color:var(--gold);
-}
-
-/* MODAL */
-
-.modal{
-    position:fixed;
-    inset:0;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    background:rgba(0,0,0,.8);
-    backdrop-filter:blur(7px);
-    z-index:2000;
-}
-
-.modal.active{
-    display:flex;
-}
-
-.modal-content{
-    width:min(450px,92%);
-    background:#0b1528;
-    border:1px solid var(--gold);
-    border-radius:17px;
-    padding:30px;
-    position:relative;
-}
-
-.modal-content h2{
-    font-size:1.3rem;
-    margin-bottom:8px;
-}
-
-.modal-content>p{
-    color:var(--muted);
-    font-size:.75rem;
-    margin-bottom:20px;
-}
-
-.modal-close{
-    position:absolute;
-    right:17px;
-    top:15px;
-    background:none;
-    border:0;
-    color:var(--muted);
-    font-size:1.2rem;
-}
-
-.contact-option{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px;
-    background:#060c18;
-    border:1px solid var(--border);
-    border-radius:10px;
-    margin:10px 0;
-}
-
-.contact-option strong{
-    display:block;
-    font-size:.8rem;
-}
-
-.contact-option span{
-    color:var(--gold);
-    font-size:.75rem;
-}
-
-.actions{
-    display:flex;
-    gap:7px;
-}
-
-.action{
-    padding:8px 11px;
-    border:0;
-    border-radius:6px;
-    color:white;
-    font-size:.7rem;
-    font-weight:700;
-}
-
-.wa{
-    background:#25d366;
-}
-
-.tel{
-    background:#2563eb;
+    background:#0b4d8d;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:1050px){
+@media(max-width:900px){
 
-    .nav-links{
+    nav{
         display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        background:white;
+        padding:15px 4%;
+        border-bottom:1px solid #e5e9ef;
+        flex-direction:column;
+        align-items:stretch;
     }
 
-    .hamburger{
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:10px;
+    }
+
+    .menu-btn{
         display:block;
     }
 
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .why{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .steps{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-grid{
-        grid-template-columns:2fr 1fr 1fr;
-    }
-}
-
-@media(max-width:800px){
-
-    .hero{
-        padding-top:135px;
-    }
-
     .hero-grid,
-    .about-grid,
-    .contact-box{
+    .contact-grid,
+    .why-grid{
         grid-template-columns:1fr;
     }
 
-    .dashboard{
-        transform:none;
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .founders{
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .founder-grid{
         grid-template-columns:1fr;
     }
 
-    .blog{
-        grid-template-columns:1fr;
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .contact-box{
-        padding:28px 20px;
+    .trust-box:nth-child(2){
+        border-right:0;
+    }
+
+    .trust-box:nth-child(-n+2){
+        border-bottom:1px solid #edf0f4;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
     }
 
     .footer-grid{
         grid-template-columns:1fr 1fr;
     }
-
-    .hero h2{
-        font-size:2.55rem;
-        letter-spacing:-1px;
-    }
-
-    section{
-        padding:80px 0;
-    }
 }
 
 @media(max-width:600px){
 
-    .navbar{
-        height:72px;
-    }
-
-    .logo h1{
-        font-size:1.05rem;
-    }
-
-    .logo span{
-        font-size:.57rem;
-    }
-
     .hero{
-        padding:120px 0 70px;
-        min-height:auto;
+        padding:58px 0 45px;
     }
 
-    .hero h2{
-        font-size:2.25rem;
+    h1{
+        font-size:38px;
     }
 
-    .hero p{
-        font-size:.92rem;
+    section{
+        padding:58px 0;
     }
 
-    .services,
-    .why,
-    .steps,
-    .trust-grid{
-        grid-template-columns:1fr;
-    }
-
-    .trust-item{
-        border-right:0;
-        border-bottom:1px solid var(--border);
-    }
-
-    .trust-item:last-child{
-        border-bottom:0;
-    }
-
-    .about-points{
-        grid-template-columns:1fr;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-        gap:0;
-    }
-
-    .form-group.full{
-        grid-column:auto;
-    }
-
+    .feature-grid,
+    .service-grid,
+    .process-grid,
+    .form-grid,
     .footer-grid{
         grid-template-columns:1fr;
     }
 
-    .dashboard-footer{
-        grid-template-columns:1fr;
+    .field.full{
+        grid-column:auto;
+    }
+
+    .trust-box{
+        padding:17px 8px;
     }
 
     .hero-buttons{
         flex-direction:column;
     }
 
-    .hero-buttons a,
-    .hero-buttons button{
+    .btn{
         width:100%;
-    }
-
-    .section-head h2{
-        font-size:1.9rem;
-    }
-
-    .about-text h2{
-        font-size:2rem;
-    }
-
-    .contact-info h2{
-        font-size:1.8rem;
-    }
-
-    .floating{
-        right:14px;
-        bottom:14px;
     }
 }
 
 </style>
+
+<!-- ORGANIZATION + LOCAL BUSINESS SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AccountingService",
+  "name":"A.S. & ASSOCIATES",
+  "description":"Tax and accounting solutions including GST, income tax, TDS, accounting, bookkeeping and business compliance services.",
+  "telephone":"+91 87898 51415",
+  "email":"adityakumarjha.taxsolutions@gmail.com",
+  "url":"https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY/",
+  "areaServed":[
+    {
+      "@type":"City",
+      "name":"Delhi"
+    },
+    {
+      "@type":"State",
+      "name":"Bihar"
+    }
+  ],
+  "founder":[
+    {
+      "@type":"Person",
+      "name":"Aditya Kumar Jha"
+    },
+    {
+      "@type":"Person",
+      "name":"Shatrughan Kumar"
+    },
+    {
+      "@type":"Person",
+      "name":"Shivam Kumar Jha"
+    }
+  ],
+  "sameAs":[]
+}
+</script>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-    <div class="container navbar">
 
-        <a href="#home" class="logo">
-            <h1>A.S. & ASSOCIATES</h1>
-            <span>Tax & Accounting Solutions</span>
-        </a>
+<div class="container nav">
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#founders">Founders</a></li>
-            <li><a href="#knowledge">Knowledge</a></li>
-            <li><a href="#contact" class="btn-nav">Contact Us</a></li>
-        </ul>
+<a href="#" class="logo">
 
-        <button class="hamburger" onclick="openDrawer()" aria-label="Open Menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+<div class="logo-box">AS</div>
 
-    </div>
+<div class="logo-text">
+<strong>A.S. & ASSOCIATES</strong>
+<span>TAX & ACCOUNTING SOLUTIONS</span>
+</div>
+
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<nav id="menu">
+<a href="#gst">GST</a>
+<a href="#income-tax">Income Tax</a>
+<a href="#accounting">Accounting</a>
+<a href="#tds">TDS</a>
+<a href="#services">Services</a>
+<a href="#contact" class="nav-btn">Contact Us</a>
+</nav>
+
+</div>
+
 </header>
 
 
-<!-- MOBILE DRAWER -->
+<main>
 
-<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<!-- HERO -->
 
-<div class="drawer" id="drawer">
+<section class="hero">
 
-    <div class="drawer-head">
-        <div class="logo">
-            <h1>A.S. & ASSOCIATES</h1>
-            <span>Tax & Accounting Solutions</span>
-        </div>
+<div class="container hero-grid">
 
-        <button class="close" onclick="closeDrawer()">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-    </div>
+<div>
 
-    <ul class="drawer-links">
-        <li>
-            <a href="#home" onclick="closeDrawer()">
-                <i class="fa-solid fa-house"></i> Home
-            </a>
-        </li>
+<span class="badge">Professional Tax & Accounting Solutions</span>
 
-        <li>
-            <a href="#services" onclick="closeDrawer()">
-                <i class="fa-solid fa-calculator"></i> Services
-            </a>
-        </li>
+<h1>Complete Financial Solutions for Your Business.</h1>
 
-        <li>
-            <a href="#about" onclick="closeDrawer()">
-                <i class="fa-solid fa-building"></i> About
-            </a>
-        </li>
+<p>
+GST, Income Tax, TDS, Accounting, Bookkeeping and Business Compliance
+support for individuals, professionals and businesses.
+</p>
 
-        <li>
-            <a href="#founders" onclick="closeDrawer()">
-                <i class="fa-solid fa-users"></i> Founders
-            </a>
-        </li>
+<div class="hero-buttons">
 
-        <li>
-            <a href="#knowledge" onclick="closeDrawer()">
-                <i class="fa-solid fa-book"></i> Knowledge
-            </a>
-        </li>
+<a href="#contact" class="btn btn-primary">
+Request a Service
+</a>
 
-        <li>
-            <a href="#contact" onclick="closeDrawer()">
-                <i class="fa-solid fa-phone"></i> Contact
-            </a>
-        </li>
-    </ul>
+<a href="https://wa.me/916205896093" target="_blank" class="btn btn-gold">
+WhatsApp Us
+</a>
+
+</div>
 
 </div>
 
 
-<!-- HERO -->
+<div class="hero-card">
 
-<section class="hero" id="home">
+<h3>Business Compliance Support</h3>
 
-    <div class="container hero-grid">
+<p>
+Stay organised with professional accounting and tax compliance assistance.
+</p>
 
-        <div>
+<div class="progress-item">
 
-            <div class="eyebrow">
-                <i class="fa-solid fa-shield-halved"></i>
-                Professional Tax & Accounting Support
-            </div>
+<div class="progress-top">
+<span>GST Compliance</span>
+<span>✓</span>
+</div>
 
-            <h2>
-                Smart Finance.
-                <span>Clear Compliance.</span>
-                Better Business.
-            </h2>
+<div class="progress">
+<span style="width:92%"></span>
+</div>
 
-            <p>
-                A.S. & Associates provides practical support for
-                taxation, GST, accounting, bookkeeping, financial
-                statements and business compliance.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#services" class="btn-primary">
-                    Explore Services
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-                <button class="btn-secondary" onclick="openContactModal()">
-                    <i class="fa-solid fa-phone"></i>
-                    Talk to Us
-                </button>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <!-- DASHBOARD -->
+<div class="progress-item">
 
-        <div class="dashboard">
+<div class="progress-top">
+<span>Income Tax Support</span>
+<span>✓</span>
+</div>
 
-            <div class="dash-top">
+<div class="progress">
+<span style="width:88%"></span>
+</div>
 
-                <div class="dash-title">
-                    Business Finance
-                    <strong>Management Dashboard</strong>
-                </div>
+</div>
 
-                <div class="dash-status">
-                    <span></span>
-                    Active
-                </div>
 
-            </div>
+<div class="progress-item">
 
-            <div class="stats">
+<div class="progress-top">
+<span>Accounting & Books</span>
+<span>✓</span>
+</div>
 
-                <div class="stat">
-                    <i class="fa-solid fa-file-invoice"></i>
-                    <small>GST & Tax</small>
-                    <strong>Managed</strong>
-                </div>
+<div class="progress">
+<span style="width:95%"></span>
+</div>
 
-                <div class="stat">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <small>Accounts</small>
-                    <strong>Organised</strong>
-                </div>
+</div>
 
-                <div class="stat">
-                    <i class="fa-solid fa-building"></i>
-                    <small>Compliance</small>
-                    <strong>Supported</strong>
-                </div>
 
-                <div class="stat">
-                    <i class="fa-solid fa-calculator"></i>
-                    <small>Reports</small>
-                    <strong>Prepared</strong>
-                </div>
+<div class="progress-item">
 
-            </div>
+<div class="progress-top">
+<span>TDS Compliance</span>
+<span>✓</span>
+</div>
 
-            <div class="chart">
+<div class="progress">
+<span style="width:90%"></span>
+</div>
 
-                <div class="chart-header">
-                    <span>Business Activity</span>
-                    <span>Monthly View</span>
-                </div>
+</div>
 
-                <div class="chart-bars">
-                    <div class="bar b1"></div>
-                    <div class="bar b2"></div>
-                    <div class="bar b3"></div>
-                    <div class="bar b4"></div>
-                    <div class="bar b5"></div>
-                    <div class="bar b6"></div>
-                    <div class="bar b7"></div>
-                    <div class="bar b8"></div>
-                </div>
+</div>
 
-            </div>
-
-            <div class="dashboard-footer">
-
-                <div class="mini-box">
-                    <i class="fa-solid fa-receipt"></i>
-                    <span>GST</span>
-                </div>
-
-                <div class="mini-box">
-                    <i class="fa-solid fa-book"></i>
-                    <span>Books</span>
-                </div>
-
-                <div class="mini-box">
-                    <i class="fa-solid fa-file-lines"></i>
-                    <span>Returns</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -1512,487 +1044,563 @@ footer{
 
 <div class="trust">
 
-    <div class="container trust-grid">
+<div class="container trust-grid">
 
-        <div class="trust-item">
-            <i class="fa-solid fa-calculator"></i>
-            <strong>Accounting</strong>
-            <span>Books & Financial Records</span>
-        </div>
+<div class="trust-box">
+<strong>GST</strong>
+<span>Registration & Returns</span>
+</div>
 
-        <div class="trust-item">
-            <i class="fa-solid fa-file-invoice-dollar"></i>
-            <strong>Taxation</strong>
-            <span>Income Tax Support</span>
-        </div>
+<div class="trust-box">
+<strong>ITR</strong>
+<span>Income Tax Filing</span>
+</div>
 
-        <div class="trust-item">
-            <i class="fa-solid fa-receipt"></i>
-            <strong>GST</strong>
-            <span>Registration & Returns</span>
-        </div>
+<div class="trust-box">
+<strong>TDS</strong>
+<span>Compliance Support</span>
+</div>
 
-        <div class="trust-item">
-            <i class="fa-solid fa-building"></i>
-            <strong>Compliance</strong>
-            <span>Business Support</span>
-        </div>
+<div class="trust-box">
+<strong>Accounts</strong>
+<span>Books & Reporting</span>
+</div>
 
-    </div>
+</div>
 
 </div>
 
 
-<!-- SERVICES -->
+<!-- GST -->
 
-<section id="services">
+<section class="feature" id="gst">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
-            <div class="section-tag">Our Services</div>
+<div class="section-head">
+<span>GST Services</span>
+<h2>GST Compliance Made Simple</h2>
+<p>
+Professional assistance for GST registration, return filing,
+reconciliation and related compliance requirements.
+</p>
+</div>
 
-            <h2>
-                Complete Tax & Accounting Solutions
-            </h2>
+<div class="feature-grid">
 
-            <p>
-                Practical professional support for individuals,
-                businesses, firms and growing organisations.
-            </p>
-        </div>
+<div class="feature-card">
 
+<div class="icon">GST</div>
 
-        <div class="search">
+<h3>GST Registration & Returns</h3>
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+<p>
+Support for businesses requiring GST registration and regular GST compliance.
+</p>
 
-            <input
-                type="text"
-                id="serviceSearch"
-                placeholder="Search services..."
-            >
+<ul>
+<li>GST Registration</li>
+<li>GSTR-1 Filing</li>
+<li>GSTR-3B Filing</li>
+<li>GSTR-9 Support</li>
+<li>GST Amendment</li>
+<li>GST Cancellation</li>
+</ul>
 
-        </div>
-
-
-        <div class="services" id="serviceList">
-
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-file-invoice-dollar"></i>
-                </div>
-
-                <h3>Income Tax</h3>
-
-                <p>
-                    ITR preparation, filing support and
-                    income-tax related compliance.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
+</div>
 
 
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-receipt"></i>
-                </div>
+<div class="feature-card">
 
-                <h3>GST Services</h3>
+<div class="icon">↔</div>
 
-                <p>
-                    GST registration, returns, reconciliation
-                    and compliance support.
-                </p>
+<h3>GST Reconciliation</h3>
 
-                <a href="#contact">Enquire →</a>
-            </div>
+<p>
+Systematic review of purchase data, sales data and available GST records.
+</p>
 
+<ul>
+<li>GSTR-2B Reconciliation</li>
+<li>Input Tax Credit Review</li>
+<li>Purchase Reconciliation</li>
+<li>Sales Reconciliation</li>
+<li>GST Data Review</li>
+<li>Compliance Assistance</li>
+</ul>
 
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-calculator"></i>
-                </div>
+</div>
 
-                <h3>Accounting & Bookkeeping</h3>
+</div>
 
-                <p>
-                    Day-to-day accounting, bookkeeping,
-                    Tally and business records.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
-
-
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-chart-pie"></i>
-                </div>
-
-                <h3>Financial Statements</h3>
-
-                <p>
-                    Balance Sheet, Profit & Loss and
-                    financial reporting support.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
-
-
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-building"></i>
-                </div>
-
-                <h3>Business Compliance</h3>
-
-                <p>
-                    General business compliance and
-                    accounting-related support.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
-
-
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-truck-fast"></i>
-                </div>
-
-                <h3>E-Way Bill</h3>
-
-                <p>
-                    E-way bill generation and related
-                    documentation support.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
-
-
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-signature"></i>
-                </div>
-
-                <h3>Digital Signature</h3>
-
-                <p>
-                    Digital signature related assistance
-                    for business requirements.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
-
-
-            <div class="service">
-                <div class="service-icon">
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-                </div>
-
-                <h3>Audit Support</h3>
-
-                <p>
-                    Accounting records and documentation
-                    support for audit requirements.
-                </p>
-
-                <a href="#contact">Enquire →</a>
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- INCOME TAX -->
 
-<section id="about" class="section-dark">
+<section class="feature" id="income-tax">
 
-    <div class="container about-grid">
+<div class="container">
 
-        <div class="about-text">
+<div class="section-head">
 
-            <div class="section-tag">About Us</div>
+<span>Income Tax</span>
 
-            <h2>
-                Focused on Accurate Records & Better Compliance
-            </h2>
+<h2>Income Tax Return Filing & Support</h2>
 
-            <p>
-                A.S. & Associates is focused on providing
-                practical tax, GST, accounting and business
-                compliance support.
-            </p>
+<p>
+Income tax filing and related compliance support for individuals,
+professionals and businesses.
+</p>
 
-            <p>
-                Our approach is simple: maintain organised
-                records, understand compliance requirements
-                and help businesses make better financial decisions.
-            </p>
-
-            <div class="about-points">
-
-                <div class="about-point">
-                    <i class="fa-solid fa-check"></i>
-                    <span>Professional Support</span>
-                </div>
-
-                <div class="about-point">
-                    <i class="fa-solid fa-check"></i>
-                    <span>Timely Compliance</span>
-                </div>
-
-                <div class="about-point">
-                    <i class="fa-solid fa-check"></i>
-                    <span>Organised Accounting</span>
-                </div>
-
-                <div class="about-point">
-                    <i class="fa-solid fa-check"></i>
-                    <span>Business Focused</span>
-                </div>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="about-panel">
+<div class="feature-grid">
 
-            <div class="about-panel-title">
-                OUR APPROACH
-            </div>
+<div class="feature-card">
 
-            <div class="progress">
+<div class="icon">IT</div>
 
-                <div class="progress-top">
-                    <span>Accounting Organisation</span>
-                    <span>92%</span>
-                </div>
+<h3>Income Tax Return Filing</h3>
 
-                <div class="progress-line">
-                    <div class="progress-fill fill1"></div>
-                </div>
+<p>
+Assistance with preparation and filing of income tax returns based on
+applicable income and records.
+</p>
 
-            </div>
+<ul>
+<li>Individual ITR Filing</li>
+<li>Business ITR Filing</li>
+<li>Professional ITR Filing</li>
+<li>Tax Computation</li>
+<li>Income & Expense Review</li>
+<li>Return Filing Support</li>
+</ul>
 
-
-            <div class="progress">
-
-                <div class="progress-top">
-                    <span>Tax Compliance</span>
-                    <span>86%</span>
-                </div>
-
-                <div class="progress-line">
-                    <div class="progress-fill fill2"></div>
-                </div>
-
-            </div>
+</div>
 
 
-            <div class="progress">
+<div class="feature-card">
 
-                <div class="progress-top">
-                    <span>GST Support</span>
-                    <span>95%</span>
-                </div>
+<div class="icon">₹</div>
 
-                <div class="progress-line">
-                    <div class="progress-fill fill3"></div>
-                </div>
+<h3>Tax Compliance Support</h3>
 
-            </div>
+<p>
+Support with tax-related documentation and compliance requirements.
+</p>
+
+<ul>
+<li>Advance Tax Assistance</li>
+<li>Tax Demand Assistance</li>
+<li>Notice Response Support</li>
+<li>Tax Documents Review</li>
+<li>Basic Tax Planning Support</li>
+<li>Compliance Tracking</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
-            <div class="progress">
+<!-- ACCOUNTING -->
 
-                <div class="progress-top">
-                    <span>Business Records</span>
-                    <span>89%</span>
-                </div>
+<section class="feature" id="accounting">
 
-                <div class="progress-line">
-                    <div class="progress-fill fill4"></div>
-                </div>
+<div class="container">
 
-            </div>
+<div class="section-head">
 
-        </div>
+<span>Accounting</span>
 
-    </div>
+<h2>Professional Accounting & Bookkeeping</h2>
+
+<p>
+Organised accounting records help businesses understand their finances
+and maintain better compliance.
+</p>
+
+</div>
+
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">A/C</div>
+
+<h3>Bookkeeping & Accounting</h3>
+
+<p>
+Regular accounting support for business transactions and financial records.
+</p>
+
+<ul>
+<li>Day-to-Day Accounting</li>
+<li>Tally Accounting</li>
+<li>Sales & Purchase Entries</li>
+<li>Cash & Bank Entries</li>
+<li>Bank Reconciliation</li>
+<li>Ledger Maintenance</li>
+</ul>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="icon">MIS</div>
+
+<h3>Financial Reporting</h3>
+
+<p>
+Financial information organised into useful reports for business review.
+</p>
+
+<ul>
+<li>Profit & Loss Account</li>
+<li>Balance Sheet</li>
+<li>Trial Balance</li>
+<li>Outstanding Reports</li>
+<li>MIS Reports</li>
+<li>Financial Data Review</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TDS -->
+
+<section class="feature" id="tds">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>TDS Services</span>
+
+<h2>TDS Compliance & Return Support</h2>
+
+<p>
+Assistance with TDS-related records, return preparation and compliance.
+</p>
+
+</div>
+
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">TDS</div>
+
+<h3>TDS Return Services</h3>
+
+<p>
+Support for maintaining TDS information and preparing applicable returns.
+</p>
+
+<ul>
+<li>TDS Return Preparation</li>
+<li>TDS Data Checking</li>
+<li>TDS Deduction Review</li>
+<li>Challan Information</li>
+<li>Quarterly Compliance Support</li>
+<li>TDS Documentation</li>
+</ul>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="icon">✓</div>
+
+<h3>TDS Compliance Assistance</h3>
+
+<p>
+Practical support for businesses dealing with TDS obligations.
+</p>
+
+<ul>
+<li>TDS Ledger Review</li>
+<li>Deductee Data Review</li>
+<li>Form 26AS Review</li>
+<li>TDS Reconciliation</li>
+<li>Compliance Follow-up</li>
+<li>Documentation Support</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>Our Services</span>
+
+<h2>Business & Tax Services</h2>
+
+<p>
+A range of accounting, tax and compliance services for your business.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+<div class="icon">01</div>
+<h3>GST Registration</h3>
+<p>GST registration assistance and documentation support.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">02</div>
+<h3>GST Return Filing</h3>
+<p>Regular GST return filing and compliance support.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">03</div>
+<h3>Income Tax Return</h3>
+<p>ITR preparation and filing support.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">04</div>
+<h3>TDS Returns</h3>
+<p>TDS preparation and compliance assistance.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">05</div>
+<h3>Bookkeeping</h3>
+<p>Organised books of accounts and transaction records.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">06</div>
+<h3>Tally Accounting</h3>
+<p>Accounting entries and ledger management.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">07</div>
+<h3>Bank Reconciliation</h3>
+<p>Bank statement and book reconciliation support.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">08</div>
+<h3>Financial Statements</h3>
+<p>Profit & Loss, Balance Sheet and related reports.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">09</div>
+<h3>E-Way Bill</h3>
+<p>E-way bill related compliance assistance.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">10</div>
+<h3>Digital Signature</h3>
+<p>DSC-related business compliance assistance.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">11</div>
+<h3>Audit Support</h3>
+<p>Accounting records and documentation support for audits.</p>
+</div>
+
+
+<div class="service-card">
+<div class="icon">12</div>
+<h3>MIS & Reporting</h3>
+<p>Business reports and financial information support.</p>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- FOUNDERS -->
 
-<section id="founders">
+<section class="founders">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
+<div class="section-head">
 
-            <div class="section-tag">
-                Leadership
-            </div>
+<span>Leadership</span>
 
-            <h2>
-                Meet Our Founders
-            </h2>
+<h2>Our Founders</h2>
 
-            <p>
-                A.S. & Associates is built around a
-                collaborative professional approach.
-            </p>
+<p>
+A professional team focused on accounting, taxation and business compliance.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="founders">
-
-            <div class="founder lead">
-
-                <div class="avatar">
-                    <i class="fa-solid fa-user-tie"></i>
-                </div>
-
-                <h3>Aditya Kumar Jha</h3>
-
-                <div class="role">
-                    Founder & Lead
-                </div>
-
-                <p>
-                    Focused on taxation, GST, accounting,
-                    bookkeeping and client coordination.
-                </p>
-
-            </div>
+<div class="founder-grid">
 
 
-            <div class="founder">
+<div class="founder">
 
-                <div class="avatar">
-                    <i class="fa-solid fa-user"></i>
-                </div>
+<div class="avatar">AJ</div>
 
-                <h3>Shatrughan Kumar</h3>
+<h3>Aditya Kumar Jha</h3>
 
-                <div class="role">
-                    Founder
-                </div>
+<p>Founder & Lead</p>
 
-                <p>
-                    Supporting the firm's professional
-                    and business development activities.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="founder">
+<div class="founder">
 
-                <div class="avatar">
-                    <i class="fa-solid fa-user"></i>
-                </div>
+<div class="avatar">SK</div>
 
-                <h3>Shivam Kumar Jha</h3>
+<h3>Shatrughan Kumar</h3>
 
-                <div class="role">
-                    Founder
-                </div>
+<p>Founder</p>
 
-                <p>
-                    Supporting the firm's operations
-                    and professional activities.
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="founder">
 
-    </div>
+<div class="avatar">SJ</div>
+
+<h3>Shivam Kumar Jha</h3>
+
+<p>Founder</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- WHY US -->
 
-<section class="section-dark">
+<section class="why">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
+<div class="section-head">
 
-            <div class="section-tag">
-                Why Choose Us
-            </div>
+<span>Why Choose Us</span>
 
-            <h2>
-                Built Around Practical Business Needs
-            </h2>
+<h2>Professional Support for Your Business</h2>
 
-            <p>
-                Our services are designed to keep financial
-                records organised and compliance work manageable.
-            </p>
+<p>
+Our approach focuses on organised records, timely compliance and clear communication.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="why">
-
-            <div class="why-card">
-                <i class="fa-solid fa-user-check"></i>
-                <h3>Personal Attention</h3>
-                <p>
-                    Direct communication and practical support
-                    for business requirements.
-                </p>
-            </div>
+<div class="why-grid">
 
 
-            <div class="why-card">
-                <i class="fa-solid fa-clock"></i>
-                <h3>Timely Work</h3>
-                <p>
-                    Focus on maintaining records and completing
-                    routine compliance work on time.
-                </p>
-            </div>
+<div class="why-card">
+
+<h3>Organised Accounting</h3>
+
+<p>
+Maintain better visibility of your business transactions through
+structured accounting and bookkeeping.
+</p>
+
+</div>
 
 
-            <div class="why-card">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>Business Focus</h3>
-                <p>
-                    Accounting support designed around
-                    day-to-day business operations.
-                </p>
-            </div>
+<div class="why-card">
+
+<h3>Compliance Focus</h3>
+
+<p>
+GST, income tax, TDS and other applicable compliance requirements
+can be tracked systematically.
+</p>
+
+</div>
 
 
-            <div class="why-card">
-                <i class="fa-solid fa-lock"></i>
-                <h3>Confidentiality</h3>
-                <p>
-                    Client financial information is handled
-                    with professional care.
-                </p>
-            </div>
+<div class="why-card">
 
-        </div>
+<h3>Clear Communication</h3>
 
-    </div>
+<p>
+We aim to keep clients informed about requirements, documents and
+important compliance activities.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<h3>Business-Oriented Support</h3>
+
+<p>
+Accounting and tax information can help business owners understand
+their financial position and plan better.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -2001,779 +1609,413 @@ footer{
 
 <section>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
+<div class="section-head">
 
-            <div class="section-tag">
-                How We Work
-            </div>
+<span>Our Process</span>
 
-            <h2>
-                Simple & Structured Process
-            </h2>
+<h2>Simple & Professional</h2>
 
-            <p>
-                From understanding the requirement to
-                maintaining records and compliance.
-            </p>
+<p>
+From your first request to completion, we keep the process straightforward.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="steps">
-
-            <div class="step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h3>Understand</h3>
-
-                <p>
-                    Understand your business and
-                    accounting requirement.
-                </p>
-
-            </div>
+<div class="process-grid">
 
 
-            <div class="step">
+<div class="step">
 
-                <div class="step-number">
-                    02
-                </div>
+<div class="step-num">STEP 01</div>
 
-                <h3>Organise</h3>
+<h3>Submit Request</h3>
 
-                <p>
-                    Collect and organise the required
-                    documents and financial records.
-                </p>
+<p>
+Tell us what accounting, GST, income tax or compliance service you need.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="step">
+<div class="step">
 
-                <div class="step-number">
-                    03
-                </div>
+<div class="step-num">STEP 02</div>
 
-                <h3>Work</h3>
+<h3>Requirement Review</h3>
 
-                <p>
-                    Process accounting, tax or GST
-                    related requirements.
-                </p>
+<p>
+We review your requirement and identify the documents and information needed.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="step">
+<div class="step">
 
-                <div class="step-number">
-                    04
-                </div>
+<div class="step-num">STEP 03</div>
 
-                <h3>Support</h3>
+<h3>Work & Compliance</h3>
 
-                <p>
-                    Provide ongoing support for routine
-                    business compliance.
-                </p>
+<p>
+The required accounting or compliance work is prepared and processed.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="step">
+
+<div class="step-num">STEP 04</div>
+
+<h3>Update & Delivery</h3>
+
+<p>
+You receive the relevant update, records or completed work.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- KNOWLEDGE -->
+<!-- CTA -->
 
-<section id="knowledge" class="section-dark">
+<section class="cta">
 
-    <div class="container">
+<div class="container cta-box">
 
-        <div class="section-head">
+<div>
 
-            <div class="section-tag">
-                Knowledge Centre
-            </div>
+<h2>Need GST, ITR, TDS or Accounting Support?</h2>
 
-            <h2>
-                Finance & Compliance Topics
-            </h2>
+<p>
+Send your requirement and connect with A.S. & ASSOCIATES.
+</p>
 
-            <p>
-                Helpful areas businesses should keep track of.
-            </p>
+</div>
 
-        </div>
+<a href="#contact" class="btn btn-gold">
+Request a Service
+</a>
 
-
-        <div class="blog">
-
-            <div class="blog-card">
-
-                <div class="blog-label">
-                    GST
-                </div>
-
-                <h3>
-                    GST Return & Reconciliation
-                </h3>
-
-                <p>
-                    Understanding GST returns, invoices,
-                    input tax credit and reconciliation.
-                </p>
-
-            </div>
-
-
-            <div class="blog-card">
-
-                <div class="blog-label">
-                    INCOME TAX
-                </div>
-
-                <h3>
-                    Income Tax Compliance
-                </h3>
-
-                <p>
-                    Organising income, expenses, tax records
-                    and return filing requirements.
-                </p>
-
-            </div>
-
-
-            <div class="blog-card">
-
-                <div class="blog-label">
-                    ACCOUNTING
-                </div>
-
-                <h3>
-                    Business Bookkeeping
-                </h3>
-
-                <p>
-                    Maintaining proper books helps businesses
-                    understand their financial position.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section class="contact" id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="contact-box">
+<div class="section-head">
 
-            <div class="contact-info">
+<span>Contact Us</span>
 
-                <div class="section-tag">
-                    Get In Touch
-                </div>
+<h2>Tell Us What You Need</h2>
 
-                <h2>
-                    Let's Discuss Your Requirement
-                </h2>
+<p>
+Submit your requirement. Your request will be prepared for WhatsApp.
+</p>
 
-                <p>
-                    Contact us for tax, GST, accounting,
-                    bookkeeping and business compliance support.
-                </p>
+</div>
 
 
-                <div class="contact-item">
+<div class="contact-grid">
 
-                    <i class="fa-brands fa-whatsapp"></i>
 
-                    <span>
-                        +91 62058 96093
-                    </span>
+<div class="contact-info">
 
-                </div>
+<h3>A.S. & ASSOCIATES</h3>
 
+<p>
+Tax & Accounting Solutions for individuals, professionals and businesses.
+</p>
 
-                <div class="contact-item">
 
-                    <i class="fa-solid fa-phone"></i>
+<div class="info">
 
-                    <span>
-                        +91 87898 51415
-                    </span>
+<span>Phone</span>
 
-                </div>
+<strong>+91 87898 51415</strong>
 
+</div>
 
-                <div class="contact-item">
 
-                    <i class="fa-solid fa-envelope"></i>
+<div class="info">
 
-                    <span>
-                        adityakumarjha.taxsolutions@gmail.com
-                    </span>
+<span>WhatsApp</span>
 
-                </div>
+<strong>+91 62058 96093</strong>
 
+</div>
 
-                <div class="contact-item">
 
-                    <i class="fa-solid fa-location-dot"></i>
+<div class="info">
 
-                    <span>
-                        Delhi / Bihar, India
-                    </span>
+<span>Email</span>
 
-                </div>
+<strong>adityakumarjha.taxsolutions@gmail.com</strong>
 
-            </div>
+</div>
 
 
-            <form id="contactForm">
+<div class="info">
 
-                <div class="form-grid">
+<span>Service Area</span>
 
-                    <div class="form-group">
+<strong>Delhi & Bihar, India</strong>
 
-                        <label>Your Name</label>
+</div>
 
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="Enter your name"
-                            required
-                        >
+</div>
 
-                    </div>
 
+<div class="contact-form">
 
-                    <div class="form-group">
+<form onsubmit="sendRequest(event)">
 
-                        <label>Phone Number</label>
+<div class="form-grid">
 
-                        <input
-                            type="tel"
-                            id="phone"
-                            placeholder="Enter phone number"
-                            required
-                        >
 
-                    </div>
+<div class="field">
 
+<label>Your Name</label>
 
-                    <div class="form-group full">
+<input id="name" type="text" placeholder="Enter your name" required>
 
-                        <label>Service Required</label>
+</div>
 
-                        <select id="service" required>
 
-                            <option value="">
-                                Select a service
-                            </option>
+<div class="field">
 
-                            <option>
-                                Income Tax
-                            </option>
+<label>Mobile Number</label>
 
-                            <option>
-                                GST Services
-                            </option>
+<input id="mobile" type="tel" placeholder="Enter mobile number" required>
 
-                            <option>
-                                Accounting & Bookkeeping
-                            </option>
+</div>
 
-                            <option>
-                                Financial Statements
-                            </option>
 
-                            <option>
-                                Business Compliance
-                            </option>
+<div class="field full">
 
-                            <option>
-                                E-Way Bill
-                            </option>
+<label>Service Required</label>
 
-                            <option>
-                                Digital Signature
-                            </option>
+<select id="service" required>
 
-                            <option>
-                                Audit Support
-                            </option>
+<option value="">Select a service</option>
 
-                        </select>
+<option>GST Registration</option>
+<option>GST Return Filing</option>
+<option>GST Reconciliation</option>
+<option>Income Tax Return Filing</option>
+<option>TDS Return / Compliance</option>
+<option>Accounting & Bookkeeping</option>
+<option>Tally Accounting</option>
+<option>Bank Reconciliation</option>
+<option>Financial Statements</option>
+<option>E-Way Bill</option>
+<option>Audit Support</option>
+<option>MIS / Reporting</option>
+<option>Other Service</option>
 
-                    </div>
+</select>
 
+</div>
 
-                    <div class="form-group full">
 
-                        <label>Message</label>
+<div class="field full">
 
-                        <textarea
-                            id="message"
-                            placeholder="Tell us about your requirement"
-                            required
-                        ></textarea>
+<label>Your Requirement</label>
 
-                    </div>
+<textarea id="requirement" placeholder="Write your requirement..." required></textarea>
 
+</div>
 
-                    <div class="form-group full">
 
-                        <button
-                            type="submit"
-                            class="btn-primary"
-                            style="width:100%;"
-                        >
+</div>
 
-                            <i class="fa-brands fa-whatsapp"></i>
 
-                            Send Enquiry on WhatsApp
+<button class="btn btn-primary" type="submit">
+Send Request on WhatsApp
+</button>
 
-                        </button>
 
-                    </div>
+<div class="thanks" id="thanks">
 
-                </div>
+<strong>Thank you for connecting with A.S. & ASSOCIATES.</strong><br>
 
-            </form>
+Your request has been received. Our team will contact you shortly.
 
-        </div>
+</div>
 
-    </div>
+</form>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+</main>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-    <div class="container">
+<div class="container">
 
-        <div class="footer-grid">
-
-            <div class="footer-col">
-
-                <div class="logo">
-
-                    <h1>
-                        A.S. & ASSOCIATES
-                    </h1>
-
-                    <span>
-                        Tax & Accounting Solutions
-                    </span>
-
-                </div>
-
-                <p style="margin-top:18px;max-width:360px;">
-                    Tax, GST, accounting, bookkeeping and
-                    business compliance support for individuals
-                    and businesses.
-                </p>
-
-            </div>
+<div class="footer-grid">
 
 
-            <div class="footer-col">
+<div>
 
-                <h4>
-                    Services
-                </h4>
+<h3>A.S. & ASSOCIATES</h3>
 
-                <ul>
+<p>
+Tax & Accounting Solutions
+</p>
 
-                    <li>
-                        <a href="#services">
-                            Income Tax
-                        </a>
-                    </li>
+<p>
+GST • Income Tax • TDS • Accounting • Compliance
+</p>
 
-                    <li>
-                        <a href="#services">
-                            GST
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services">
-                            Accounting
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services">
-                            Bookkeeping
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
+</div>
 
 
-            <div class="footer-col">
+<div>
 
-                <h4>
-                    Company
-                </h4>
+<h3>Services</h3>
 
-                <ul>
+<a href="#gst">GST Services</a>
 
-                    <li>
-                        <a href="#about">
-                            About
-                        </a>
-                    </li>
+<a href="#income-tax">Income Tax</a>
 
-                    <li>
-                        <a href="#founders">
-                            Founders
-                        </a>
-                    </li>
+<a href="#accounting">Accounting</a>
 
-                    <li>
-                        <a href="#knowledge">
-                            Knowledge
-                        </a>
-                    </li>
+<a href="#tds">TDS</a>
 
-                    <li>
-                        <a href="#contact">
-                            Contact
-                        </a>
-                    </li>
+<a href="#services">All Services</a>
 
-                </ul>
-
-            </div>
+</div>
 
 
-            <div class="footer-col">
+<div>
 
-                <h4>
-                    Contact
-                </h4>
+<h3>Contact</h3>
 
-                <ul>
+<a href="tel:+918789851415">+91 87898 51415</a>
 
-                    <li>
-                        <a href="tel:+918789851415">
-                            +91 87898 51415
-                        </a>
-                    </li>
+<a href="https://wa.me/916205896093" target="_blank">WhatsApp</a>
 
-                    <li>
-                        <a href="https://wa.me/916205896093">
-                            WhatsApp
-                        </a>
-                    </li>
+<a href="mailto:adityakumarjha.taxsolutions@gmail.com">
+Email Us
+</a>
 
-                    <li>
-                        <a href="mailto:adityakumarjha.taxsolutions@gmail.com">
-                            Email Us
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="footer-bottom">
+</div>
 
-            © 2026 A.S. & ASSOCIATES. All Rights Reserved.
 
-        </div>
+<div class="footer-bottom">
 
-    </div>
+© 2026 A.S. & ASSOCIATES. All Rights Reserved.
+
+</div>
+
+</div>
 
 </footer>
 
 
 <!-- FLOATING BUTTONS -->
 
-<div class="floating">
+<div class="float">
 
-    <a
-        href="https://wa.me/916205896093"
-        class="float-btn whatsapp"
-        aria-label="WhatsApp"
-    >
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+<a class="whatsapp"
+href="https://wa.me/916205896093"
+target="_blank"
+aria-label="WhatsApp">
+WA
+</a>
 
-
-    <a
-        href="tel:+918789851415"
-        class="float-btn call"
-        aria-label="Call"
-    >
-        <i class="fa-solid fa-phone"></i>
-    </a>
-
-</div>
-
-
-<!-- CONTACT MODAL -->
-
-<div class="modal" id="contactModal">
-
-    <div class="modal-content">
-
-        <button
-            class="modal-close"
-            onclick="closeContactModal()"
-        >
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-        <h2>
-            Contact A.S. & Associates
-        </h2>
-
-        <p>
-            Choose your preferred way to connect with us.
-        </p>
-
-
-        <div class="contact-option">
-
-            <div>
-                <strong>WhatsApp</strong>
-                <span>
-                    +91 62058 96093
-                </span>
-            </div>
-
-            <div class="actions">
-
-                <a
-                    class="action wa"
-                    href="https://wa.me/916205896093"
-                >
-                    Chat
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="contact-option">
-
-            <div>
-                <strong>Phone</strong>
-                <span>
-                    +91 87898 51415
-                </span>
-            </div>
-
-            <div class="actions">
-
-                <a
-                    class="action tel"
-                    href="tel:+918789851415"
-                >
-                    Call
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="contact-option">
-
-            <div>
-                <strong>Email</strong>
-                <span>
-                    Contact us by email
-                </span>
-            </div>
-
-            <div class="actions">
-
-                <a
-                    class="action tel"
-                    href="mailto:adityakumarjha.taxsolutions@gmail.com"
-                >
-                    Email
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
+<a class="call"
+href="tel:+918789851415"
+aria-label="Call">
+☎
+</a>
 
 </div>
 
 
 <script>
 
-/* MOBILE DRAWER */
+function toggleMenu(){
 
-function openDrawer(){
-
-    document.getElementById("drawer")
-        .classList.add("active");
-
-    document.getElementById("overlay")
-        .classList.add("active");
-
-}
-
-function closeDrawer(){
-
-    document.getElementById("drawer")
-        .classList.remove("active");
-
-    document.getElementById("overlay")
-        .classList.remove("active");
+    document.getElementById("menu").classList.toggle("show");
 
 }
 
 
-/* CONTACT MODAL */
-
-function openContactModal(){
-
-    document.getElementById("contactModal")
-        .classList.add("active");
-
-}
-
-function closeContactModal(){
-
-    document.getElementById("contactModal")
-        .classList.remove("active");
-
-}
-
-
-document
-.getElementById("contactModal")
-.addEventListener("click",function(e){
-
-    if(e.target === this){
-
-        closeContactModal();
-
-    }
-
-});
-
-
-/* SERVICE SEARCH */
-
-const searchInput =
-document.getElementById("serviceSearch");
-
-searchInput.addEventListener("input",function(){
-
-    const value =
-        this.value.toLowerCase().trim();
-
-    const services =
-        document.querySelectorAll(".service");
-
-    services.forEach(function(card){
-
-        const text =
-            card.innerText.toLowerCase();
-
-        if(text.includes(value)){
-
-            card.style.display = "";
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-});
-
-
-/* CONTACT FORM */
-
-document
-.getElementById("contactForm")
-.addEventListener("submit",function(e){
+function sendRequest(e){
 
     e.preventDefault();
 
     const name =
         document.getElementById("name").value.trim();
 
-    const phone =
-        document.getElementById("phone").value.trim();
+    const mobile =
+        document.getElementById("mobile").value.trim();
 
     const service =
         document.getElementById("service").value;
 
+    const requirement =
+        document.getElementById("requirement").value.trim();
+
+
     const message =
-        document.getElementById("message").value.trim();
+`NEW SERVICE REQUEST
+
+A.S. & ASSOCIATES
+Tax & Accounting Solutions
+
+Name: ${name}
+
+Mobile: ${mobile}
+
+Service: ${service}
+
+Requirement:
+${requirement}`;
 
 
-    const whatsappMessage =
-        "Hello A.S. & Associates,%0A%0A" +
-        "Name: " + encodeURIComponent(name) +
-        "%0APhone: " + encodeURIComponent(phone) +
-        "%0AService: " + encodeURIComponent(service) +
-        "%0AMessage: " + encodeURIComponent(message);
-
-
-    const url =
+    const whatsappURL =
         "https://wa.me/916205896093?text=" +
-        whatsappMessage;
+        encodeURIComponent(message);
 
 
-    window.open(url,"_blank");
-
-});
+    document.getElementById("thanks").style.display="block";
 
 
-/* CLOSE MODAL WITH ESCAPE */
+    window.open(whatsappURL,"_blank");
 
-document.addEventListener("keydown",function(e){
 
-    if(e.key === "Escape"){
+    e.target.reset();
 
-        closeContactModal();
-        closeDrawer();
-
-    }
-
-});
+}
 
 </script>
 
