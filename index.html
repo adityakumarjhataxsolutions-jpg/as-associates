@@ -400,6 +400,98 @@ html,body{margin:0;padding:0;background:#02060b!important;}
   #welcomeScreen .orbit-right{right:-18px!important;}
 }
 </style>
+
+<style id="cinematic-welcome-final">
+/* CINEMATIC WELCOME — no card/box, line-by-line reveal */
+#welcomeScreen{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(232,191,93,.12),transparent 20%),
+    radial-gradient(ellipse at 50% 100%,rgba(211,160,55,.15),transparent 32%),
+    linear-gradient(120deg,#010409 0%,#07131d 48%,#010307 100%)!important;
+}
+#welcomeScreen::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-30%!important;
+  background:linear-gradient(105deg,transparent 35%,rgba(239,200,105,.10) 48%,transparent 59%)!important;
+  transform:translateX(-35%)!important;
+  animation:cinematicLightSweep 2.8s ease-out .15s forwards!important;
+}
+#welcomeScreen::after{
+  width:min(76vw,760px)!important;
+  height:min(76vw,760px)!important;
+  border:1px solid rgba(231,190,89,.10)!important;
+  box-shadow:0 0 110px rgba(226,181,72,.08),inset 0 0 100px rgba(226,181,72,.025)!important;
+  animation:cinematicHalo 4s ease-in-out infinite!important;
+}
+#welcomeScreen .welcome-stage{
+  width:100%!important;height:100%!important;perspective:none!important;
+}
+#welcomeScreen .welcome-board{
+  width:min(94vw,1000px)!important;
+  padding:30px 15px 38px!important;
+  border:0!important;border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  overflow:visible!important;
+  animation:none!important;
+}
+#welcomeScreen .welcome-board::before,
+#welcomeScreen .welcome-board::after{display:none!important;content:none!important;}
+#welcomeScreen .welcome-small{display:none!important;}
+#welcomeScreen .welcome-word{
+  margin:0 auto!important;
+  font:500 clamp(31px,6vw,68px)/1 Georgia,'Times New Roman',serif!important;
+  letter-spacing:clamp(4px,1vw,10px)!important;
+  color:#f0d58e!important;
+  text-shadow:0 0 25px rgba(238,198,101,.25),0 12px 35px rgba(0,0,0,.75)!important;
+  opacity:0!important;
+  transform:none!important;
+  filter:blur(4px)!important;
+  clip-path:inset(0 100% 0 0)!important;
+  animation:cinematicTextReveal 1.25s cubic-bezier(.22,.8,.18,1) .55s forwards!important;
+}
+#welcomeScreen .welcome-word::after{
+  content:"";display:block;width:min(300px,48vw);height:1px;margin:18px auto 0;
+  background:linear-gradient(90deg,transparent,#e7c56b,transparent);
+  box-shadow:0 0 14px rgba(231,197,107,.35);
+}
+#welcomeScreen .welcome-divider,
+#welcomeScreen .welcome-monogram,
+#welcomeScreen .welcome-line{display:none!important;}
+#welcomeScreen .welcome-title{
+  margin-top:30px!important;
+  font:500 clamp(34px,7vw,82px)/1 Georgia,'Times New Roman',serif!important;
+  letter-spacing:clamp(2px,.7vw,8px)!important;
+  white-space:nowrap!important;
+  opacity:0!important;
+  transform:none!important;
+  filter:blur(6px)!important;
+  clip-path:inset(0 100% 0 0)!important;
+  animation:cinematicBrandReveal 1.55s cubic-bezier(.22,.8,.18,1) 1.75s forwards!important;
+}
+#welcomeScreen .welcome-sub{
+  margin-top:22px!important;
+  opacity:0!important;
+  transform:translateY(12px)!important;
+  animation:cinematicSubReveal .8s ease-out 3.15s forwards!important;
+}
+#welcomeScreen .welcome-petal,
+#welcomeScreen .welcome-orbit,
+#welcomeScreen .welcome-aura{display:none!important;}
+@keyframes cinematicLightSweep{0%{transform:translateX(-45%);opacity:0}20%{opacity:1}100%{transform:translateX(45%);opacity:.45}}
+@keyframes cinematicHalo{0%,100%{transform:scale(.94);opacity:.45}50%{transform:scale(1.02);opacity:.8}}
+@keyframes cinematicTextReveal{0%{opacity:0;clip-path:inset(0 100% 0 0);filter:blur(5px);transform:translateX(-18px)}25%{opacity:1}100%{opacity:1;clip-path:inset(0 0 0 0);filter:blur(0);transform:translateX(0)}}
+@keyframes cinematicBrandReveal{0%{opacity:0;clip-path:inset(0 100% 0 0);filter:blur(7px);transform:translateX(25px)}25%{opacity:1}100%{opacity:1;clip-path:inset(0 0 0 0);filter:blur(0);transform:translateX(0)}}
+@keyframes cinematicSubReveal{to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){
+  #welcomeScreen .welcome-word{font-size:clamp(28px,8vw,48px)!important;letter-spacing:3px!important;}
+  #welcomeScreen .welcome-title{font-size:clamp(24px,7vw,42px)!important;letter-spacing:1.5px!important;margin-top:25px!important;}
+  #welcomeScreen .welcome-sub{font-size:7px!important;letter-spacing:2px!important;}
+}
+</style>
+
 </head>
 
 
@@ -430,8 +522,8 @@ html,body{margin:0;padding:0;background:#02060b!important;}
         <div class="welcome-stage">
             <div class="welcome-board-glow" aria-hidden="true"></div>
             <div class="welcome-board">
-                <div class="welcome-small">A WARM WELCOME</div>
-                <div class="welcome-word">WELCOME</div>
+                <div class="welcome-small">WELCOME TO</div>
+                <div class="welcome-word">WELCOME TO</div>
                 <div class="welcome-divider"><span></span><em>🪷</em><span></span></div>
                 <div class="welcome-monogram" aria-hidden="true"><span>A</span><span>S</span></div>
                 <div class="welcome-title">
@@ -2175,7 +2267,7 @@ html,body{margin:0;padding:0;background:#02060b!important;}
         rel="noopener"
         aria-label="WhatsApp">
 
-        W
+        💬
 
     </a>
 
@@ -2185,7 +2277,7 @@ html,body{margin:0;padding:0;background:#02060b!important;}
         href="tel:+916205896093"
         aria-label="Call">
 
-        ☎
+        📞
 
     </a>
 
