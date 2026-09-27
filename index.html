@@ -595,6 +595,39 @@ html,body{background:#02060b!important;}
 #welcomeScreen.hide{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .55s ease,visibility 0s linear .55s!important;}
 </style>
 
+<style id="welcome-letter-premium-final">
+/* ONLY: premium one-by-one WELCOME TO letter reveal */
+#welcomeScreen .cinematic-welcome-to{
+  position:relative;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-weight:500!important;
+  text-shadow:0 0 22px rgba(239,198,103,.16),0 12px 42px rgba(0,0,0,.82)!important;
+}
+#welcomeScreen .cinematic-welcome-to span:not(.space){
+  opacity:0!important;
+  transform:translateY(28px) scale(.82) rotateX(55deg)!important;
+  filter:blur(7px);
+  animation:premiumWelcomeLetter .72s cubic-bezier(.16,.82,.18,1) forwards!important;
+}
+#welcomeScreen .cinematic-welcome-to span:nth-child(1){animation-delay:.42s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(2){animation-delay:.50s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(3){animation-delay:.58s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(4){animation-delay:.66s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(5){animation-delay:.74s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(6){animation-delay:.82s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(7){animation-delay:.90s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(9){animation-delay:1.00s!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(10){animation-delay:1.08s!important}
+#welcomeScreen .cinematic-welcome-to span:not(.space)::after{
+  content:"";position:absolute;inset:8% -2px;pointer-events:none;
+}
+@keyframes premiumWelcomeLetter{
+  0%{opacity:0;transform:translateY(28px) scale(.82) rotateX(55deg);filter:blur(7px);text-shadow:0 0 0 rgba(239,198,103,0)}
+  65%{opacity:1;transform:translateY(-3px) scale(1.035) rotateX(0);filter:blur(0);text-shadow:0 0 30px rgba(239,198,103,.34),0 12px 42px rgba(0,0,0,.82)}
+  100%{opacity:1;transform:translateY(0) scale(1) rotateX(0);filter:blur(0);text-shadow:0 0 18px rgba(239,198,103,.18),0 12px 42px rgba(0,0,0,.82)}
+}
+@media(prefers-reduced-motion:reduce){#welcomeScreen .cinematic-welcome-to span:not(.space){animation:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+</style>
 </head>
 
 
