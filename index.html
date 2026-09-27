@@ -1869,7 +1869,7 @@ function releaseWelcomeOnce(){
     welcomeReleased = true;
     hideWelcomeScreen();
 }
-setTimeout(releaseWelcomeOnce, 8000);
+setTimeout(releaseWelcomeOnce, 6500);
 
 
 /* =========================================================
@@ -6034,6 +6034,109 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   100%{opacity:0;visibility:hidden;pointer-events:none}
 }
 #welcomeScreen.hide{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+<style id="welcome-zoom-interior-final">
+/* FINAL WELCOME POLISH: larger cinematic interior + shorter intro */
+#welcomeScreen{
+  background:
+    radial-gradient(ellipse at 50% 78%,rgba(226,181,76,.18),transparent 22%),
+    radial-gradient(ellipse at 50% 42%,rgba(55,78,91,.16),transparent 38%),
+    linear-gradient(180deg,#02070d 0%,#07111a 48%,#010407 100%) !important;
+}
+#welcomeScreen::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  background:
+    linear-gradient(90deg,transparent 0 14%,rgba(224,183,88,.055) 14.2%,transparent 14.5% 31%,rgba(224,183,88,.035) 31.2%,transparent 31.5% 68.5%,rgba(224,183,88,.035) 68.8%,transparent 69% 85.5%,rgba(224,183,88,.055) 85.8%,transparent 86%),
+    linear-gradient(180deg,transparent 0 70%,rgba(223,181,83,.045) 70.2%,transparent 71%) !important;
+  pointer-events:none !important;
+}
+#welcomeScreen::after{
+  content:"" !important;
+  position:absolute !important;
+  width:72vmin !important;
+  height:72vmin !important;
+  left:50% !important;
+  top:52% !important;
+  transform:translate(-50%,-50%) !important;
+  border-radius:50% !important;
+  background:radial-gradient(circle,rgba(231,193,104,.12) 0%,rgba(231,193,104,.045) 38%,transparent 68%) !important;
+  filter:blur(4px) !important;
+  opacity:1 !important;
+  animation:none !important;
+  pointer-events:none !important;
+}
+#welcomeScreen .scene-two{
+  position:relative !important;
+  isolation:isolate !important;
+  transform:none !important;
+  overflow:hidden !important;
+}
+#welcomeScreen .scene-two::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,transparent 0 12%,rgba(242,204,117,.11) 12.15%,transparent 12.5% 28%,rgba(242,204,117,.045) 28.15%,transparent 28.5% 71.5%,rgba(242,204,117,.045) 71.8%,transparent 72.2% 87.5%,rgba(242,204,117,.11) 87.7%,transparent 88%),
+    linear-gradient(115deg,transparent 0 47%,rgba(235,197,108,.055) 49%,transparent 51%);
+  z-index:-2;
+  pointer-events:none;
+}
+#welcomeScreen .scene-two::after{
+  content:"";
+  position:absolute;
+  width:86vw;
+  height:20vh;
+  left:50%;
+  bottom:-5vh;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse,rgba(231,188,82,.18),transparent 68%);
+  filter:blur(8px);
+  z-index:-1;
+  pointer-events:none;
+}
+#welcomeScreen .brand-reveal-ring{
+  width:min(400px,88vw) !important;
+  height:min(400px,88vw) !important;
+  border:1px solid rgba(239,201,108,.62) !important;
+  background:radial-gradient(circle,rgba(12,19,26,.34),rgba(3,8,13,.12) 62%,transparent 70%) !important;
+  box-shadow:0 0 85px rgba(231,188,82,.17),0 0 180px rgba(231,188,82,.07),inset 0 0 65px rgba(231,188,82,.08) !important;
+}
+#welcomeScreen .brand-reveal-as{
+  font-size:clamp(84px,12vw,112px) !important;
+  letter-spacing:4px !important;
+  text-shadow:0 0 26px rgba(231,197,107,.28),0 3px 22px rgba(0,0,0,.55) !important;
+}
+#welcomeScreen .brand-reveal-name{
+  font-size:clamp(22px,3.2vw,30px) !important;
+  letter-spacing:1.5px !important;
+  text-shadow:0 2px 14px rgba(0,0,0,.6) !important;
+}
+#welcomeScreen .brand-reveal-name small{
+  font-size:10px !important;
+  letter-spacing:2.4px !important;
+}
+#welcomeScreen .scene-two-welcome{
+  top:8% !important;
+  text-shadow:0 0 26px rgba(229,190,96,.32),0 2px 12px rgba(0,0,0,.65) !important;
+}
+/* 6.5-second welcome: visible immediately, then clean fade to dashboard */
+#welcomeScreen{animation:welcomeAutoHideFast 6.5s ease forwards !important;}
+@keyframes welcomeAutoHideFast{
+  0%,86%{opacity:1;visibility:visible;pointer-events:auto}
+  100%{opacity:0;visibility:hidden;pointer-events:none}
+}
+@media(max-width:700px){
+  #welcomeScreen .brand-reveal-ring{width:86vw !important;height:86vw !important;}
+  #welcomeScreen .brand-reveal-as{font-size:24vw !important;}
+  #welcomeScreen .brand-reveal-name{font-size:5.2vw !important;}
+  #welcomeScreen .brand-reveal-name small{font-size:2.1vw !important;letter-spacing:1.5px !important;}
+  #welcomeScreen .scene-two-welcome{top:9% !important;}
+}
+</style>
 </style>
 </body>
 </html>
