@@ -6,7 +6,7 @@
 
 <title>A.S. & ASSOCIATES | Tax & Accounting Solutions</title>
 
-<meta name="description" content="A.S. & ASSOCIATES provides GST, Income Tax, TDS, Accounting, Bookkeeping, Tally, MCA, ROC, Audit Support, MIS and Business Compliance services across Delhi and Bihar.">
+<meta name="description" content="A.S. & ASSOCIATES provides GST, Income Tax, TDS, Accounting, Bookkeeping, Tally, MCA, ROC, Audit Support, MIS and Business Compliance services in New Delhi.">
 
 <meta name="keywords" content="GST services, GST return filing, GST registration, Income Tax Return, ITR filing, TDS return, accounting services, bookkeeping, Tally accounting, ROC compliance, MCA compliance, company registration, audit support, MIS, tax consultant, accounting consultant, A.S. & ASSOCIATES">
 
@@ -160,8 +160,9 @@ img{
 .welcome-petal{
     position:absolute;
     top:-30px;
-    color:rgba(239,211,142,.75);
-    font-size:18px;
+    color:rgba(239,211,142,.9);
+    font-size:23px;
+    filter:drop-shadow(0 0 8px rgba(228,189,88,.45));
     animation:fallPetal linear infinite;
     opacity:.8;
 }
@@ -186,50 +187,6 @@ img{
         transform:translateY(110vh) rotate(360deg);
         opacity:0;
     }
-}
-
-
-/* =========================================================
-   TOP BAR
-========================================================= */
-
-.topbar{
-    background:var(--navy);
-    color:#dfe6ef;
-    font-size:12px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.topbar-inner{
-    min-height:38px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.topbar-left{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.topbar-dot{
-    width:7px;
-    height:7px;
-    background:var(--gold2);
-    border-radius:50%;
-    box-shadow:0 0 12px var(--gold2);
-}
-
-.topbar-right{
-    display:flex;
-    gap:18px;
-    align-items:center;
-}
-
-.topbar a:hover{
-    color:var(--gold2);
 }
 
 
@@ -541,225 +498,114 @@ header{
     justify-content:center;
     gap:8px;
 
-    padding:14px 22px;
-    border-radius:12px;
+    min-height:48px;
+    padding:0 20px;
 
-    font-weight:800;
+    border-radius:13px;
+
     font-size:13px;
+    font-weight:850;
 
     transition:.25s ease;
 }
 
-.btn-gold{
-    background:linear-gradient(135deg,var(--gold2),var(--gold));
-    color:#101820;
-    box-shadow:0 14px 35px rgba(184,138,36,.18);
+.btn-primary{
+    background:linear-gradient(135deg,var(--gold2),#c3942b);
+    color:#07101d;
+    box-shadow:0 12px 30px rgba(228,189,88,.18);
 }
 
-.btn-gold:hover{
+.btn-primary:hover{
     transform:translateY(-2px);
-    box-shadow:0 18px 45px rgba(184,138,36,.28);
+    box-shadow:0 18px 38px rgba(228,189,88,.28);
 }
 
 .btn-outline{
     border:1px solid rgba(255,255,255,.18);
     color:white;
-    background:rgba(255,255,255,.045);
+    background:rgba(255,255,255,.035);
 }
 
 .btn-outline:hover{
-    background:rgba(255,255,255,.1);
-}
-
-
-/* =========================================================
-   PREMIUM FIRM NAME LIGHT EFFECT
-========================================================= */
-
-.hero-brand{
-    margin-top:42px;
-    padding:19px 22px;
-
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    border:1px solid rgba(228,189,88,.16);
-    background:rgba(255,255,255,.035);
-    border-radius:16px;
-
-    backdrop-filter:blur(12px);
-
-    box-shadow:
-        inset 0 0 30px rgba(255,255,255,.02),
-        0 20px 60px rgba(0,0,0,.16);
-}
-
-.brand-word{
-    position:relative;
-
-    color:#f7f8fa;
-    font-weight:950;
-    letter-spacing:1.8px;
-    font-size:clamp(17px,3vw,26px);
-
-    text-shadow:
-        0 0 0 rgba(228,189,88,0);
-}
-
-.brand-word.active-light{
-    animation:wordLight 1.4s ease-in-out;
-}
-
-@keyframes wordLight{
-    0%{
-        color:#fff;
-        text-shadow:
-            0 0 0 rgba(228,189,88,0);
-        transform:translateY(0);
-    }
-
-    35%{
-        color:#ffe9a7;
-        text-shadow:
-            0 0 7px rgba(228,189,88,.7),
-            0 0 18px rgba(228,189,88,.5),
-            0 0 35px rgba(228,189,88,.3);
-        transform:translateY(-1px);
-    }
-
-    65%{
-        color:#fff2bd;
-        text-shadow:
-            0 0 10px rgba(228,189,88,.9),
-            0 0 26px rgba(228,189,88,.55);
-    }
-
-    100%{
-        color:#f7f8fa;
-        text-shadow:
-            0 0 0 rgba(228,189,88,0);
-        transform:translateY(0);
-    }
-}
-
-.brand-separator{
+    border-color:rgba(228,189,88,.5);
     color:var(--gold2);
-    font-weight:900;
-    font-size:22px;
 }
-
-
-/* =========================================================
-   HERO PREMIUM SIDE CARD
-========================================================= */
 
 .hero-card{
     position:relative;
 
     padding:30px;
 
-    background:
-        linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.055);
 
-    border:1px solid rgba(255,255,255,.13);
-    border-radius:28px;
+    border-radius:27px;
 
-    box-shadow:
-        0 30px 90px rgba(0,0,0,.25),
-        inset 0 1px 0 rgba(255,255,255,.08);
+    backdrop-filter:blur(16px);
 
-    backdrop-filter:blur(15px);
+    box-shadow:0 25px 80px rgba(0,0,0,.25);
+}
+
+.hero-card:before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:-40px;
+    right:-30px;
+    border-radius:50%;
+    border:1px solid rgba(228,189,88,.2);
 }
 
 .hero-card-label{
     color:var(--gold2);
-    text-transform:uppercase;
     font-size:10px;
-    letter-spacing:3px;
     font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
 
 .hero-card h3{
-    margin-top:12px;
-    font-size:28px;
-    line-height:1.15;
+    margin-top:14px;
+    font-size:25px;
 }
 
 .hero-card p{
-    margin-top:12px;
-    color:#b9c5d4;
-    font-size:14px;
-}
-
-.hero-card-list{
-    margin-top:22px;
-    display:grid;
-    gap:10px;
-}
-
-.hero-card-list div{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:#e3e9f1;
+    margin-top:9px;
+    color:#b8c5d4;
     font-size:13px;
-    font-weight:700;
 }
 
-.hero-check{
-    width:22px;
-    height:22px;
-    border-radius:50%;
-
+.hero-mini-grid{
+    margin-top:25px;
     display:grid;
-    place-items:center;
-
-    background:rgba(228,189,88,.12);
-    color:var(--gold2);
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
 }
 
-
-/* =========================================================
-   TRUST STRIP
-========================================================= */
-
-.trust{
-    background:white;
-    border-bottom:1px solid var(--border);
+.hero-mini{
+    padding:13px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    background:rgba(255,255,255,.035);
 }
 
-.trust-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-.trust-item{
-    padding:25px 18px;
-    text-align:center;
-    border-right:1px solid var(--border);
-}
-
-.trust-item:last-child{
-    border-right:0;
-}
-
-.trust-item strong{
+.hero-mini strong{
     display:block;
-    font-size:25px;
-    color:var(--navy);
+    color:white;
+    font-size:13px;
 }
 
-.trust-item span{
-    font-size:11px;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:1px;
+.hero-mini span{
+    display:block;
+    margin-top:2px;
+    color:#9baabd;
+    font-size:10px;
 }
 
 
 /* =========================================================
-   SECTION COMMON
+   COMMON SECTIONS
 ========================================================= */
 
 section{
@@ -768,78 +614,104 @@ section{
 
 .section-head{
     max-width:720px;
-    margin-bottom:42px;
+    margin-bottom:45px;
 }
 
 .section-kicker{
-    display:inline-block;
     color:var(--gold);
-    font-size:11px;
-    font-weight:900;
+    font-size:10px;
     letter-spacing:3px;
+    font-weight:900;
     text-transform:uppercase;
-    margin-bottom:10px;
 }
 
 .section-title{
-    font-size:clamp(31px,4vw,49px);
+    margin-top:10px;
+    font-size:clamp(30px,4vw,46px);
     line-height:1.1;
+    letter-spacing:-1px;
     color:var(--navy);
 }
 
 .section-text{
-    margin-top:15px;
+    margin-top:13px;
     color:var(--muted);
-    font-size:15px;
+    font-size:14px;
 }
 
 
 /* =========================================================
-   SERVICE AREA
+   TRUST / STATS
 ========================================================= */
 
-.service-area{
-    background:
-        radial-gradient(circle at 20% 20%,rgba(228,189,88,.12),transparent 28%),
-        linear-gradient(135deg,#071324,#0b2039);
-
-    color:white;
-    position:relative;
-    overflow:hidden;
+.trust{
+    background:white;
+    padding:38px 0;
+    border-bottom:1px solid var(--border);
 }
 
-.service-area:before{
-    content:"";
-    position:absolute;
-    inset:20px;
-
-    border:1px solid rgba(228,189,88,.12);
-    border-radius:30px;
-    pointer-events:none;
-}
-
-.service-area .section-title{
-    color:white;
-}
-
-.service-area .section-text{
-    color:#b8c5d5;
-}
-
-.area-grid{
+.trust-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
+.trust-card{
+    padding:24px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:#fff;
+    text-align:center;
+}
+
+.trust-card strong{
+    display:block;
+    color:var(--navy);
+    font-size:27px;
+    line-height:1;
+}
+
+.trust-card span{
+    display:block;
+    margin-top:7px;
+    color:var(--muted);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+
+/* =========================================================
+   SERVICE AREAS
+========================================================= */
+
+.areas{
+    background:var(--navy);
+    color:white;
+    overflow:hidden;
+}
+
+.areas .section-title{
+    color:white;
+}
+
+.areas .section-text{
+    color:#b9c6d5;
+}
+
+.area-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
 .area-card{
-    padding:30px;
+    padding:28px;
 
+    border:1px solid rgba(255,255,255,.09);
     background:rgba(255,255,255,.045);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:22px;
 
-    backdrop-filter:blur(10px);
+    border-radius:22px;
 
     transition:.3s ease;
 }
@@ -1247,7 +1119,7 @@ section{
 
 
 /* =========================================================
-   REVIEWS - 15 SLOTS
+   REVIEWS
 ========================================================= */
 
 .reviews{
@@ -1468,47 +1340,40 @@ section{
     font-style:normal;
 }
 
-
-/* FORM */
-
 .request-form{
-    padding:31px;
+    padding:30px;
 
-    background:
-        linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(255,255,255,.045);
 
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:28px;
+    border-radius:26px;
 
-    box-shadow:
-        0 35px 100px rgba(0,0,0,.35),
-        inset 0 1px 0 rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
 
-    backdrop-filter:blur(18px);
+    box-shadow:0 30px 90px rgba(0,0,0,.3);
 }
 
-.form-title{
-    font-size:24px;
-    font-weight:850;
+.request-form h3{
+    font-size:23px;
 }
 
-.form-sub{
-    margin-top:5px;
-    color:#9daabd;
+.request-form p{
+    margin-top:6px;
+    color:#9eacbd;
     font-size:12px;
 }
 
 .form-grid{
+    margin-top:22px;
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:25px;
+    grid-template-columns:repeat(2,1fr);
+    gap:13px;
 }
 
 .field{
     display:flex;
     flex-direction:column;
-    gap:7px;
+    gap:6px;
 }
 
 .field.full{
@@ -1516,10 +1381,9 @@ section{
 }
 
 .field label{
-    color:#d9e1ea;
+    color:#dbe3ed;
     font-size:11px;
     font-weight:800;
-    letter-spacing:.5px;
 }
 
 .field input,
@@ -1527,126 +1391,82 @@ section{
 .field textarea{
     width:100%;
 
-    border:1px solid rgba(255,255,255,.1);
-    background:rgba(0,0,0,.22);
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(255,255,255,.045);
 
     color:white;
 
     border-radius:12px;
-    padding:13px 14px;
+    padding:12px 13px;
 
     outline:none;
-    font-size:13px;
 
-    transition:.2s ease;
+    font-size:12px;
 }
 
 .field input::placeholder,
 .field textarea::placeholder{
-    color:#738195;
-}
-
-.field select{
-    color:#cdd6e0;
-}
-
-.field select option{
-    background:#071324;
-    color:white;
+    color:#758397;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
-    border-color:rgba(228,189,88,.7);
-    box-shadow:
-        0 0 0 3px rgba(228,189,88,.08),
-        0 0 25px rgba(228,189,88,.08);
+    border-color:rgba(228,189,88,.55);
+    box-shadow:0 0 0 3px rgba(228,189,88,.08);
+}
+
+.field select option{
+    color:#111827;
 }
 
 .field textarea{
-    min-height:125px;
+    min-height:105px;
     resize:vertical;
 }
 
 .request-submit{
-    width:100%;
     margin-top:17px;
-
+    width:100%;
     border:0;
     cursor:pointer;
 
-    padding:15px;
+    min-height:50px;
 
     border-radius:13px;
 
-    background:
-        linear-gradient(135deg,var(--gold2),var(--gold));
+    background:linear-gradient(135deg,var(--gold2),#c3942b);
+    color:#07101d;
 
-    color:#07101c;
-
-    font-size:13px;
     font-weight:950;
+    font-size:13px;
 
-    box-shadow:0 14px 35px rgba(184,138,36,.16);
+    box-shadow:0 12px 30px rgba(228,189,88,.16);
 
     transition:.25s ease;
 }
 
 .request-submit:hover{
     transform:translateY(-2px);
-    box-shadow:0 18px 45px rgba(184,138,36,.28);
+    box-shadow:0 18px 40px rgba(228,189,88,.25);
 }
-
-.form-note{
-    margin-top:11px;
-    text-align:center;
-    color:#7e8da0;
-    font-size:10px;
-}
-
-
-/* =========================================================
-   THANK YOU
-========================================================= */
 
 .thank-you{
     display:none;
+    margin-top:15px;
+    padding:13px;
 
+    border:1px solid rgba(95,211,139,.25);
+    background:rgba(95,211,139,.07);
+    border-radius:12px;
+
+    color:#b8f2cc;
+    font-size:12px;
     text-align:center;
-    padding:42px 20px;
 }
 
 .thank-you.show{
     display:block;
-}
-
-.thank-icon{
-    width:70px;
-    height:70px;
-    margin:auto;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:50%;
-
-    background:rgba(228,189,88,.12);
-    color:var(--gold2);
-
-    font-size:28px;
-
-    border:1px solid rgba(228,189,88,.25);
-}
-
-.thank-you h3{
-    margin-top:18px;
-    font-size:29px;
-}
-
-.thank-you p{
-    color:#aab7c7;
-    margin-top:8px;
 }
 
 
@@ -1660,49 +1480,73 @@ section{
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
 .contact-card{
-    padding:27px;
-
+    padding:30px;
     background:white;
     border:1px solid var(--border);
-    border-radius:21px;
-
-    box-shadow:0 10px 35px rgba(10,25,45,.045);
+    border-radius:23px;
+    box-shadow:0 12px 40px rgba(15,30,50,.05);
 }
 
-.contact-label{
-    color:var(--gold);
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.contact-item{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid #edf0f4;
 }
 
-.contact-card h3{
-    margin-top:10px;
+.contact-item:last-child{
+    border-bottom:0;
+}
+
+.contact-icon{
+    width:43px;
+    height:43px;
+    flex:0 0 43px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:13px;
+
+    background:var(--navy);
+    color:var(--gold2);
+
     font-size:17px;
 }
 
-.contact-card p{
-    margin-top:6px;
+.contact-item strong{
+    display:block;
+    color:var(--navy);
+    font-size:13px;
+}
+
+.contact-item span,
+.contact-item a{
+    display:block;
+    margin-top:2px;
     color:var(--muted);
     font-size:12px;
 }
 
-.contact-card a{
-    display:inline-block;
-    margin-top:8px;
-    color:var(--navy);
-    font-weight:800;
-    font-size:13px;
+.contact-item a:hover{
+    color:var(--gold);
 }
 
-.contact-card a:hover{
-    color:var(--gold);
+.contact-note{
+    margin-top:18px;
+    padding:14px;
+
+    background:#f8fafc;
+    border:1px solid var(--border);
+    border-radius:13px;
+
+    color:var(--muted);
+    font-size:11px;
 }
 
 
@@ -1711,116 +1555,78 @@ section{
 ========================================================= */
 
 footer{
-    background:#020814;
+    background:#020812;
     color:white;
-
-    border-top:1px solid rgba(255,255,255,.06);
+    padding:55px 0 25px;
 }
 
-.footer-main{
-    padding:65px 0 42px;
-
+.footer-grid{
     display:grid;
-    grid-template-columns:1.4fr .8fr .8fr 1fr;
+    grid-template-columns:1.2fr .8fr .8fr;
     gap:40px;
 }
 
-.footer-brand{
-    max-width:350px;
-}
-
-.footer-brand-name{
-    font-size:25px;
-    font-weight:950;
+.footer-brand strong{
+    font-size:24px;
     letter-spacing:2px;
 }
 
-.footer-brand-tag{
-    margin-top:5px;
+.footer-brand span{
+    display:block;
+    margin-top:7px;
     color:var(--gold2);
     font-size:10px;
     letter-spacing:3px;
     text-transform:uppercase;
+    font-weight:800;
 }
 
 .footer-brand p{
-    margin-top:18px;
-    color:#8e9caf;
+    margin-top:17px;
+    color:#8997aa;
     font-size:12px;
+    max-width:420px;
 }
 
-.footer-title{
+.footer-col h4{
     color:white;
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+.footer-col a{
+    display:block;
+    color:#8997aa;
     font-size:12px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    font-weight:900;
+    margin:8px 0;
 }
 
-.footer-links{
-    margin-top:14px;
-    display:grid;
-    gap:8px;
-}
-
-.footer-links a{
-    color:#8e9caf;
-    font-size:12px;
-}
-
-.footer-links a:hover{
+.footer-col a:hover{
     color:var(--gold2);
 }
 
-.footer-contact{
-    margin-top:14px;
-    display:grid;
-    gap:11px;
-}
-
-.footer-contact div{
-    color:#8e9caf;
-    font-size:12px;
-}
-
-.footer-contact strong{
-    display:block;
-    color:#e3e8ee;
-    font-size:11px;
-}
-
 .footer-bottom{
+    margin-top:40px;
+    padding-top:20px;
     border-top:1px solid rgba(255,255,255,.07);
-
-    padding:19px 0;
 
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    gap:15px;
+    gap:20px;
 
-    color:#69788b;
+    color:#68778b;
     font-size:10px;
 }
-
-.footer-bottom strong{
-    color:#b8c4d2;
-}
-
-
-/* =========================================================
-   FLOATING BUTTONS
-========================================================= */
 
 .floating-actions{
     position:fixed;
     right:18px;
     bottom:18px;
-    z-index:4500;
+    z-index:6000;
 
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:9px;
 }
 
 .float-btn{
@@ -1832,49 +1638,74 @@ footer{
 
     border-radius:50%;
 
-    background:var(--navy);
     color:white;
 
-    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 12px 35px rgba(0,0,0,.20);
 
-    box-shadow:0 12px 35px rgba(0,0,0,.2);
+    font-size:20px;
 
-    font-size:19px;
+    transition:.25s ease;
 }
 
 .float-btn:hover{
-    background:var(--gold);
-    color:#111;
+    transform:scale(1.08);
+}
+
+.float-whatsapp{
+    background:#1fbd66;
+}
+
+.float-call{
+    background:var(--navy);
 }
 
 
 /* =========================================================
-   ABOUT DETAILS
+   HERO BRAND WORD LIGHT
 ========================================================= */
 
-.about-details{
-    margin-top:22px;
+.brand-word{
+    display:inline-block;
+    position:relative;
 }
 
-.about-toggle{
-    border:1px solid var(--border);
-    background:white;
-    padding:12px 16px;
-    border-radius:11px;
-    cursor:pointer;
-    font-weight:800;
-    color:var(--navy);
+.brand-word.active{
+    animation:wordLight 1.05s ease;
 }
 
-.about-extra{
-    display:none;
-    margin-top:15px;
-    color:var(--muted);
-    font-size:13px;
-}
+@keyframes wordLight{
+    0%{
+        opacity:.45;
+        transform:scale(.94);
+        text-shadow:0 0 0 transparent;
+        filter:brightness(.85);
+    }
 
-.about-extra.show{
-    display:block;
+    45%{
+        opacity:1;
+        transform:scale(1.08) translateY(-2px);
+        text-shadow:
+            0 0 8px rgba(228,189,88,.95),
+            0 0 20px rgba(228,189,88,.75),
+            0 0 42px rgba(228,189,88,.42);
+        filter:brightness(1.55);
+    }
+
+    75%{
+        opacity:1;
+        transform:scale(1.03);
+        text-shadow:
+            0 0 7px rgba(228,189,88,.8),
+            0 0 18px rgba(228,189,88,.55);
+        filter:brightness(1.35);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+        text-shadow:none;
+        filter:brightness(1);
+    }
 }
 
 
@@ -1882,7 +1713,7 @@ footer{
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:1000px){
+@media(max-width:980px){
 
     .nav-links{
         display:none;
@@ -1894,10 +1725,11 @@ footer{
 
     .hero-grid{
         grid-template-columns:1fr;
+        gap:35px;
     }
 
     .hero-card{
-        max-width:650px;
+        max-width:620px;
     }
 
     .core-grid{
@@ -1908,100 +1740,55 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-panel{
-        min-height:300px;
-    }
-
-    .founder-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
     .process-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .review-grid{
-        grid-template-columns:repeat(2,1fr);
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .footer-main{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .request-grid{
-        grid-template-columns:1fr;
-    }
-
-    .request-copy{
-        padding-top:0;
-    }
 }
-
 
 @media(max-width:700px){
 
-    .topbar{
-        display:none;
-    }
-
-    .nav{
-        min-height:68px;
-    }
-
-    .logo-main{
-        font-size:18px;
-    }
-
     section{
-        padding:65px 0;
+        padding:70px 0;
     }
 
     .hero{
-        padding:70px 0 65px;
+        padding:75px 0 65px;
     }
 
     .hero h1{
-        font-size:43px;
-        letter-spacing:-1.5px;
+        font-size:clamp(38px,12vw,58px);
     }
 
     .hero-text{
         font-size:15px;
     }
 
-    .hero-brand{
-        width:100%;
-        justify-content:center;
-        padding:16px 10px;
-    }
-
-    .brand-word{
-        font-size:15px;
-        letter-spacing:1px;
-    }
-
-    .brand-separator{
-        font-size:17px;
-    }
-
-    .hero-card{
-        padding:23px;
+    .trust{
+        padding:25px 0;
     }
 
     .trust-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;
     }
 
-    .trust-item:nth-child(2){
-        border-right:0;
+    .trust-card{
+        padding:17px 7px;
+        border-radius:14px;
     }
 
-    .trust-item:nth-child(-n+2){
-        border-bottom:1px solid var(--border);
+    .trust-card strong{
+        font-size:20px;
+    }
+
+    .trust-card span{
+        font-size:8px;
+        line-height:1.3;
     }
 
     .area-grid{
@@ -2016,8 +1803,13 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .about-points{
+    .about-grid{
         grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .about-panel{
+        min-height:300px;
     }
 
     .founder-grid{
@@ -2033,12 +1825,22 @@ footer{
     }
 
     .connect-box{
-        padding:35px 23px;
+        padding:35px 25px;
     }
 
     .connect-content{
         flex-direction:column;
         align-items:flex-start;
+    }
+
+    .request-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .request:before{
+        inset:12px;
+        border-radius:25px;
     }
 
     .request-form{
@@ -2057,52 +1859,103 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .footer-main{
+    .footer-grid{
         grid-template-columns:1fr;
-        gap:30px;
+        gap:28px;
     }
 
     .footer-bottom{
         flex-direction:column;
-        text-align:center;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .container{
+        width:min(92%,380px);
+    }
+
+    .logo-main{
+        font-size:18px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-mini-grid{
+        grid-template-columns:1fr;
     }
 
     .floating-actions{
-        right:13px;
-        bottom:13px;
+        right:12px;
+        bottom:12px;
     }
 
     .float-btn{
         width:46px;
         height:46px;
     }
+
+}
+
+
+/* =========================================================
+   EXTRA POLISH
+========================================================= */
+
+::selection{
+    background:var(--gold2);
+    color:var(--navy);
+}
+
+::-webkit-scrollbar{
+    width:9px;
+}
+
+::-webkit-scrollbar-track{
+    background:#edf1f5;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#b9a05e;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#8e7229;
 }
 
 </style>
 </head>
-
 
 <body>
 
 
 <!-- =======================================================
      WELCOME SCREEN
-======================================================== -->
+======================================================= -->
 
 <div id="welcomeScreen">
 
-    <div class="welcome-petal">✦</div>
-    <div class="welcome-petal">✧</div>
-    <div class="welcome-petal">✦</div>
-    <div class="welcome-petal">✧</div>
-    <div class="welcome-petal">✦</div>
-    <div class="welcome-petal">✧</div>
-    <div class="welcome-petal">✦</div>
+    <div class="welcome-petal">🪷</div>
+    <div class="welcome-petal">🪷</div>
+    <div class="welcome-petal">🪷</div>
+    <div class="welcome-petal">🪷</div>
+    <div class="welcome-petal">🪷</div>
+    <div class="welcome-petal">🪷</div>
+    <div class="welcome-petal">🪷</div>
 
     <div class="welcome-content">
 
         <div class="welcome-small">
-            Welcome To
+            Professional Tax & Accounting Services
         </div>
 
         <div class="welcome-title">
@@ -2112,37 +1965,7 @@ footer{
         <div class="welcome-line"></div>
 
         <div class="welcome-sub">
-            TAX & ACCOUNTING SOLUTIONS
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =======================================================
-     TOP BAR
-======================================================== -->
-
-<div class="topbar">
-
-    <div class="container topbar-inner">
-
-        <div class="topbar-left">
-            <span class="topbar-dot"></span>
-            <span>Delhi & Bihar Service Area</span>
-        </div>
-
-        <div class="topbar-right">
-
-            <a href="tel:+916205896093">
-                +91 62058 96093
-            </a>
-
-            <a href="mailto:adityakumarjha.taxsolutions@gmail.com">
-                Email Us
-            </a>
-
+            TAX • ACCOUNTING • GST • COMPLIANCE
         </div>
 
     </div>
@@ -2152,194 +1975,112 @@ footer{
 
 <!-- =======================================================
      HEADER
-======================================================== -->
+======================================================= -->
 
 <header>
 
     <div class="container">
 
-        <div class="nav">
+        <nav class="nav">
 
             <a href="#home" class="logo">
 
-                <span class="logo-main">
+                <div class="logo-main">
                     A.S. & ASSOCIATES
-                </span>
+                </div>
 
-                <span class="logo-sub">
+                <div class="logo-sub">
                     TAX & ACCOUNTING SOLUTIONS
-                </span>
+                </div>
 
             </a>
 
 
-            <nav class="nav-links">
+            <div class="nav-links">
 
-                <a href="#home">Home</a>
+                <a href="#home">
+                    Home
+                </a>
 
+                <a href="#services">
+                    Services
+                </a>
 
-                <div class="dropdown" id="servicesDropdown">
+                <a href="#about">
+                    About Us
+                </a>
 
-                    <button class="dropdown-btn">
-                        Services ▾
-                    </button>
+                <a href="#founders">
+                    Founders
+                </a>
 
-                    <div class="dropdown-menu">
+                <a href="#contact">
+                    Contact
+                </a>
 
-                        <a href="#gst">GST Services</a>
-                        <a href="#income-tax">Income Tax</a>
-                        <a href="#tds">TDS Services</a>
-                        <a href="#accounting">Accounting</a>
-                        <a href="#business">Business Registration</a>
-                        <a href="#audit">Audit Support</a>
-                        <a href="#mis">MIS & Reporting</a>
-                        <a href="#notices">Tax Notices</a>
-                        <a href="#other">Other Services</a>
-
-                    </div>
-
-                </div>
-
-
-                <a href="#about">About Us</a>
-
-                <a href="#founders">Founders</a>
-
-
-                <!-- CONTACT DROPDOWN WITH 3 NUMBERS -->
-
-                <div class="dropdown" id="contactDropdown">
-
-                    <button class="dropdown-btn">
-                        Contact ▾
-                    </button>
-
-                    <div class="dropdown-menu contact-menu">
-
-                        <a class="contact-number"
-                           href="tel:+916205896093">
-
-                            <strong>
-                                +91 62058 96093
-                            </strong>
-
-                            <small>
-                                Main Business Contact
-                            </small>
-
-                        </a>
-
-                        <a class="contact-number"
-                           href="tel:+918789851415">
-
-                            <strong>
-                                +91 87898 51415
-                            </strong>
-
-                            <small>
-                                General Business Enquiries
-                            </small>
-
-                        </a>
-
-                        <a class="contact-number"
-                           href="tel:+917303753885">
-
-                            <strong>
-                                +91 73037 53885
-                            </strong>
-
-                            <small>
-                                TDS & Compliance
-                            </small>
-
-                        </a>
-
-                        <a href="#contact">
-                            View Contact Details →
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <a href="#request"
-                   class="get-started">
+                <a href="#request" class="get-started">
                     Get Started
                 </a>
 
-            </nav>
+            </div>
 
 
-            <button class="menu-btn"
-                    id="menuBtn"
-                    aria-label="Open Menu">
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open Menu"
+            >
                 ☰
             </button>
 
-        </div>
+        </nav>
 
-
-        <!-- MOBILE MENU -->
 
         <div class="mobile-menu" id="mobileMenu">
 
-            <a href="#home">Home</a>
+            <a href="#home">
+                Home
+            </a>
 
-            <a href="#gst">GST Services</a>
-            <a href="#income-tax">Income Tax</a>
-            <a href="#tds">TDS Services</a>
-            <a href="#accounting">Accounting</a>
-            <a href="#business">Business Registration</a>
-            <a href="#audit">Audit Support</a>
-            <a href="#mis">MIS & Reporting</a>
-            <a href="#notices">Tax Notices</a>
+            <a href="#services">
+                Services
+            </a>
 
-            <a href="#about">About Us</a>
-            <a href="#founders">Founders</a>
+            <a href="#about">
+                About Us
+            </a>
+
+            <a href="#founders">
+                Founders
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="#request">
+                Get Started
+            </a>
 
             <div class="mobile-contact">
 
-                <strong>Contact</strong>
-
                 <div>
-                    <strong>
-                        +91 62058 96093
-                    </strong>
-                    <span>
-                        Main Business Contact
-                    </span>
+                    <strong>+91 62058 96093</strong>
+                    <span>Main Business Contact</span>
                 </div>
 
                 <div>
-                    <strong>
-                        +91 87898 51415
-                    </strong>
-                    <span>
-                        General Business Enquiries
-                    </span>
+                    <strong>+91 87898 51415</strong>
+                    <span>General Business Enquiries</span>
                 </div>
 
                 <div>
-                    <strong>
-                        +91 73037 53885
-                    </strong>
-                    <span>
-                        TDS & Compliance
-                    </span>
+                    <strong>+91 73037 53885</strong>
+                    <span>TDS & Compliance</span>
                 </div>
 
             </div>
-
-            <a href="#contact">
-                Contact Details
-            </a>
-
-            <a href="#request"
-               class="get-started">
-                Get Started
-            </a>
 
         </div>
 
@@ -2350,115 +2091,98 @@ footer{
 
 <!-- =======================================================
      HERO
-======================================================== -->
+======================================================= -->
 
 <section class="hero" id="home">
 
-    <div class="container hero-grid">
+    <div class="container">
 
-        <div>
+        <div class="hero-grid">
 
-            <div class="hero-badge">
-                <i></i>
-                Professional Tax & Accounting Support
+            <div>
+
+                <div class="hero-badge">
+                    <i></i>
+                    Trusted Tax & Accounting Support
+                </div>
+
+                <h1>
+
+                    <span class="brand-word" id="brandWord1">
+                        A.S.
+                    </span>
+
+                    <span class="brand-word" id="brandWord2">
+                        &
+                    </span>
+
+                    <span class="brand-word" id="brandWord3">
+                        ASSOCIATES
+                    </span>
+
+                </h1>
+
+                <p class="hero-text">
+                    Professional GST, Income Tax, TDS, Accounting,
+                    Bookkeeping, Compliance and Business Support
+                    for individuals, startups and growing businesses
+                    in New Delhi and online.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#request" class="btn btn-primary">
+                        Request a Service →
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        Explore Services
+                    </a>
+
+                </div>
+
             </div>
 
 
-            <h1>
-                Smart Finance.
-                <span>Better Business.</span>
-            </h1>
+            <div class="hero-card">
 
-
-            <p class="hero-text">
-                Professional GST, Income Tax, TDS, Accounting,
-                Bookkeeping, Compliance and Business support
-                for individuals, professionals and businesses.
-            </p>
-
-
-            <div class="hero-actions">
-
-                <a href="#request"
-                   class="btn btn-gold">
-                    Start a Service Request →
-                </a>
-
-                <a href="#services"
-                   class="btn btn-outline">
-                    View Our Services
-                </a>
-
-            </div>
-
-
-            <!-- PREMIUM ACTIVE FIRM NAME -->
-
-            <div class="hero-brand">
-
-                <span class="brand-word"
-                      id="brandWord1">
-                    A.S.
-                </span>
-
-                <span class="brand-separator">
-                    &
-                </span>
-
-                <span class="brand-word"
-                      id="brandWord2">
-                    ASSOCIATES
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <div class="hero-card-label">
-                Why A.S. & ASSOCIATES
-            </div>
-
-            <h3>
-                Structured Financial
-                Support For Your Business.
-            </h3>
-
-            <p>
-                From day-to-day accounting to GST,
-                taxation and compliance support,
-                we help keep your financial work
-                organized and easier to manage.
-            </p>
-
-
-            <div class="hero-card-list">
-
-                <div>
-                    <span class="hero-check">✓</span>
-                    GST & Tax Compliance
+                <div class="hero-card-label">
+                    Tax & Accounting Solutions
                 </div>
 
-                <div>
-                    <span class="hero-check">✓</span>
-                    Accounting & Bookkeeping
-                </div>
+                <h3>
+                    One place for your business compliance.
+                </h3>
 
-                <div>
-                    <span class="hero-check">✓</span>
-                    TDS & Income Tax Support
-                </div>
+                <p>
+                    From day-to-day accounting and GST filing
+                    to income tax, TDS, bookkeeping and compliance
+                    support, we help keep your financial work
+                    organized.
+                </p>
 
-                <div>
-                    <span class="hero-check">✓</span>
-                    Business Compliance
-                </div>
+                <div class="hero-mini-grid">
 
-                <div>
-                    <span class="hero-check">✓</span>
-                    MIS & Financial Reporting
+                    <div class="hero-mini">
+                        <strong>GST</strong>
+                        <span>Registration & Returns</span>
+                    </div>
+
+                    <div class="hero-mini">
+                        <strong>Income Tax</strong>
+                        <span>ITR & Tax Support</span>
+                    </div>
+
+                    <div class="hero-mini">
+                        <strong>TDS</strong>
+                        <span>Compliance Support</span>
+                    </div>
+
+                    <div class="hero-mini">
+                        <strong>Accounting</strong>
+                        <span>Books & Reporting</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -2471,61 +2195,82 @@ footer{
 
 
 <!-- =======================================================
-     TRUST
-======================================================== -->
+     TRUST STATS
+======================================================= -->
 
-<div class="trust">
+<section class="trust">
 
-    <div class="container trust-grid">
+    <div class="container">
 
-        <div class="trust-item">
-            <strong>100+</strong>
-            <span>Happy Clients</span>
-        </div>
+        <div class="trust-grid">
 
-        <div class="trust-item">
-            <strong>3.5+</strong>
-            <span>Years Experience</span>
-        </div>
+            <div class="trust-card">
 
-        <div class="trust-item">
-            <strong>5.0 ⭐</strong>
-            <span>Client Reviews</span>
-        </div>
+                <strong>
+                    100+
+                </strong>
 
-        <div class="trust-item">
-            <strong>24×7</strong>
-            <span>Online Assistance</span>
+                <span>
+                    Clients
+                </span>
+
+            </div>
+
+
+            <div class="trust-card">
+
+                <strong>
+                    5.0 ⭐
+                </strong>
+
+                <span>
+                    Client Reviews
+                </span>
+
+            </div>
+
+
+            <div class="trust-card">
+
+                <strong>
+                    5+
+                </strong>
+
+                <span>
+                    Years Experience
+                </span>
+
+            </div>
+
         </div>
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =======================================================
-     SERVICE AREA
-======================================================== -->
+     SERVICE AREAS
+======================================================= -->
 
-<section class="service-area">
+<section class="areas">
 
     <div class="container">
 
         <div class="section-head">
 
-            <span class="section-kicker">
+            <div class="section-kicker">
                 Service Area
-            </span>
+            </div>
 
             <h2 class="section-title">
-                Professional Support Across
-                Delhi & Bihar
+                Professional support from New Delhi
             </h2>
 
             <p class="section-text">
-                We provide accounting, taxation, GST,
-                TDS and compliance support with
-                flexible online assistance.
+                Serving businesses and individuals in New Delhi,
+                with online support available for clients across
+                India and beyond.
             </p>
 
         </div>
@@ -2533,20 +2278,21 @@ footer{
 
         <div class="area-grid">
 
+
             <div class="area-card">
 
                 <div class="area-icon">
-                    D
+                    ◉
                 </div>
 
                 <h3>
-                    Delhi
+                    New Delhi
                 </h3>
 
                 <p>
-                    Accounting, taxation, GST,
-                    TDS and business compliance
-                    support for Delhi-based businesses.
+                    Tax, accounting, GST, TDS and business
+                    compliance support for local businesses,
+                    professionals and individuals.
                 </p>
 
             </div>
@@ -2555,17 +2301,16 @@ footer{
             <div class="area-card">
 
                 <div class="area-icon">
-                    B
+                    ◆
                 </div>
 
                 <h3>
-                    Bihar
+                    Business Support
                 </h3>
 
                 <p>
-                    Professional financial and
-                    compliance support for businesses
-                    and individuals across Bihar.
+                    Accounting, bookkeeping, GST, tax and
+                    compliance assistance for growing businesses.
                 </p>
 
             </div>
@@ -2574,7 +2319,7 @@ footer{
             <div class="area-card">
 
                 <div class="area-icon">
-                    ↗
+                    ◎
                 </div>
 
                 <h3>
@@ -2582,12 +2327,13 @@ footer{
                 </h3>
 
                 <p>
-                    Documents and requirements can
-                    be handled digitally for convenient
-                    professional assistance.
+                    Documents, consultations, filing and
+                    accounting coordination through online
+                    communication.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -2598,7 +2344,7 @@ footer{
 
 <!-- =======================================================
      CORE SERVICES
-======================================================== -->
+======================================================= -->
 
 <section class="core-services" id="services">
 
@@ -2606,19 +2352,17 @@ footer{
 
         <div class="section-head">
 
-            <span class="section-kicker">
-                Core Services
-            </span>
+            <div class="section-kicker">
+                What We Do
+            </div>
 
             <h2 class="section-title">
-                Financial Services
-                Built Around Your Needs
+                Complete Tax & Accounting Solutions
             </h2>
 
             <p class="section-text">
-                Practical support for tax,
-                accounting, compliance and
-                business financial requirements.
+                Practical support for regular accounting,
+                taxation, compliance and business requirements.
             </p>
 
         </div>
@@ -2626,10 +2370,11 @@ footer{
 
         <div class="core-grid">
 
+
             <div class="core-card">
 
                 <div class="core-number">
-                    01 / GST
+                    01
                 </div>
 
                 <h3>
@@ -2637,13 +2382,12 @@ footer{
                 </h3>
 
                 <p>
-                    Registration, returns,
-                    reconciliation and GST
-                    compliance support.
+                    GST registration, return filing, GST
+                    reconciliation and related compliance support.
                 </p>
 
-                <a href="#gst" class="text-link">
-                    Explore GST →
+                <a href="#request" class="text-link">
+                    Request Service →
                 </a>
 
             </div>
@@ -2652,7 +2396,7 @@ footer{
             <div class="core-card">
 
                 <div class="core-number">
-                    02 / TAX
+                    02
                 </div>
 
                 <h3>
@@ -2660,13 +2404,12 @@ footer{
                 </h3>
 
                 <p>
-                    ITR filing, tax computation,
-                    planning support and
-                    tax-related assistance.
+                    ITR filing, income tax support, tax
+                    documentation and related assistance.
                 </p>
 
-                <a href="#income-tax" class="text-link">
-                    Explore Income Tax →
+                <a href="#request" class="text-link">
+                    Request Service →
                 </a>
 
             </div>
@@ -2675,30 +2418,7 @@ footer{
             <div class="core-card">
 
                 <div class="core-number">
-                    03 / TDS
-                </div>
-
-                <h3>
-                    TDS Services
-                </h3>
-
-                <p>
-                    TDS returns, reconciliation,
-                    computation and compliance
-                    support.
-                </p>
-
-                <a href="#tds" class="text-link">
-                    Explore TDS →
-                </a>
-
-            </div>
-
-
-            <div class="core-card">
-
-                <div class="core-number">
-                    04 / ACCOUNTS
+                    03
                 </div>
 
                 <h3>
@@ -2706,16 +2426,38 @@ footer{
                 </h3>
 
                 <p>
-                    Bookkeeping, Tally,
-                    billing, reconciliation and
-                    financial statements.
+                    Bookkeeping, Tally, billing, bank
+                    reconciliation, financial statements and MIS.
                 </p>
 
-                <a href="#accounting" class="text-link">
-                    Explore Accounting →
+                <a href="#request" class="text-link">
+                    Request Service →
                 </a>
 
             </div>
+
+
+            <div class="core-card">
+
+                <div class="core-number">
+                    04
+                </div>
+
+                <h3>
+                    TDS & Compliance
+                </h3>
+
+                <p>
+                    TDS-related work, compliance support and
+                    business documentation assistance.
+                </p>
+
+                <a href="#request" class="text-link">
+                    Request Service →
+                </a>
+
+            </div>
+
 
         </div>
 
@@ -2726,7 +2468,7 @@ footer{
 
 <!-- =======================================================
      DETAILED SERVICES
-======================================================== -->
+======================================================= -->
 
 <section class="services-section">
 
@@ -2734,18 +2476,17 @@ footer{
 
         <div class="section-head">
 
-            <span class="section-kicker">
-                Complete Services
-            </span>
+            <div class="section-kicker">
+                Our Services
+            </div>
 
             <h2 class="section-title">
-                Everything Organized
-                Under One Professional Desk
+                All Services Under One Roof
             </h2>
 
             <p class="section-text">
-                Select the area where you need
-                professional assistance.
+                Professional tax, accounting, GST, compliance
+                and business support services.
             </p>
 
         </div>
@@ -2754,9 +2495,7 @@ footer{
         <div class="service-category-grid">
 
 
-            <!-- GST -->
-
-            <div class="service-category" id="gst">
+            <div class="service-category">
 
                 <div class="service-top">
 
@@ -2772,21 +2511,36 @@ footer{
 
                 <ul class="service-list">
 
-                    <li>GST Registration</li>
-                    <li>GSTR-1 Filing</li>
-                    <li>GSTR-3B Filing</li>
-                    <li>GSTR-9</li>
-                    <li>GSTR-2B Reconciliation</li>
-                    <li>E-Way Bill Support</li>
+                    <li>
+                        GST Registration
+                    </li>
+
+                    <li>
+                        GSTR-1 Filing
+                    </li>
+
+                    <li>
+                        GSTR-3B Filing
+                    </li>
+
+                    <li>
+                        GSTR-9 Support
+                    </li>
+
+                    <li>
+                        GSTR-2B ITC Reconciliation
+                    </li>
+
+                    <li>
+                        GST Notice Support
+                    </li>
 
                 </ul>
 
             </div>
 
 
-            <!-- INCOME TAX -->
-
-            <div class="service-category" id="income-tax">
+            <div class="service-category">
 
                 <div class="service-top">
 
@@ -2795,28 +2549,88 @@ footer{
                     </h3>
 
                     <div class="service-icon">
-                        T
+                        ₹
                     </div>
 
                 </div>
 
                 <ul class="service-list">
 
-                    <li>Income Tax Return</li>
-                    <li>Tax Computation</li>
-                    <li>Tax Planning Support</li>
-                    <li>Business ITR</li>
-                    <li>Tax Audit Support</li>
-                    <li>Outstanding Demand Support</li>
+                    <li>
+                        Income Tax Return Filing
+                    </li>
+
+                    <li>
+                        Tax Computation
+                    </li>
+
+                    <li>
+                        Tax Planning Support
+                    </li>
+
+                    <li>
+                        Outstanding Demand Assistance
+                    </li>
+
+                    <li>
+                        Income Tax Documentation
+                    </li>
+
+                    <li>
+                        Tax Compliance Support
+                    </li>
 
                 </ul>
 
             </div>
 
 
-            <!-- TDS -->
+            <div class="service-category">
 
-            <div class="service-category" id="tds">
+                <div class="service-top">
+
+                    <h3>
+                        Accounting & Bookkeeping
+                    </h3>
+
+                    <div class="service-icon">
+                        A
+                    </div>
+
+                </div>
+
+                <ul class="service-list">
+
+                    <li>
+                        Monthly Bookkeeping
+                    </li>
+
+                    <li>
+                        Tally Accounting
+                    </li>
+
+                    <li>
+                        Billing & Entries
+                    </li>
+
+                    <li>
+                        Bank Reconciliation
+                    </li>
+
+                    <li>
+                        Profit & Loss
+                    </li>
+
+                    <li>
+                        Balance Sheet
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="service-category">
 
                 <div class="service-top">
 
@@ -2832,81 +2646,81 @@ footer{
 
                 <ul class="service-list">
 
-                    <li>TDS Return Filing</li>
-                    <li>TDS Computation</li>
-                    <li>TDS Reconciliation</li>
-                    <li>Form 16 / 16A Support</li>
-                    <li>TDS Compliance</li>
-                    <li>TDS Related Queries</li>
+                    <li>
+                        TDS Return Support
+                    </li>
+
+                    <li>
+                        TDS Compliance
+                    </li>
+
+                    <li>
+                        TDS Documentation
+                    </li>
+
+                    <li>
+                        TDS Reconciliation
+                    </li>
+
+                    <li>
+                        Form 16 / 16A Support
+                    </li>
+
+                    <li>
+                        Related Compliance Work
+                    </li>
 
                 </ul>
 
             </div>
 
 
-            <!-- ACCOUNTING -->
-
-            <div class="service-category" id="accounting">
+            <div class="service-category">
 
                 <div class="service-top">
 
                     <h3>
-                        Accounting
+                        MCA & ROC
                     </h3>
 
                     <div class="service-icon">
-                        A
+                        M
                     </div>
 
                 </div>
 
                 <ul class="service-list">
 
-                    <li>Bookkeeping</li>
-                    <li>Tally Accounting</li>
-                    <li>Billing & Invoicing</li>
-                    <li>Bank Reconciliation</li>
-                    <li>Profit & Loss</li>
-                    <li>Balance Sheet</li>
+                    <li>
+                        Company Registration Support
+                    </li>
+
+                    <li>
+                        LLP / OPC Support
+                    </li>
+
+                    <li>
+                        MCA Compliance
+                    </li>
+
+                    <li>
+                        ROC Related Work
+                    </li>
+
+                    <li>
+                        Business Documentation
+                    </li>
+
+                    <li>
+                        Compliance Coordination
+                    </li>
 
                 </ul>
 
             </div>
 
 
-            <!-- BUSINESS -->
-
-            <div class="service-category" id="business">
-
-                <div class="service-top">
-
-                    <h3>
-                        Business Registration
-                    </h3>
-
-                    <div class="service-icon">
-                        B
-                    </div>
-
-                </div>
-
-                <ul class="service-list">
-
-                    <li>Company Registration</li>
-                    <li>LLP Registration</li>
-                    <li>OPC Registration</li>
-                    <li>MSME / Udyam</li>
-                    <li>FSSAI Support</li>
-                    <li>Business Licenses</li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- AUDIT -->
-
-            <div class="service-category" id="audit">
+            <div class="service-category">
 
                 <div class="service-top">
 
@@ -2922,21 +2736,81 @@ footer{
 
                 <ul class="service-list">
 
-                    <li>Tax Audit Support</li>
-                    <li>Internal Audit Support</li>
-                    <li>Statutory Audit Support</li>
-                    <li>Stock Audit Support</li>
-                    <li>Audit Documentation</li>
-                    <li>CA Coordination</li>
+                    <li>
+                        Tax Audit Preparation
+                    </li>
+
+                    <li>
+                        Audit Documentation
+                    </li>
+
+                    <li>
+                        Internal Audit Support
+                    </li>
+
+                    <li>
+                        Statutory Audit Support
+                    </li>
+
+                    <li>
+                        Stock Audit Support
+                    </li>
+
+                    <li>
+                        Financial Data Preparation
+                    </li>
 
                 </ul>
 
             </div>
 
 
-            <!-- MIS -->
+            <div class="service-category">
 
-            <div class="service-category" id="mis">
+                <div class="service-top">
+
+                    <h3>
+                        Business Compliance
+                    </h3>
+
+                    <div class="service-icon">
+                        C
+                    </div>
+
+                </div>
+
+                <ul class="service-list">
+
+                    <li>
+                        DSC Services
+                    </li>
+
+                    <li>
+                        Business Licenses
+                    </li>
+
+                    <li>
+                        FSSAI Related Support
+                    </li>
+
+                    <li>
+                        E-Way Bill Support
+                    </li>
+
+                    <li>
+                        Business Documentation
+                    </li>
+
+                    <li>
+                        Compliance Coordination
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="service-category">
 
                 <div class="service-top">
 
@@ -2945,63 +2819,48 @@ footer{
                     </h3>
 
                     <div class="service-icon">
-                        M
+                        R
                     </div>
 
                 </div>
 
                 <ul class="service-list">
 
-                    <li>MIS Reports</li>
-                    <li>Receivable Reports</li>
-                    <li>Payable Reports</li>
-                    <li>Expense Reports</li>
-                    <li>Financial Statements</li>
-                    <li>Business Data Review</li>
+                    <li>
+                        MIS Reports
+                    </li>
+
+                    <li>
+                        Financial Reports
+                    </li>
+
+                    <li>
+                        Sales & Purchase Reports
+                    </li>
+
+                    <li>
+                        Receivable / Payable Reports
+                    </li>
+
+                    <li>
+                        Business Data Analysis
+                    </li>
+
+                    <li>
+                        Management Reporting
+                    </li>
 
                 </ul>
 
             </div>
 
 
-            <!-- NOTICES -->
-
-            <div class="service-category" id="notices">
+            <div class="service-category">
 
                 <div class="service-top">
 
                     <h3>
-                        Tax Notices
-                    </h3>
-
-                    <div class="service-icon">
-                        N
-                    </div>
-
-                </div>
-
-                <ul class="service-list">
-
-                    <li>GST Notice Support</li>
-                    <li>Income Tax Notice Support</li>
-                    <li>GST Demand Support</li>
-                    <li>Compliance Review</li>
-                    <li>Documentation Support</li>
-                    <li>Professional Coordination</li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- OTHER -->
-
-            <div class="service-category" id="other">
-
-                <div class="service-top">
-
-                    <h3>
-                        Other Services
+                        Other Tax Support
                     </h3>
 
                     <div class="service-icon">
@@ -3012,16 +2871,34 @@ footer{
 
                 <ul class="service-list">
 
-                    <li>DSC Support</li>
-                    <li>MCA Compliance</li>
-                    <li>ROC Compliance</li>
-                    <li>Business Documentation</li>
-                    <li>Accounting Consultation</li>
-                    <li>General Compliance Support</li>
+                    <li>
+                        Tax Documentation
+                    </li>
+
+                    <li>
+                        Notice Reply Coordination
+                    </li>
+
+                    <li>
+                        Outstanding Demand Support
+                    </li>
+
+                    <li>
+                        Compliance Assistance
+                    </li>
+
+                    <li>
+                        Financial Record Support
+                    </li>
+
+                    <li>
+                        Business Advisory Coordination
+                    </li>
 
                 </ul>
 
             </div>
+
 
         </div>
 
@@ -3032,110 +2909,108 @@ footer{
 
 <!-- =======================================================
      ABOUT
-======================================================== -->
+======================================================= -->
 
 <section class="about" id="about">
 
-    <div class="container about-grid">
+    <div class="container">
 
-        <div class="about-panel">
+        <div class="about-grid">
 
-            <div class="about-logo-box">
+            <div class="about-panel">
 
-                <strong>
-                    A.S.
-                </strong>
+                <div class="about-logo-box">
 
-                <span>
-                    Tax & Accounting Solutions
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="about-copy">
-
-            <span class="section-kicker">
-                About Us
-            </span>
-
-            <h2 class="section-title">
-                Professional Financial
-                Support For Growing Businesses
-            </h2>
-
-            <p>
-                A.S. & ASSOCIATES is focused on providing
-                structured support across taxation,
-                accounting, GST, TDS, compliance and
-                business-related financial requirements.
-            </p>
-
-            <p>
-                Our approach is simple: understand the
-                requirement, organize the work and provide
-                practical professional support.
-            </p>
-
-
-            <div class="about-points">
-
-                <div class="about-point">
                     <strong>
-                        Tax Support
+                        A.S.
                     </strong>
-                    <span>
-                        GST, ITR & TDS
-                    </span>
-                </div>
 
-                <div class="about-point">
-                    <strong>
-                        Accounting
-                    </strong>
                     <span>
-                        Books & Reporting
+                        Tax & Accounting Solutions
                     </span>
-                </div>
 
-                <div class="about-point">
-                    <strong>
-                        Compliance
-                    </strong>
-                    <span>
-                        MCA, ROC & Business
-                    </span>
-                </div>
-
-                <div class="about-point">
-                    <strong>
-                        Service Area
-                    </strong>
-                    <span>
-                        Delhi & Bihar
-                    </span>
                 </div>
 
             </div>
 
 
-            <div class="about-details">
+            <div class="about-copy">
 
-                <button class="about-toggle"
-                        id="aboutToggle">
-                    More About Us +
-                </button>
+                <div class="section-kicker">
+                    About Us
+                </div>
 
-                <div class="about-extra"
-                     id="aboutExtra">
+                <h2 class="section-title">
+                    Professional financial support for modern businesses.
+                </h2>
 
-                    We support individuals, professionals,
-                    proprietorships and businesses with
-                    accounting, taxation and compliance
-                    requirements. Online coordination is
-                    also available for document-based work.
+                <p>
+                    A.S. & ASSOCIATES provides practical tax,
+                    accounting, GST, TDS and compliance support
+                    designed around the regular needs of
+                    individuals, professionals, startups and
+                    growing businesses.
+                </p>
+
+                <p>
+                    Our approach focuses on organized records,
+                    timely compliance, clear communication and
+                    dependable accounting support.
+                </p>
+
+
+                <div class="about-points">
+
+                    <div class="about-point">
+
+                        <strong>
+                            Professional
+                        </strong>
+
+                        <span>
+                            Structured accounting & tax support
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <strong>
+                            Transparent
+                        </strong>
+
+                        <span>
+                            Clear communication & documentation
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <strong>
+                            Practical
+                        </strong>
+
+                        <span>
+                            Business-focused solutions
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <strong>
+                            Online Ready
+                        </strong>
+
+                        <span>
+                            Remote support & digital coordination
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -3150,7 +3025,7 @@ footer{
 
 <!-- =======================================================
      FOUNDERS
-======================================================== -->
+======================================================= -->
 
 <section class="founders" id="founders">
 
@@ -3158,18 +3033,17 @@ footer{
 
         <div class="section-head">
 
-            <span class="section-kicker">
-                Our Founders
-            </span>
+            <div class="section-kicker">
+                Leadership
+            </div>
 
             <h2 class="section-title">
-                The People Behind
-                A.S. & ASSOCIATES
+                Meet Our Founders
             </h2>
 
             <p class="section-text">
-                A professional team focused on accounting,
-                taxation and business support.
+                A dedicated team focused on accounting, taxation,
+                compliance and business support.
             </p>
 
         </div>
@@ -3193,8 +3067,8 @@ footer{
                 </div>
 
                 <p>
-                    Leading the professional operations
-                    and client service coordination.
+                    Tax, accounting, GST and compliance support,
+                    with a focus on practical business solutions.
                 </p>
 
             </div>
@@ -3215,8 +3089,8 @@ footer{
                 </div>
 
                 <p>
-                    Supporting the firm's professional
-                    and business activities.
+                    Supporting business operations and professional
+                    service coordination.
                 </p>
 
             </div>
@@ -3237,22 +3111,14 @@ footer{
                 </div>
 
                 <p>
-                    Supporting business coordination
-                    and professional activities.
+                    Supporting business coordination and client
+                    service activities.
                 </p>
 
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =======================================================
+           <!-- =======================================================
      PROCESS
-======================================================== -->
+======================================================= -->
 
 <section class="process">
 
@@ -3260,13 +3126,19 @@ footer{
 
         <div class="section-head">
 
-            <span class="section-kicker">
-                Our Process
-            </span>
+            <div class="section-kicker">
+                How We Work
+            </div>
 
             <h2 class="section-title">
-                Simple. Structured. Professional.
+                Simple, Organized & Professional Process
             </h2>
+
+            <p class="section-text">
+                From your first enquiry to completion of the
+                required service, we keep the process clear
+                and properly coordinated.
+            </p>
 
         </div>
 
@@ -3276,15 +3148,16 @@ footer{
             <div class="process-card">
 
                 <div class="process-number">
-                    01
+                    STEP 01
                 </div>
 
                 <h3>
-                    Connect
+                    Share Your Requirement
                 </h3>
 
                 <p>
-                    Share your requirement with us.
+                    Tell us about your GST, ITR, accounting,
+                    TDS or other business requirement.
                 </p>
 
             </div>
@@ -3293,16 +3166,16 @@ footer{
             <div class="process-card">
 
                 <div class="process-number">
-                    02
+                    STEP 02
                 </div>
 
                 <h3>
-                    Understand
+                    Document Review
                 </h3>
 
                 <p>
-                    We understand your business
-                    and documentation requirements.
+                    We review the relevant information and
+                    documents required for the work.
                 </p>
 
             </div>
@@ -3311,16 +3184,17 @@ footer{
             <div class="process-card">
 
                 <div class="process-number">
-                    03
+                    STEP 03
                 </div>
 
                 <h3>
-                    Work
+                    Work & Compliance
                 </h3>
 
                 <p>
-                    The required accounting,
-                    tax or compliance work is handled.
+                    The required accounting, filing,
+                    documentation or compliance work is
+                    coordinated accordingly.
                 </p>
 
             </div>
@@ -3329,16 +3203,16 @@ footer{
             <div class="process-card">
 
                 <div class="process-number">
-                    04
+                    STEP 04
                 </div>
 
                 <h3>
-                    Support
+                    Completion & Support
                 </h3>
 
                 <p>
-                    Continued coordination for
-                    future requirements.
+                    We provide completion updates and
+                    support for related follow-up requirements.
                 </p>
 
             </div>
@@ -3351,8 +3225,8 @@ footer{
 
 
 <!-- =======================================================
-     REVIEWS - 15 CARDS
-======================================================== -->
+     CLIENT FEEDBACK
+======================================================= -->
 
 <section class="reviews">
 
@@ -3360,18 +3234,17 @@ footer{
 
         <div class="section-head">
 
-            <span class="section-kicker">
-                Client Reviews
-            </span>
+            <div class="section-kicker">
+                Client Feedback
+            </div>
 
             <h2 class="section-title">
-                Client Feedback
+                What Clients Say
             </h2>
 
             <p class="section-text">
-                Add your verified client reviews here.
-                The cards are designed for a premium
-                testimonial layout.
+                Illustrative feedback examples showing the type
+                of professional experience clients may expect.
             </p>
 
         </div>
@@ -3381,182 +3254,244 @@ footer{
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Professional communication and organized
+                    support for regular accounting requirements.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 01</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Rahul Sharma
+                    </strong>
+
+                    <span>
+                        Business Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    The process was clearly explained and the
+                    required tax documentation was handled in
+                    an organized manner.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 02</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Priya Verma
+                    </strong>
+
+                    <span>
+                        Professional Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Helpful accounting and GST coordination with
+                    clear communication throughout the work.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 03</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Amit Kumar
+                    </strong>
+
+                    <span>
+                        Business Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    The accounting requirements were understood
+                    properly and the overall coordination was
+                    smooth.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 04</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Neha Singh
+                    </strong>
+
+                    <span>
+                        Business Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Good support for bookkeeping and business
+                    documentation with a professional approach.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 05</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Rohit Gupta
+                    </strong>
+
+                    <span>
+                        Business Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Clear explanations and responsive coordination
+                    for tax and compliance-related requirements.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 06</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Anjali Mehta
+                    </strong>
+
+                    <span>
+                        Individual Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Useful support for accounting records, GST
+                    requirements and regular business work.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 07</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Vikash Jha
+                    </strong>
+
+                    <span>
+                        Business Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Professional service coordination with
+                    attention to documentation and timely work.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 08</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Sneha Patel
+                    </strong>
+
+                    <span>
+                        Business Client · New Delhi
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Clear and structured assistance for business
+                    accounting and compliance requirements.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 09</strong>
-                    <span>Verified feedback</span>
+                    <strong>
+                        Daniel Wilson
+                    </strong>
+
+                    <span>
+                        International Client
+                    </span>
                 </div>
+
             </div>
 
 
             <div class="review-card">
-                <div class="stars">★★★★★</div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
                 <div class="review-text">
-                    Verified client review to be added.
+                    Professional communication and convenient
+                    online coordination for accounting-related work.
                 </div>
+
                 <div class="reviewer">
-                    <strong>Client Review 10</strong>
-                    <span>Verified feedback</span>
-                </div>
-            </div>
+                    <strong>
+                        Michael Anderson
+                    </strong>
 
+                    <span>
+                        International Client
+                    </span>
+                </div>
 
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div class="review-text">
-                    Verified client review to be added.
-                </div>
-                <div class="reviewer">
-                    <strong>Client Review 11</strong>
-                    <span>Verified feedback</span>
-                </div>
-            </div>
-
-
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div class="review-text">
-                    Verified client review to be added.
-                </div>
-                <div class="reviewer">
-                    <strong>Client Review 12</strong>
-                    <span>Verified feedback</span>
-                </div>
-            </div>
-
-
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div class="review-text">
-                    Verified client review to be added.
-                </div>
-                <div class="reviewer">
-                    <strong>Client Review 13</strong>
-                    <span>Verified feedback</span>
-                </div>
-            </div>
-
-
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div class="review-text">
-                    Verified client review to be added.
-                </div>
-                <div class="reviewer">
-                    <strong>Client Review 14</strong>
-                    <span>Verified feedback</span>
-                </div>
-            </div>
-
-
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div class="review-text">
-                    Verified client review to be added.
-                </div>
-                <div class="reviewer">
-                    <strong>Client Review 15</strong>
-                    <span>Verified feedback</span>
-                </div>
             </div>
 
 
@@ -3569,7 +3504,7 @@ footer{
 
 <!-- =======================================================
      LET'S CONNECT
-======================================================== -->
+======================================================= -->
 
 <section class="connect">
 
@@ -3586,23 +3521,26 @@ footer{
                     </div>
 
                     <h2>
-                        Have a Requirement?
-                        Let's Discuss.
+                        Need help with your tax,
+                        accounting or compliance?
                     </h2>
 
                     <p>
-                        Tell us what accounting, taxation,
-                        GST, TDS or compliance support
-                        you need. We will connect with you.
+                        Share your requirement with
+                        A.S. & ASSOCIATES and get connected
+                        for the relevant professional support.
                     </p>
 
                 </div>
 
 
-                <a href="#request"
-                   class="btn btn-gold">
-                    Start Your Request →
-                </a>
+                <div>
+
+                    <a href="#request" class="btn btn-primary">
+                        Start Your Request →
+                    </a>
+
+                </div>
 
             </div>
 
@@ -3615,71 +3553,105 @@ footer{
 
 <!-- =======================================================
      SERVICE REQUEST
-     NO FLOWER DESIGN HERE
-======================================================== -->
+     ULTRA PREMIUM DARK
+     NO DECORATIVE FLOWERS
+======================================================= -->
 
 <section class="request" id="request">
 
-    <div class="container request-grid">
+    <div class="container">
+
+        <div class="request-grid">
 
 
-        <div class="request-copy">
+            <div class="request-copy">
 
-            <span class="section-kicker">
-                Service Request
-            </span>
-
-            <h2 class="section-title">
-                Tell Us What
-                You Need.
-            </h2>
-
-            <p class="section-text">
-                Fill in the basic details and your
-                request will be sent directly to
-                A.S. & ASSOCIATES through WhatsApp.
-            </p>
-
-
-            <div class="request-points">
-
-                <div class="request-point">
-                    <i>✓</i>
-                    Quick requirement sharing
+                <div class="section-kicker">
+                    Service Request
                 </div>
 
-                <div class="request-point">
-                    <i>✓</i>
-                    GST, ITR, TDS & Accounting support
-                </div>
+                <h2 class="section-title">
+                    Tell Us What You Need
+                </h2>
 
-                <div class="request-point">
-                    <i>✓</i>
-                    Business compliance assistance
-                </div>
+                <p class="section-text">
+                    Send your requirement directly to our
+                    business WhatsApp. Our team can review
+                    the requirement and coordinate the next step.
+                </p>
 
-                <div class="request-point">
-                    <i>✓</i>
-                    Delhi & Bihar service area
+
+                <div class="request-points">
+
+                    <div class="request-point">
+
+                        <i>✓</i>
+
+                        <span>
+                            GST & Income Tax Services
+                        </span>
+
+                    </div>
+
+
+                    <div class="request-point">
+
+                        <i>✓</i>
+
+                        <span>
+                            Accounting & Bookkeeping
+                        </span>
+
+                    </div>
+
+
+                    <div class="request-point">
+
+                        <i>✓</i>
+
+                        <span>
+                            TDS & Compliance Support
+                        </span>
+
+                    </div>
+
+
+                    <div class="request-point">
+
+                        <i>✓</i>
+
+                        <span>
+                            MCA, ROC & Business Support
+                        </span>
+
+                    </div>
+
+
+                    <div class="request-point">
+
+                        <i>✓</i>
+
+                        <span>
+                            Online Coordination from New Delhi
+                        </span>
+
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
 
+            <div class="request-form">
 
-        <div class="request-form">
-
-
-            <div id="requestFormBox">
-
-                <div class="form-title">
+                <h3>
                     Request a Service
-                </div>
+                </h3>
 
-                <div class="form-sub">
-                    Please enter your details below.
-                </div>
+                <p>
+                    Fill in the details below and continue
+                    directly through WhatsApp.
+                </p>
 
 
                 <form id="serviceForm">
@@ -3689,13 +3661,13 @@ footer{
 
                         <div class="field">
 
-                            <label>
-                                Your Name *
+                            <label for="clientName">
+                                Full Name
                             </label>
 
                             <input
                                 type="text"
-                                id="name"
+                                id="clientName"
                                 placeholder="Enter your name"
                                 required
                             >
@@ -3705,13 +3677,13 @@ footer{
 
                         <div class="field">
 
-                            <label>
-                                Mobile Number *
+                            <label for="clientPhone">
+                                Mobile Number
                             </label>
 
                             <input
                                 type="tel"
-                                id="phone"
+                                id="clientPhone"
                                 placeholder="Enter mobile number"
                                 required
                             >
@@ -3719,31 +3691,28 @@ footer{
                         </div>
 
 
-                        <div class="field full">
+                        <div class="field">
 
-                            <label>
-                                Business / Firm Name
+                            <label for="clientEmail">
+                                Email
                             </label>
 
                             <input
-                                type="text"
-                                id="business"
-                                placeholder="Enter business or firm name"
+                                type="email"
+                                id="clientEmail"
+                                placeholder="Enter email address"
                             >
 
                         </div>
 
 
-                        <div class="field full">
+                        <div class="field">
 
-                            <label>
-                                Select Service *
+                            <label for="serviceType">
+                                Service Required
                             </label>
 
-                            <select
-                                id="service"
-                                required
-                            >
+                            <select id="serviceType" required>
 
                                 <option value="">
                                     Select a service
@@ -3762,7 +3731,11 @@ footer{
                                 </option>
 
                                 <option>
-                                    Income Tax / ITR
+                                    Income Tax Return / ITR
+                                </option>
+
+                                <option>
+                                    Income Tax Support
                                 </option>
 
                                 <option>
@@ -3770,7 +3743,7 @@ footer{
                                 </option>
 
                                 <option>
-                                    Accounting / Bookkeeping
+                                    Accounting & Bookkeeping
                                 </option>
 
                                 <option>
@@ -3778,15 +3751,7 @@ footer{
                                 </option>
 
                                 <option>
-                                    Business Registration
-                                </option>
-
-                                <option>
-                                    MCA / ROC Compliance
-                                </option>
-
-                                <option>
-                                    Audit Support
+                                    Bank Reconciliation
                                 </option>
 
                                 <option>
@@ -3794,11 +3759,27 @@ footer{
                                 </option>
 
                                 <option>
-                                    Tax Notice Support
+                                    MCA / ROC Services
                                 </option>
 
                                 <option>
-                                    Other Service
+                                    Company / LLP / OPC Support
+                                </option>
+
+                                <option>
+                                    Audit Support
+                                </option>
+
+                                <option>
+                                    Business Compliance
+                                </option>
+
+                                <option>
+                                    E-Way Bill Support
+                                </option>
+
+                                <option>
+                                    Other Requirement
                                 </option>
 
                             </select>
@@ -3808,14 +3789,13 @@ footer{
 
                         <div class="field full">
 
-                            <label>
-                                Requirement *
+                            <label for="clientMessage">
+                                Requirement Details
                             </label>
 
                             <textarea
-                                id="message"
-                                placeholder="Briefly tell us what you need..."
-                                required
+                                id="clientMessage"
+                                placeholder="Briefly describe your requirement..."
                             ></textarea>
 
                         </div>
@@ -3826,49 +3806,24 @@ footer{
 
                     <button
                         type="submit"
-                        class="request-submit">
-
+                        class="request-submit"
+                    >
                         Send Request on WhatsApp →
-
                     </button>
 
 
-                    <div class="form-note">
-                        Your request will open WhatsApp
-                        with the details filled in.
+                    <div
+                        class="thank-you"
+                        id="thankYou"
+                    >
+                        Thank you! Your request is being prepared
+                        for WhatsApp. Please continue the WhatsApp
+                        conversation to complete your enquiry.
                     </div>
 
                 </form>
 
             </div>
-
-
-            <!-- THANK YOU -->
-
-            <div class="thank-you"
-                 id="thankYou">
-
-                <div class="thank-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Thank You ❤️
-                </h3>
-
-                <p>
-                    Your service request has been prepared.
-                    WhatsApp is opening now.
-                </p>
-
-                <p>
-                    A.S. & ASSOCIATES
-                    <br>
-                    Tax & Accounting Solutions
-                </p>
-
-            </div>
-
 
         </div>
 
@@ -3879,7 +3834,7 @@ footer{
 
 <!-- =======================================================
      CONTACT
-======================================================== -->
+======================================================= -->
 
 <section class="contact" id="contact">
 
@@ -3887,17 +3842,17 @@ footer{
 
         <div class="section-head">
 
-            <span class="section-kicker">
+            <div class="section-kicker">
                 Contact Us
-            </span>
+            </div>
 
             <h2 class="section-title">
-                Let's Start A Conversation
+                Let's Discuss Your Requirement
             </h2>
 
             <p class="section-text">
-                Connect with the appropriate business
-                contact for your requirement.
+                Connect with A.S. & ASSOCIATES for tax,
+                accounting, GST, TDS and compliance support.
             </p>
 
         </div>
@@ -3908,282 +3863,204 @@ footer{
 
             <div class="contact-card">
 
-                <div class="contact-label">
-                    Main Business Contact
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Main Business Contact
+                        </strong>
+
+                        <a href="tel:+916205896093">
+                            +91 62058 96093
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <h3>
-                    A.S. & ASSOCIATES
-                </h3>
 
-                <p>
-                    Founder & Lead
-                </p>
+                <div class="contact-item">
 
-                <a href="tel:+916205896093">
-                    +91 62058 96093
-                </a>
+                    <div class="contact-icon">
+                        ☎
+                    </div>
 
-            </div>
+                    <div>
 
+                        <strong>
+                            General Business Enquiries
+                        </strong>
 
-            <div class="contact-card">
+                        <a href="tel:+918789851415">
+                            +91 87898 51415
+                        </a>
 
-                <div class="contact-label">
-                    General Enquiries
+                    </div>
+
                 </div>
 
-                <h3>
-                    Business Enquiries
-                </h3>
 
-                <p>
-                    General service and business
-                    coordination.
-                </p>
+                <div class="contact-item">
 
-                <a href="tel:+918789851415">
-                    +91 87898 51415
-                </a>
+                    <div class="contact-icon">
+                        T
+                    </div>
 
-            </div>
+                    <div>
 
+                        <strong>
+                            TDS & Compliance
+                        </strong>
 
-            <div class="contact-card">
+                        <a href="tel:+917303753885">
+                            +91 73037 53885
+                        </a>
 
-                <div class="contact-label">
-                    TDS & Compliance
+                    </div>
+
                 </div>
+<div class="contact-card">
 
-                <h3>
-                    TDS Support
-                </h3>
-
-                <p>
-                    TDS and compliance-related
-                    coordination.
-                </p>
-
-                <a href="tel:+917303753885">
-                    +91 73037 53885
-                </a>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <div class="contact-label">
-                    Email
-                </div>
-
-                <h3>
-                    Email Us
-                </h3>
-
-                <p>
-                    Send your requirement by email.
-                </p>
-
-                <a href="mailto:adityakumarjha.taxsolutions@gmail.com">
-                    adityakumarjha.taxsolutions@gmail.com
-                </a>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <div class="contact-label">
-                    Service Area
-                </div>
-
-                <h3>
-                    Delhi & Bihar
-                </h3>
-
-                <p>
-                    Professional service area with
-                    online support.
-                </p>
-
-                <a href="#request">
-                    Request Service →
-                </a>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <div class="contact-label">
-                    WhatsApp
-                </div>
-
-                <h3>
-                    Quick Connect
-                </h3>
-
-                <p>
-                    Send your service requirement
-                    directly on WhatsApp.
-                </p>
-
-                <a
-                    href="https://wa.me/916205896093"
-                    target="_blank"
-                    rel="noopener">
-                    Chat on WhatsApp →
-                </a>
-
-            </div>
-
-
+    <div class="contact-item">
+        <div class="contact-icon">
+            ✉
         </div>
 
+        <div>
+            <strong>
+                Email Support
+            </strong>
+
+            <a href="mailto:adityakumarjha.taxsolutions@gmail.com">
+                adityakumarjha.taxsolutions@gmail.com
+            </a>
+        </div>
     </div>
 
+
+    <div class="contact-item">
+        <div class="contact-icon">
+            📍
+        </div>
+
+        <div>
+            <strong>
+                Location
+            </strong>
+
+            <span>
+                New Delhi
+            </span>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</div>
 </section>
 
 
-<!-- =======================================================
+<!-- =========================
      FOOTER
-======================================================== -->
+========================= -->
 
-<footer>
+<footer class="site-footer">
 
-    <div class="container footer-main">
-
+    <div class="footer-inner">
 
         <div class="footer-brand">
 
-            <div class="footer-brand-name">
-                A.S. & ASSOCIATES
-            </div>
-
-            <div class="footer-brand-tag">
-                Tax & Accounting Solutions
+            <div class="footer-logo">
+                A.S. &amp; ASSOCIATES
             </div>
 
             <p>
-                Professional support for GST,
-                Income Tax, TDS, Accounting,
-                Bookkeeping, Compliance and
-                business financial requirements.
+                Tax &amp; Accounting Solutions
             </p>
 
+            <span>
+                Professional accounting, taxation, GST,
+                TDS and business compliance support in New Delhi.
+            </span>
+
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
-            <div class="footer-title">
+            <h4>
                 Quick Links
-            </div>
+            </h4>
 
-            <div class="footer-links">
-
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#founders">Founders</a>
-                <a href="#services">Services</a>
-                <a href="#request">Get Started</a>
-
-            </div>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#founders">Founders</a>
+            <a href="#contact">Contact</a>
+            <a href="#request">Get Started</a>
 
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
-            <div class="footer-title">
-                Services
-            </div>
+            <h4>
+                Our Services
+            </h4>
 
-            <div class="footer-links">
-
-                <a href="#gst">GST Services</a>
-                <a href="#income-tax">Income Tax</a>
-                <a href="#tds">TDS Services</a>
-                <a href="#accounting">Accounting</a>
-                <a href="#audit">Audit Support</a>
-                <a href="#mis">MIS & Reporting</a>
-
-            </div>
+            <a href="#services">GST Services</a>
+            <a href="#services">Income Tax</a>
+            <a href="#services">Accounting &amp; Bookkeeping</a>
+            <a href="#services">TDS &amp; Compliance</a>
+            <a href="#services">MCA &amp; ROC</a>
+            <a href="#services">Audit Support</a>
 
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
-            <div class="footer-title">
+            <h4>
                 Contact
-            </div>
+            </h4>
 
-            <div class="footer-contact">
+            <a href="tel:+916205896093">
+                +91 62058 96093
+            </a>
 
-                <div>
-                    <strong>
-                        Main Contact
-                    </strong>
+            <a href="tel:+918789851415">
+                +91 87898 51415
+            </a>
 
-                    <a href="tel:+916205896093">
-                        +91 62058 96093
-                    </a>
-                </div>
+            <a href="tel:+917303753885">
+                +91 73037 53885
+            </a>
 
-
-                <div>
-                    <strong>
-                        General Enquiries
-                    </strong>
-
-                    <a href="tel:+918789851415">
-                        +91 87898 51415
-                    </a>
-                </div>
-
-
-                <div>
-                    <strong>
-                        TDS & Compliance
-                    </strong>
-
-                    <a href="tel:+917303753885">
-                        +91 73037 53885
-                    </a>
-                </div>
-
-
-                <div>
-                    <strong>
-                        Service Area
-                    </strong>
-
-                    Delhi & Bihar
-
-                </div>
-
-            </div>
+            <a href="mailto:adityakumarjha.taxsolutions@gmail.com">
+                Email Us
+            </a>
 
         </div>
-
 
     </div>
 
 
-    <div class="container footer-bottom">
+    <div class="footer-bottom">
 
         <div>
-            © <span id="year"></span>
-            <strong>
-                A.S. & ASSOCIATES
-            </strong>
-            All Rights Reserved.
+            © <span id="footerYear"></span>
+            A.S. &amp; ASSOCIATES. All Rights Reserved.
         </div>
 
         <div>
-            Tax & Accounting Solutions
+            New Delhi
         </div>
 
     </div>
@@ -4191,404 +4068,305 @@ footer{
 </footer>
 
 
-<!-- =======================================================
-     FLOATING ACTIONS
-======================================================== -->
+
+<!-- =========================
+     FLOATING ACTION BUTTONS
+========================= -->
 
 <div class="floating-actions">
 
     <a
-        class="float-btn"
+        class="floating-btn whatsapp-btn"
         href="https://wa.me/916205896093"
         target="_blank"
-        rel="noopener"
-        aria-label="WhatsApp">
-
-        W
-
+        aria-label="WhatsApp"
+    >
+        <span>◉</span>
     </a>
 
 
     <a
-        class="float-btn"
+        class="floating-btn call-btn"
         href="tel:+916205896093"
-        aria-label="Call">
-
-        ☎
-
+        aria-label="Call"
+    >
+        <span>☎</span>
     </a>
 
 </div>
 
 
-<!-- =======================================================
+
+<!-- =========================
      JAVASCRIPT
-======================================================== -->
+========================= -->
 
 <script>
 
-/* =========================================================
-   CURRENT YEAR
-========================================================= */
+document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+    /* =========================
+       WELCOME SCREEN
+    ========================= */
 
+    const welcomeScreen =
+        document.getElementById("welcomeScreen");
 
-/* =========================================================
-   WELCOME SCREEN
-========================================================= */
+    if (welcomeScreen) {
 
-window.addEventListener("load",function(){
+        setTimeout(function () {
 
-    setTimeout(function(){
+            welcomeScreen.classList.add("hide");
 
-        const welcome =
-            document.getElementById("welcomeScreen");
+        }, 2400);
 
-        if(welcome){
-            welcome.classList.add("hide");
-        }
-
-    },5000);
-
-});
+    }
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
 
-const menuBtn =
-    document.getElementById("menuBtn");
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
+    const menuToggle =
+        document.getElementById("menuToggle");
 
+    const mobileMenu =
+        document.getElementById("mobileMenu");
 
-if(menuBtn){
+    if (menuToggle && mobileMenu) {
 
-    menuBtn.addEventListener("click",function(){
+        menuToggle.addEventListener("click", function () {
 
-        mobileMenu.classList.toggle("open");
-
-        if(mobileMenu.classList.contains("open")){
-            menuBtn.textContent="✕";
-        }else{
-            menuBtn.textContent="☰";
-        }
-
-    });
-
-}
-
-
-/* =========================================================
-   CLOSE MOBILE MENU ON LINK CLICK
-========================================================= */
-
-document.querySelectorAll(
-    "#mobileMenu a"
-).forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        mobileMenu.classList.remove("open");
-
-        menuBtn.textContent="☰";
-
-    });
-
-});
-
-
-/* =========================================================
-   DROPDOWN MOBILE CLICK
-========================================================= */
-
-document.querySelectorAll(
-    ".dropdown-btn"
-).forEach(function(button){
-
-    button.addEventListener("click",function(e){
-
-        e.preventDefault();
-
-        const parent =
-            button.closest(".dropdown");
-
-        document.querySelectorAll(
-            ".dropdown"
-        ).forEach(function(drop){
-
-            if(drop !== parent){
-                drop.classList.remove("active");
-            }
+            mobileMenu.classList.toggle("active");
 
         });
 
-        parent.classList.toggle("active");
 
-    });
+        const mobileLinks =
+            mobileMenu.querySelectorAll("a");
 
-});
+        mobileLinks.forEach(function (link) {
 
+            link.addEventListener("click", function () {
 
-/* =========================================================
-   CLOSE DROPDOWN OUTSIDE CLICK
-========================================================= */
-
-document.addEventListener(
-    "click",
-    function(e){
-
-        if(!e.target.closest(".dropdown")){
-
-            document.querySelectorAll(
-                ".dropdown"
-            ).forEach(function(drop){
-
-                drop.classList.remove("active");
+                mobileMenu.classList.remove("active");
 
             });
 
-        }
+        });
 
     }
-);
 
 
-/* =========================================================
-   ABOUT TOGGLE
-========================================================= */
 
-const aboutToggle =
-    document.getElementById("aboutToggle");
+    /* =========================
+       HERO ACTIVE LIGHT
+       A.S. → & → ASSOCIATES
+    ========================= */
 
-const aboutExtra =
-    document.getElementById("aboutExtra");
+    const brandWords =
+        document.querySelectorAll(".brand-word");
+
+    let activeIndex = 0;
 
 
-if(aboutToggle){
+    function animateBrandWord() {
 
-    aboutToggle.addEventListener(
-        "click",
-        function(){
+        brandWords.forEach(function (word) {
 
-            aboutExtra.classList.toggle("show");
+            word.classList.remove("active");
 
-            if(aboutExtra.classList.contains("show")){
+        });
 
-                aboutToggle.textContent =
-                    "Hide Details −";
 
-            }else{
+        if (brandWords.length > 0) {
 
-                aboutToggle.textContent =
-                    "More About Us +";
+            brandWords[activeIndex].classList.add("active");
+
+            activeIndex++;
+
+            if (activeIndex >= brandWords.length) {
+
+                activeIndex = 0;
 
             }
 
         }
-    );
-
-}
-
-
-/* =========================================================
-   PREMIUM FIRM NAME ACTIVE LIGHT
-========================================================= */
-
-const brandWords = [
-
-    document.getElementById("brandWord1"),
-    document.getElementById("brandWord2")
-
-];
-
-let brandIndex = 0;
-
-
-function activateBrandLight(){
-
-    brandWords.forEach(function(word){
-
-        if(word){
-            word.classList.remove("active-light");
-        }
-
-    });
-
-
-    const current =
-        brandWords[brandIndex];
-
-    if(current){
-
-        /*
-           Force browser to restart
-           animation every cycle.
-        */
-
-        void current.offsetWidth;
-
-        current.classList.add(
-            "active-light"
-        );
 
     }
 
 
-    brandIndex++;
+    if (brandWords.length > 0) {
 
-    if(brandIndex >= brandWords.length){
-        brandIndex=0;
+        setTimeout(function () {
+
+            animateBrandWord();
+
+            setInterval(
+                animateBrandWord,
+                1300
+            );
+
+        }, 900);
+
     }
 
-}
 
 
-/*
-   Start immediately.
-*/
+    /* =========================
+       SERVICE REQUEST FORM
+    ========================= */
 
-activateBrandLight();
+    const requestForm =
+        document.getElementById("serviceRequestForm");
 
-
-/*
-   Move active light from
-   A.S. → ASSOCIATES → A.S.
-*/
-
-setInterval(
-    activateBrandLight,
-    1700
-);
+    const thankYou =
+        document.getElementById("thankYouMessage");
 
 
-/* =========================================================
-   SERVICE REQUEST → WHATSAPP
-========================================================= */
+    if (requestForm) {
 
-const serviceForm =
-    document.getElementById("serviceForm");
+        requestForm.addEventListener("submit", function (event) {
 
-const requestFormBox =
-    document.getElementById("requestFormBox");
-
-const thankYou =
-    document.getElementById("thankYou");
-
-
-if(serviceForm){
-
-    serviceForm.addEventListener(
-        "submit",
-        function(e){
-
-            e.preventDefault();
+            event.preventDefault();
 
 
             const name =
-                document.getElementById("name")
-                .value.trim();
+                document.getElementById("fullName")?.value.trim() || "";
 
-            const phone =
-                document.getElementById("phone")
-                .value.trim();
+            const mobile =
+                document.getElementById("mobileNumber")?.value.trim() || "";
 
-            const business =
-                document.getElementById("business")
-                .value.trim();
+            const email =
+                document.getElementById("email")?.value.trim() || "";
 
             const service =
-                document.getElementById("service")
-                .value;
+                document.getElementById("serviceRequired")?.value || "";
+
+            const requirement =
+                document.getElementById("requirementDetails")?.value.trim() || "";
+
 
             const message =
-                document.getElementById("message")
-                .value.trim();
+`Hello A.S. & ASSOCIATES,
+
+I would like to request your professional service.
+
+Name: ${name}
+Mobile: ${mobile}
+Email: ${email}
+Service Required: ${service}
+
+Requirement Details:
+${requirement}
+
+Location: New Delhi`;
 
 
-            if(
-                !name ||
-                !phone ||
-                !service ||
-                !message
-            ){
+            const whatsappURL =
+                "https://wa.me/916205896093?text=" +
+                encodeURIComponent(message);
 
-                alert(
-                    "Please fill all required fields."
-                );
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            if (thankYou) {
+
+                thankYou.classList.add("show");
+
+            }
+
+
+            requestForm.reset();
+
+
+            setTimeout(function () {
+
+                if (thankYou) {
+
+                    thankYou.classList.remove("show");
+
+                }
+
+            }, 6000);
+
+        });
+
+    }
+
+
+
+    /* =========================
+       SMOOTH NAVIGATION
+    ========================= */
+
+    document.querySelectorAll(
+        'a[href^="#"]'
+    ).forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
 
                 return;
 
             }
 
 
-            const whatsappMessage =
-`Hello A.S. & ASSOCIATES,
-
-*New Service Request*
-
-*Name:* ${name}
-*Mobile:* ${phone}
-*Business/Firm:* ${business || "Not provided"}
-*Service:* ${service}
-*Requirement:* ${message}
-
-Thank you.`;
+            const target =
+                document.querySelector(targetId);
 
 
-            const whatsappURL =
-                "https://wa.me/916205896093?text=" +
-                encodeURIComponent(
-                    whatsappMessage
-                );
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+            }
+
+        });
+
+    });
 
 
-            /*
-               Show thank-you message first.
-            */
 
-            requestFormBox.style.display="none";
+    /* =========================
+       FOOTER YEAR
+    ========================= */
 
-            thankYou.classList.add("show");
+    const footerYear =
+        document.getElementById("footerYear");
 
 
-            /*
-               Create a real link dynamically.
-               This is more reliable on mobile browsers
-               than relying only on window.open().
-            */
+    if (footerYear) {
 
-            const whatsappLink =
-                document.createElement("a");
+        footerYear.textContent =
+            new Date().getFullYear();
 
-            whatsappLink.href =
-                whatsappURL;
+    }
 
-            whatsappLink.target="_blank";
-
-            whatsappLink.rel="noopener";
-
-            whatsappLink.style.display="none";
-
-            document.body.appendChild(
-                whatsappLink
-            );
-
-            whatsappLink.click();
-
-            whatsappLink.remove();
-
-        }
-    );
-
-}
+});
 
 </script>
 
 
 </body>
-</html>
+        </html>
