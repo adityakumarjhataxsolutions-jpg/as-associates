@@ -2723,6 +2723,154 @@ footer{
     .welcome-line{margin:21px auto 16px;}
 }
 
+
+/* =========================================================
+   WELCOME TRAILER — FOUNDERS REVEAL
+========================================================= */
+.welcome-hindi{
+    display:block;
+    margin-top:8px;
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:2px;
+    color:rgba(239,230,205,.55);
+}
+.founder-intro{
+    margin:26px auto 0;
+    width:min(720px,90vw);
+    opacity:0;
+    transform:translateY(14px);
+    animation:founderReveal 1.1s 2.05s cubic-bezier(.16,1,.3,1) forwards;
+}
+.founder-kicker{
+    font-size:10px;
+    letter-spacing:5px;
+    color:#e2c36d;
+    font-weight:600;
+}
+.founder-hindi{
+    margin-top:6px;
+    font-size:9px;
+    letter-spacing:2px;
+    color:rgba(213,220,230,.48);
+}
+.founder-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+.founder-card-mini{
+    min-width:0;
+    padding:12px 9px 11px;
+    border:1px solid rgba(224,191,102,.13);
+    background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));
+    box-shadow:inset 0 1px rgba(255,255,255,.025),0 8px 30px rgba(0,0,0,.16);
+    backdrop-filter:blur(5px);
+}
+.founder-initial{
+    width:29px;height:29px;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 7px;
+    border:1px solid rgba(226,193,103,.38);
+    border-radius:50%;
+    color:#f0d78b;
+    font-size:9px;
+    letter-spacing:.5px;
+}
+.founder-card-mini strong{
+    display:block;
+    color:#f0eee7;
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:11px;
+    font-weight:500;
+    white-space:nowrap;
+}
+.founder-card-mini small{
+    display:block;
+    margin-top:4px;
+    color:rgba(211,220,232,.48);
+    font-size:8px;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+}
+@keyframes founderReveal{to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){
+    .welcome-hindi{font-size:8px;letter-spacing:1.5px;}
+    .founder-intro{margin-top:20px;}
+    .founder-kicker{font-size:8px;letter-spacing:3.2px;}
+    .founder-hindi{font-size:8px;}
+    .founder-grid{gap:6px;margin-top:12px;}
+    .founder-card-mini{padding:9px 4px;}
+    .founder-initial{width:25px;height:25px;font-size:8px;margin-bottom:5px;}
+    .founder-card-mini strong{font-size:8px;}
+    .founder-card-mini small{font-size:6.5px;letter-spacing:.7px;}
+}
+
+
+/* =========================================================
+   DESKTOP / LANDSCAPE PREMIUM LAYOUT
+========================================================= */
+@media (min-width:1001px){
+    html,body{width:100%;max-width:100%;overflow-x:hidden;}
+    .container{width:min(1180px,calc(100% - 64px));max-width:1180px;margin-inline:auto;}
+    .nav{min-height:82px;}
+    .nav-links{gap:24px;}
+    .hero{padding:92px 0 84px;}
+    .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(360px,.82fr);gap:58px;align-items:center;}
+    .hero h1{font-size:clamp(52px,5vw,76px);line-height:1.03;}
+    .hero-text{max-width:680px;font-size:16px;line-height:1.85;}
+    .hero-brand{max-width:620px;}
+    .hero-card{max-width:none;min-height:420px;}
+    .trust-grid{grid-template-columns:repeat(3,1fr)!important;gap:0!important;}
+    .core-grid{grid-template-columns:repeat(4,1fr);gap:18px;}
+    .service-category-grid{grid-template-columns:repeat(4,1fr);gap:18px;}
+    .about-grid{grid-template-columns:1.05fr .95fr;gap:55px;align-items:center;}
+    .founder-grid{grid-template-columns:repeat(3,1fr);gap:22px;}
+    .process-grid{grid-template-columns:repeat(4,1fr);gap:18px;}
+    .review-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
+    .request-grid{grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center;}
+    .request-form{padding:34px;}
+    .form-grid{grid-template-columns:repeat(2,1fr);}
+    .field.full{grid-column:1 / -1;}
+    .contact-grid{grid-template-columns:repeat(3,1fr);gap:18px;}
+    .footer-main{grid-template-columns:1.35fr 1fr 1fr 1fr;gap:35px;}
+    .area-grid{grid-template-columns:1fr 1fr;gap:24px;}
+    .welcome-content{max-width:1080px;}
+    .founder-grid{max-width:850px;margin-left:auto;margin-right:auto;}
+}
+
+/* Wide desktop gets more cinematic breathing room */
+@media (min-width:1400px){
+    .container{width:min(1240px,calc(100% - 100px));max-width:1240px;}
+    .hero{padding-top:108px;padding-bottom:96px;}
+    .hero-grid{gap:78px;}
+    .hero h1{font-size:78px;}
+    section{padding:96px 0;}
+}
+
+/* Landscape tablets: keep a desktop-like composition without overflow */
+@media (min-width:701px) and (max-width:1000px) and (orientation:landscape){
+    html,body{width:100%;max-width:100%;overflow-x:hidden;}
+    .container{width:calc(100% - 44px);max-width:1100px;margin-inline:auto;}
+    .nav{min-height:74px;}
+    .nav-links{display:flex;gap:14px;font-size:11px;}
+    .menu-btn{display:none;}
+    .hero{padding:72px 0 62px;}
+    .hero-grid{grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;}
+    .hero h1{font-size:clamp(42px,6vw,62px);}
+    .hero-card{max-width:none;}
+    .core-grid{grid-template-columns:repeat(4,1fr);}
+    .service-category-grid{grid-template-columns:repeat(3,1fr);}
+    .about-grid{grid-template-columns:1fr 1fr;gap:28px;}
+    .founder-grid{grid-template-columns:repeat(3,1fr);}
+    .process-grid{grid-template-columns:repeat(4,1fr);}
+    .review-grid{grid-template-columns:repeat(3,1fr);}
+    .request-grid{grid-template-columns:1fr 1fr;gap:30px;}
+    .contact-grid{grid-template-columns:repeat(3,1fr);}
+    .footer-main{grid-template-columns:repeat(4,1fr);}
+}
+
 </style>
 </head>
 
@@ -2754,7 +2902,7 @@ footer{
         </div>
 
         <div class="welcome-small">
-            WELCOME TO
+            WELCOME TO <span class="welcome-hindi">• आपका स्वागत है •</span>
         </div>
 
         <div class="welcome-title">
@@ -2765,6 +2913,28 @@ footer{
 
         <div class="welcome-sub">
             TAX  •  ACCOUNTING  •  COMPLIANCE
+        </div>
+
+        <div class="founder-intro">
+            <div class="founder-kicker">MEET OUR FOUNDERS</div>
+            <div class="founder-hindi">हमारे संस्थापकों से मिलिए</div>
+            <div class="founder-grid">
+                <div class="founder-card-mini">
+                    <span class="founder-initial">AJ</span>
+                    <strong>Aditya Kumar Jha</strong>
+                    <small>Founder &amp; Lead</small>
+                </div>
+                <div class="founder-card-mini">
+                    <span class="founder-initial">SK</span>
+                    <strong>Shatrughan Kumar</strong>
+                    <small>Founder</small>
+                </div>
+                <div class="founder-card-mini">
+                    <span class="founder-initial">SJ</span>
+                    <strong>Shivam Kumar Jha</strong>
+                    <small>Founder</small>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -4543,10 +4713,10 @@ function hideWelcomeScreen(){
 
 // Always release the welcome screen, even if another page resource is slow.
 document.addEventListener("DOMContentLoaded", function(){
-    setTimeout(hideWelcomeScreen, 3500);
+    setTimeout(hideWelcomeScreen, 5200);
 });
 window.addEventListener("load", function(){
-    setTimeout(hideWelcomeScreen, 3500);
+    setTimeout(hideWelcomeScreen, 5200);
 });
 
 
