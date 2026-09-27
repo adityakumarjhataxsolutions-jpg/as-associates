@@ -3768,6 +3768,42 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.08);filter:blur(3px)}
 }
 </style>
+<style id="welcome-scene-reorder-final">
+/* Remove the old first welcome scene. The next scene now carries the welcome. */
+#welcomeScreen .scene-one{display:none!important;animation:none!important;}
+#welcomeScreen .scene-two{
+  animation:welcomeSceneTwoReordered 8.40s ease-in-out forwards!important;
+  display:flex!important;
+}
+#welcomeScreen .scene-three{
+  animation:welcomeSceneThreeReordered 7.80s 7.65s ease-in-out forwards!important;
+}
+.scene-two-welcome{
+  position:absolute;top:9%;left:50%;transform:translateX(-50%);
+  z-index:5;text-align:center;font-family:Georgia,'Times New Roman',serif;
+  color:#ead09a;font-size:clamp(14px,2.1vw,22px);letter-spacing:5px;
+  text-shadow:0 0 22px rgba(229,190,96,.25);white-space:nowrap;
+}
+.scene-two-welcome span{display:block;margin-top:10px;font-family:Georgia,serif;font-size:.52em;letter-spacing:1.8px;color:#d7c39a;}
+@keyframes welcomeSceneTwoReordered{
+  0%{opacity:0;visibility:visible;transform:scale(.93);filter:blur(7px)}
+  14%{opacity:1;transform:scale(1.01);filter:blur(0)}
+  82%{opacity:1;transform:scale(1.01)}
+  100%{opacity:0;visibility:hidden;transform:scale(1.06);filter:blur(3px)}
+}
+@keyframes welcomeSceneThreeReordered{
+  0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.96);filter:blur(5px)}
+  16%{opacity:1;transform:translateY(0) scale(1.04);filter:blur(0)}
+  84%{opacity:1;transform:translateY(0) scale(1.04)}
+  100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.08);filter:blur(3px)}
+}
+@media(max-width:700px){
+  .scene-two-welcome{top:10%;font-size:14px;letter-spacing:3.5px;}
+  .scene-two-welcome span{margin-top:8px;font-size:7px;letter-spacing:1.2px;}
+  #welcomeScreen .scene-two{animation:welcomeSceneTwoReordered 8.40s ease-in-out forwards!important;}
+  #welcomeScreen .scene-three{animation:welcomeSceneThreeReordered 7.80s 7.65s ease-in-out forwards!important;}
+}
+</style>
 </head>
 
 
@@ -3804,8 +3840,9 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
         </div>
     </div>
 
-    <!-- SCENE 2: Brand reveal -->
+    <!-- SCENE 2: Welcome + Brand reveal -->
     <div class="welcome-scene scene-two">
+        <div class="scene-two-welcome">WELCOME TO<span>• आपका स्वागत है •</span></div>
         <div class="brand-reveal-ring">
             <div class="brand-reveal-inner">
                 <div class="brand-reveal-as">AS</div>
@@ -5615,10 +5652,10 @@ function hideWelcomeScreen(){
 
 // Always release the welcome screen, even if another page resource is slow.
 document.addEventListener("DOMContentLoaded", function(){
-    setTimeout(hideWelcomeScreen, 21500);
+    setTimeout(hideWelcomeScreen, 16500);
 });
 window.addEventListener("load", function(){
-    setTimeout(hideWelcomeScreen, 21500);
+    setTimeout(hideWelcomeScreen, 16500);
 });
 
 
