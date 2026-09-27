@@ -142,6 +142,113 @@ html,body{margin:0;padding:0;background:#02060b!important;}
 }
 </style>
 
+
+<style id="welcome-ultimate-fix">
+/* ULTIMATE WELCOME FIX: the actual welcome board is Scene One. */
+#welcomeScreen{
+  display:flex!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  animation:none!important;
+  background:
+    radial-gradient(circle at 50% 48%,rgba(232,191,93,.16),transparent 22%),
+    radial-gradient(circle at 12% 52%,rgba(31,77,108,.16),transparent 32%),
+    radial-gradient(circle at 88% 52%,rgba(31,77,108,.14),transparent 32%),
+    linear-gradient(135deg,#010409 0%,#07131d 48%,#010307 100%)!important;
+}
+#welcomeScreen .scene-one{
+  display:flex!important;
+  opacity:1!important;
+  visibility:visible!important;
+  position:relative!important;
+  width:100%!important;
+  height:100%!important;
+  align-items:center!important;
+  justify-content:center!important;
+  animation:none!important;
+}
+#welcomeScreen .scene-two,#welcomeScreen .scene-three{
+  display:none!important;
+}
+#welcomeScreen .welcome-stage{
+  width:min(96vw,1000px)!important;
+  height:min(84vh,760px)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  position:relative!important;
+  z-index:10!important;
+}
+#welcomeScreen .welcome-board{
+  width:min(88vw,820px)!important;
+  min-height:0!important;
+  padding:42px 24px 34px!important;
+  border:1px solid rgba(239,202,112,.34)!important;
+  border-radius:26px!important;
+  background:linear-gradient(145deg,rgba(10,22,32,.96),rgba(1,6,11,.97))!important;
+  box-shadow:0 30px 90px rgba(0,0,0,.78),0 0 55px rgba(226,180,70,.13),inset 0 1px rgba(255,255,255,.07)!important;
+  opacity:1!important;
+  transform:none!important;
+  animation:welcomeBoardPop .85s cubic-bezier(.2,.85,.2,1) .05s both!important;
+  overflow:hidden!important;
+}
+#welcomeScreen .welcome-small{
+  opacity:1!important;transform:none!important;
+  animation:welcomeSideIn .7s ease .25s both!important;
+  color:#e7c878!important;
+}
+#welcomeScreen .welcome-word{
+  opacity:1!important;
+  transform:none!important;
+  animation:welcomeWordFinal .95s cubic-bezier(.16,.82,.18,1) .45s both!important;
+  color:#f5ecda!important;
+  text-shadow:0 0 30px rgba(239,199,102,.22),0 12px 40px rgba(0,0,0,.8)!important;
+}
+#welcomeScreen .welcome-hindi{
+  opacity:1!important;transform:none!important;
+  animation:welcomeSideInRight .65s ease .85s both!important;
+}
+#welcomeScreen .welcome-divider{
+  opacity:1!important;transform:none!important;
+  animation:dividerIn .7s ease 1.05s both!important;
+}
+#welcomeScreen .welcome-monogram{
+  opacity:1!important;
+  transform:none!important;
+  animation:welcomeLogoFinal .9s cubic-bezier(.16,.82,.18,1) 1.12s both!important;
+}
+#welcomeScreen .welcome-title{
+  opacity:1!important;
+  transform:none!important;
+  animation:firmFinal .95s cubic-bezier(.16,.82,.18,1) 1.48s both!important;
+  white-space:nowrap!important;
+}
+#welcomeScreen .welcome-line{
+  opacity:1!important;transform:none!important;
+  animation:dividerIn .6s ease 2.05s both!important;
+}
+#welcomeScreen .welcome-sub{
+  opacity:1!important;transform:none!important;
+  animation:welcomeSubIn .6s ease 2.15s both!important;
+}
+#welcomeScreen .welcome-orbit{z-index:4!important;}
+@keyframes welcomeBoardPop{from{opacity:0;transform:scale(.82) translateY(25px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes welcomeWordFinal{from{opacity:0;transform:translateX(-100px) rotateY(-28deg) scale(.78);filter:blur(6px)}to{opacity:1;transform:translateX(0) rotateY(0) scale(1);filter:blur(0)}}
+@keyframes welcomeLogoFinal{from{opacity:0;transform:scale(.35) rotate(-70deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes firmFinal{from{opacity:0;transform:translateX(90px) scale(.78);filter:blur(4px)}to{opacity:1;transform:translateX(0) scale(1);filter:blur(0)}}
+@media(max-width:700px){
+  #welcomeScreen .welcome-stage{width:100vw!important;height:82vh!important;}
+  #welcomeScreen .welcome-board{width:90vw!important;padding:34px 12px 28px!important;border-radius:22px!important;}
+  #welcomeScreen .welcome-word{font-size:clamp(48px,14vw,78px)!important;letter-spacing:4px!important;}
+  #welcomeScreen .welcome-monogram{width:80px!important;height:80px!important;margin:9px auto 15px!important;}
+  #welcomeScreen .welcome-monogram span{font-size:31px!important;}
+  #welcomeScreen .welcome-title{font-size:clamp(25px,7.2vw,44px)!important;letter-spacing:1.5px!important;}
+  #welcomeScreen .welcome-sub{font-size:7px!important;letter-spacing:2px!important;}
+  #welcomeScreen .orbit-left,#welcomeScreen .orbit-right{width:86px!important;height:86px!important;margin-top:-43px!important;}
+  #welcomeScreen .orbit-left{left:-20px!important}.welcome-orbit.orbit-right{right:-20px!important;}
+}
+</style>
 </head>
 
 
