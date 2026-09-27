@@ -817,6 +817,82 @@ html,body{background:#02060b!important;}
 @media(prefers-reduced-motion:reduce){#welcomeScreen .cinematic-welcome-to span:not(.space),#welcomeScreen .cinematic-firm{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}}
 </style>
 
+
+<style id="welcome-premium-dark-final">
+/* Premium dark cinematic welcome — final visual layer */
+html,body{background:#000!important;}
+#welcomeScreen{
+  background:
+    radial-gradient(ellipse at 50% 46%,rgba(185,145,48,.055) 0%,transparent 26%),
+    radial-gradient(ellipse at 50% 70%,rgba(20,45,70,.07) 0%,transparent 38%),
+    #000!important;
+}
+#welcomeScreen::before{
+  content:"";position:absolute;inset:-25%;z-index:1;pointer-events:none;
+  background:linear-gradient(108deg,transparent 34%,rgba(235,193,86,.035) 45%,rgba(255,255,255,.075) 50%,rgba(235,193,86,.035) 55%,transparent 66%);
+  transform:translateX(-42%) skewX(-8deg);
+  animation:premiumWelcomeSweep 3.8s cubic-bezier(.2,.7,.2,1) .25s forwards!important;
+}
+#welcomeScreen::after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border:0!important;border-radius:0!important;
+  background:radial-gradient(circle at center,transparent 30%,rgba(0,0,0,.72) 100%);
+  box-shadow:none!important;opacity:1!important;animation:none!important;
+}
+#welcomeScreen .cinematic-bg-glow,
+#welcomeScreen .cinematic-light-line{opacity:.22!important;filter:blur(1px);}
+#welcomeScreen .cinematic-light-line{background:linear-gradient(180deg,transparent,rgba(224,183,72,.22),transparent)!important;box-shadow:0 0 16px rgba(224,183,72,.08)!important;}
+#welcomeScreen .cinematic-welcome{z-index:8!important;transform:translateY(-1vh)!important;}
+#welcomeScreen .cinematic-kicker{display:none!important;}
+#welcomeScreen .cinematic-welcome-to{
+  margin-top:0!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-weight:500!important;
+  letter-spacing:clamp(5px,1.25vw,13px)!important;
+  color:#f7f2e8!important;
+  text-shadow:0 0 10px rgba(255,255,255,.08),0 0 34px rgba(226,183,69,.12),0 18px 55px rgba(0,0,0,.9)!important;
+}
+#welcomeScreen .cinematic-welcome-to span{
+  color:#eee9df!important;
+  text-shadow:0 0 6px rgba(255,255,255,.16),0 0 20px rgba(224,184,72,.18)!important;
+  animation:premiumLetterLight .95s cubic-bezier(.18,.78,.2,1) both!important;
+}
+#welcomeScreen .cinematic-welcome-to span:nth-child(1){animation-delay:.45s!important;color:#f2d27b!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(2){animation-delay:.60s!important;color:#f5eee1!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(3){animation-delay:.75s!important;color:#e8c36b!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(4){animation-delay:.90s!important;color:#f3e7cf!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(5){animation-delay:1.05s!important;color:#d9e8f5!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(6){animation-delay:1.20s!important;color:#f1d27e!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(7){animation-delay:1.35s!important;color:#f7ead1!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(9){animation-delay:1.58s!important;color:#b9d8f1!important}
+#welcomeScreen .cinematic-welcome-to span:nth-child(10){animation-delay:1.73s!important;color:#eac66f!important}
+#welcomeScreen .cinematic-rule{margin:30px auto 18px!important;opacity:.72!important;}
+#welcomeScreen .cinematic-rule span{background:linear-gradient(90deg,transparent,#e4bd62,rgba(255,255,255,.8),#e4bd62,transparent)!important;box-shadow:0 0 18px rgba(225,187,79,.45)!important;animation-delay:2.05s!important;}
+#welcomeScreen .cinematic-monogram{
+  width:clamp(68px,9vw,96px)!important;height:clamp(68px,9vw,96px)!important;
+  background:radial-gradient(circle,rgba(255,255,255,.035),rgba(0,0,0,.62))!important;
+  border-color:rgba(224,184,77,.42)!important;
+  box-shadow:0 0 45px rgba(220,177,66,.14),inset 0 0 25px rgba(255,255,255,.02)!important;
+  animation-delay:2.18s!important;
+}
+#welcomeScreen .cinematic-firm{
+  margin-top:20px!important;
+  font-weight:500!important;
+  letter-spacing:clamp(2px,.55vw,7px)!important;
+  text-shadow:0 10px 45px rgba(0,0,0,.95)!important;
+  animation:premiumFirmReveal 1.55s cubic-bezier(.16,.75,.18,1) 2.55s both!important;
+}
+#welcomeScreen .cinematic-as{color:#e9c56b!important;text-shadow:0 0 22px rgba(233,197,107,.28)!important}
+#welcomeScreen .cinematic-amp{color:#9fc9eb!important;text-shadow:0 0 20px rgba(118,182,234,.20)!important}
+#welcomeScreen .cinematic-assoc{color:#f0d58e!important;text-shadow:0 0 24px rgba(235,198,105,.22)!important}
+#welcomeScreen .cinematic-subline{animation-delay:4.15s!important;color:rgba(239,228,203,.58)!important;}
+@keyframes premiumWelcomeSweep{0%{transform:translateX(-42%) skewX(-8deg);opacity:0}20%{opacity:1}100%{transform:translateX(42%) skewX(-8deg);opacity:0}}
+@keyframes premiumLetterLight{0%{opacity:0;transform:translateY(24px) scale(.94);filter:blur(8px);text-shadow:0 0 0 transparent}55%{opacity:1;transform:translateY(-2px) scale(1.015);filter:blur(0);text-shadow:0 0 9px currentColor,0 0 28px currentColor,0 0 55px rgba(255,255,255,.14)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 5px currentColor,0 0 18px currentColor,0 12px 42px rgba(0,0,0,.9)}}
+@keyframes premiumFirmReveal{0%{opacity:0;transform:translateY(35px) scale(.94);filter:blur(10px);letter-spacing:12px}55%{opacity:1;filter:blur(0);transform:translateY(-2px) scale(1.01)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0);letter-spacing:clamp(2px,.55vw,7px)}}
+@media(max-width:600px){
+ #welcomeScreen .cinematic-welcome-to{letter-spacing:2px!important;font-size:clamp(28px,8.5vw,52px)!important}
+ #welcomeScreen .cinematic-firm{font-size:clamp(22px,7vw,42px)!important;gap:5px!important}
+}
+</style>
 </head>
 
 
