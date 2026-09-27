@@ -3680,6 +3680,94 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   .scene-three .founder-kicker{font-size:15px!important;letter-spacing:2px!important;}
 }
 </style>
+<style id="welcome-final-zoom-clean">
+/* =========================================================
+   WELCOME FINAL TUNING — ZOOM + CLEAN BACKGROUND
+   Requested: slightly larger cinematic welcome and no visible
+   rectangular/vertical lining around the welcome screen.
+========================================================= */
+#welcomeScreen::before,
+#welcomeScreen::after{
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  animation:none!important;
+}
+#welcomeScreen .welcome-scene::before,
+#welcomeScreen .welcome-scene::after{
+  display:none!important;
+}
+
+/* Keep the cinematic lighting, but let the actual content breathe larger. */
+#welcomeScreen .welcome-scene{
+  transform:translateY(18px) scale(1.035);
+}
+#welcomeScreen .welcome-scene.scene-one{
+  animation:welcomeSceneOneZoom 4.50s ease-in-out forwards!important;
+}
+#welcomeScreen .welcome-scene.scene-two{
+  animation:welcomeSceneTwoZoom 4.80s 4.15s ease-in-out forwards!important;
+}
+#welcomeScreen .welcome-scene.scene-three{
+  animation:welcomeSceneThreeZoom 5.20s 8.35s ease-in-out forwards!important;
+}
+
+@keyframes welcomeSceneOneZoom{
+  0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.995);filter:blur(5px)}
+  13%{opacity:1;transform:translateY(0) scale(1.10);filter:blur(0)}
+  76%{opacity:1;transform:translateY(0) scale(1.10)}
+  100%{opacity:0;visibility:hidden;transform:translateY(-12px) scale(1.14);filter:blur(3px)}
+}
+@keyframes welcomeSceneTwoZoom{
+  0%{opacity:0;visibility:visible;transform:scale(.96);filter:blur(7px)}
+  16%{opacity:1;transform:scale(1.08);filter:blur(0)}
+  78%{opacity:1;transform:scale(1.08)}
+  100%{opacity:0;visibility:hidden;transform:scale(1.13);filter:blur(4px)}
+}
+@keyframes welcomeSceneThreeZoom{
+  0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.995);filter:blur(5px)}
+  13%{opacity:1;transform:translateY(0) scale(1.06);filter:blur(0)}
+  80%{opacity:1;transform:translateY(0) scale(1.06)}
+  100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.09);filter:blur(3px)}
+}
+
+@media(max-width:700px){
+  #welcomeScreen .welcome-scene.scene-one{
+    animation:welcomeSceneOneMobileZoom 4.50s ease-in-out forwards!important;
+  }
+  #welcomeScreen .welcome-scene.scene-two{
+    animation:welcomeSceneTwoMobileZoom 4.80s 4.15s ease-in-out forwards!important;
+  }
+  #welcomeScreen .welcome-scene.scene-three{
+    animation:welcomeSceneThreeMobileZoom 5.20s 8.35s ease-in-out forwards!important;
+  }
+  .scene-one .welcome-panel{padding:28px 18px 30px!important;}
+  .scene-one .welcome-monogram{width:128px!important;height:128px!important;}
+  .scene-one .welcome-title{font-size:clamp(28px,8.8vw,46px)!important;}
+  .brand-reveal-ring{width:min(340px,84vw)!important;height:min(340px,84vw)!important;}
+  .brand-reveal-as{font-size:78px!important;}
+  .brand-reveal-name{font-size:24px!important;}
+  .founder-panel{width:96vw!important;}
+}
+@keyframes welcomeSceneOneMobileZoom{
+  0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.96);filter:blur(5px)}
+  13%{opacity:1;transform:translateY(0) scale(1.08);filter:blur(0)}
+  76%{opacity:1;transform:translateY(0) scale(1.08)}
+  100%{opacity:0;visibility:hidden;transform:translateY(-12px) scale(1.12);filter:blur(3px)}
+}
+@keyframes welcomeSceneTwoMobileZoom{
+  0%{opacity:0;visibility:visible;transform:scale(.90);filter:blur(7px)}
+  16%{opacity:1;transform:scale(1.08);filter:blur(0)}
+  78%{opacity:1;transform:scale(1.08)}
+  100%{opacity:0;visibility:hidden;transform:scale(1.13);filter:blur(4px)}
+}
+@keyframes welcomeSceneThreeMobileZoom{
+  0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.94);filter:blur(5px)}
+  13%{opacity:1;transform:translateY(0) scale(1.04);filter:blur(0)}
+  80%{opacity:1;transform:translateY(0) scale(1.04)}
+  100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.08);filter:blur(3px)}
+}
+</style>
 </head>
 
 
@@ -5874,3 +5962,5 @@ Thank you.`;
 
 </body>
 </html>
+
+
