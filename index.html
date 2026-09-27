@@ -137,8 +137,8 @@ img{
     height:52vmin;
     border-radius:50%;
     background:conic-gradient(from 0deg,rgba(255,64,91,.08),rgba(71,139,255,.14),rgba(245,195,75,.12),rgba(255,64,91,.08));
-    filter:blur(18px);
-    animation:welcomeSpin 12s linear infinite;
+    filter:blur(10px);
+    animation:welcomeSpin 18s linear infinite;
     pointer-events:none;
 }
 
@@ -1634,7 +1634,7 @@ section{
         0 35px 100px rgba(0,0,0,.35),
         inset 0 1px 0 rgba(255,255,255,.08);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(10px);
 }
 
 .form-title{
@@ -5644,9 +5644,7 @@ function releaseWelcomeOnce(){
     welcomeReleased = true;
     hideWelcomeScreen();
 }
-document.addEventListener("DOMContentLoaded", function(){
-    setTimeout(releaseWelcomeOnce, 9800);
-});
+setTimeout(releaseWelcomeOnce, 9000);
 
 
 /* =========================================================
