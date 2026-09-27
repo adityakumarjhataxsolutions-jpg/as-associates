@@ -546,6 +546,55 @@ html,body{margin:0;padding:0;background:#02060b!important;}
 @media(prefers-reduced-motion:reduce){#welcomeScreen .cinematic-welcome-to span,#welcomeScreen .cinematic-kicker,#welcomeScreen .cinematic-monogram,#welcomeScreen .cinematic-firm,#welcomeScreen .cinematic-subline{animation:none!important;opacity:1!important;transform:none!important}}
 </style>
 
+
+<style id="welcome-cinematic-hard-fix">
+/* FINAL HARDENED CINEMATIC WELCOME — guaranteed visible fallback */
+html,body{background:#02060b!important;}
+#welcomeScreen{
+  position:fixed!important;inset:0!important;z-index:2147483647!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  visibility:visible!important;opacity:1!important;pointer-events:auto!important;
+  overflow:hidden!important;isolation:isolate!important;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(235,195,100,.16),transparent 22%),
+    radial-gradient(circle at 50% 100%,rgba(214,164,65,.16),transparent 34%),
+    linear-gradient(120deg,#010307 0%,#07131d 48%,#010307 100%)!important;
+}
+#welcomeScreen .cinematic-bg-glow{position:absolute!important;display:block!important;border-radius:50%;pointer-events:none!important;z-index:0!important;}
+#welcomeScreen .cinematic-glow-left{width:55vw;height:55vw;left:-30vw;top:15%;background:radial-gradient(circle,rgba(63,112,145,.16),transparent 68%)!important;}
+#welcomeScreen .cinematic-glow-right{width:55vw;height:55vw;right:-30vw;top:15%;background:radial-gradient(circle,rgba(63,112,145,.13),transparent 68%)!important;}
+#welcomeScreen .cinematic-light-line{position:absolute!important;display:block!important;top:-15%;width:1px;height:130%;background:linear-gradient(180deg,transparent,rgba(237,198,103,.5),transparent)!important;box-shadow:0 0 24px rgba(237,198,103,.18)!important;opacity:.7!important;z-index:1!important;pointer-events:none!important;}
+#welcomeScreen .cinematic-light-left{left:9%!important;transform:rotate(10deg)!important;}
+#welcomeScreen .cinematic-light-right{right:9%!important;transform:rotate(-10deg)!important;}
+#welcomeScreen .cinematic-vignette{position:absolute!important;inset:0!important;background:radial-gradient(circle at center,transparent 30%,rgba(0,0,0,.62) 100%)!important;z-index:2!important;pointer-events:none!important;}
+#welcomeScreen .cinematic-welcome{
+  position:relative!important;z-index:5!important;width:min(94vw,1100px)!important;
+  text-align:center!important;display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;transform:none!important;
+  color:#fff!important;
+}
+#welcomeScreen .cinematic-kicker{opacity:1!important;transform:none!important;color:rgba(239,215,161,.82)!important;}
+#welcomeScreen .cinematic-welcome-to{opacity:1!important;visibility:visible!important;}
+#welcomeScreen .cinematic-welcome-to span{
+  opacity:1!important;visibility:visible!important;display:inline-block!important;
+  transform:translateY(0)!important;animation:cinematicLetterReveal .65s cubic-bezier(.16,.82,.18,1) both!important;
+}
+#welcomeScreen .cinematic-welcome-to .space{opacity:1!important;animation:none!important;width:.35em!important;}
+#welcomeScreen .cinematic-rule{opacity:1!important;visibility:visible!important;}
+#welcomeScreen .cinematic-monogram{opacity:1!important;visibility:visible!important;transform:none!important;animation:cinematicLogoReveal .9s cubic-bezier(.16,.82,.18,1) .85s both!important;}
+#welcomeScreen .cinematic-firm{opacity:1!important;visibility:visible!important;transform:none!important;animation:cinematicFirmReveal 1s cubic-bezier(.16,.82,.18,1) 1.35s both!important;}
+#welcomeScreen .cinematic-subline{opacity:1!important;visibility:visible!important;transform:none!important;animation:cinematicFadeUp .8s ease-out 2s both!important;}
+@keyframes cinematicLetterReveal{0%{opacity:.15;transform:translateY(24px);filter:blur(7px)}100%{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes cinematicLogoReveal{0%{opacity:.2;transform:scale(.7);filter:blur(5px)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
+@keyframes cinematicFirmReveal{0%{opacity:.2;transform:translateY(25px);filter:blur(6px)}100%{opacity:1;transform:translateY(0);filter:blur(0)}}
+@media(max-width:600px){
+  #welcomeScreen .cinematic-welcome-to{font-size:clamp(29px,9vw,52px)!important;letter-spacing:2px!important;}
+  #welcomeScreen .cinematic-firm{font-size:clamp(22px,7vw,42px)!important;gap:5px!important;}
+  #welcomeScreen .cinematic-subline{font-size:7px!important;letter-spacing:1.5px!important;}
+}
+#welcomeScreen.hide{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .55s ease,visibility 0s linear .55s!important;}
+</style>
+
 </head>
 
 
@@ -2365,7 +2414,7 @@ function releaseWelcomeOnce(){
     welcomeReleased = true;
     hideWelcomeScreen();
 }
-setTimeout(releaseWelcomeOnce, 5000);
+setTimeout(releaseWelcomeOnce, 5500);
 
 
 /* =========================================================
