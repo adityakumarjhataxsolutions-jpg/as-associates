@@ -340,7 +340,6 @@ html,body{margin:0;padding:0;background:#02060b!important;}
             <div class="welcome-board">
                 <div class="welcome-small">A WARM WELCOME</div>
                 <div class="welcome-word">WELCOME</div>
-                <div class="welcome-hindi">आपका स्वागत है</div>
                 <div class="welcome-divider"><span></span><em>🪷</em><span></span></div>
                 <div class="welcome-monogram" aria-hidden="true"><span>A</span><span>S</span></div>
                 <div class="welcome-title">
@@ -6312,3 +6311,14 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 </html>
 
 
+
+<style id="remove-welcome-hindi-final">#welcomeScreen .welcome-hindi{display:none!important;}</style>
+
+<style id="remove-stray-dashboard-board-text">
+/* Remove stray decorative text from the dashboard firm/about panel corner. */
+.about-panel::before,
+.about-panel::after{
+  content:"" !important;
+  display:none !important;
+}
+</style>
