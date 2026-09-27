@@ -4920,17 +4920,7 @@ footer{
     padding-bottom:7px;
 }
 
-.logo-main::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    max-width:245px;
-    height:1px;
-    background:linear-gradient(90deg,#ff5b6e 0%,#58a6ff 48%,#e6bd55 100%);
-    box-shadow:0 0 9px rgba(88,166,255,.25);
-}
+.logo-main::after{display:none!important;}
 
 .logo-main .firm-word-as{
     font-size:1em;
@@ -6308,17 +6298,12 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 }
 </style>
 </body>
+<style id="firm-board-line-removal">
+/* Remove decorative corner/underline line from the firm name board */
+.logo-main::after{display:none!important;content:none!important;}
+</style>
 </html>
 
 
 
 <style id="remove-welcome-hindi-final">#welcomeScreen .welcome-hindi{display:none!important;}</style>
-
-<style id="remove-stray-dashboard-board-text">
-/* Remove stray decorative text from the dashboard firm/about panel corner. */
-.about-panel::before,
-.about-panel::after{
-  content:"" !important;
-  display:none !important;
-}
-</style>
