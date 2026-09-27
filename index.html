@@ -2160,6 +2160,334 @@ footer{
 .field input::placeholder,.field textarea::placeholder{color:#8fa1b4;}.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(228,189,88,.65);box-shadow:0 0 0 3px rgba(228,189,88,.10),0 0 22px rgba(228,189,88,.08);}
 .request-submit{background:linear-gradient(135deg,#f0ca61,#c99520);box-shadow:0 12px 35px rgba(228,189,88,.24),0 0 22px rgba(228,189,88,.10);}.request-submit:hover{box-shadow:0 16px 45px rgba(228,189,88,.34),0 0 28px rgba(228,189,88,.14);}
 
+
+/* =========================================================
+   PREMIUM MULTI-COLOR FIRM BRANDING
+   ========================================================= */
+.firm-name{
+    display:inline;
+    white-space:normal;
+    font-weight:900;
+}
+
+.firm-word-as,
+.firm-word-amp,
+.firm-word-assoc{
+    display:inline-block;
+    font-weight:950;
+    letter-spacing:.02em;
+    transition:transform .3s ease, filter .3s ease;
+}
+
+.firm-word-as{
+    color:#ff5b6e;
+    text-shadow:
+        0 0 5px rgba(255,91,110,.35),
+        0 0 16px rgba(255,91,110,.20);
+}
+
+.firm-word-amp{
+    color:#58a6ff;
+    text-shadow:
+        0 0 5px rgba(88,166,255,.38),
+        0 0 17px rgba(88,166,255,.22);
+    margin:0 .12em;
+}
+
+.firm-word-assoc{
+    color:#e6bd55;
+    text-shadow:
+        0 0 5px rgba(230,189,85,.38),
+        0 0 18px rgba(230,189,85,.22);
+}
+
+.firm-name:hover .firm-word-as,
+.firm-name:hover .firm-word-amp,
+.firm-name:hover .firm-word-assoc{
+    transform:translateY(-1px);
+    filter:brightness(1.12);
+}
+
+
+
+/* =========================================================
+   TOP-CORNER PREMIUM MONOGRAM BRAND
+   Inspired by the supplied luxury A.S. plaque reference.
+   Header only — does not alter hero/other firm-name designs.
+========================================================= */
+
+.logo{
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    min-width:0;
+}
+
+.logo-monogram{
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    border-radius:11px;
+    border:1px solid rgba(184,138,36,.58);
+    background:linear-gradient(145deg,#182437,#07111f);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),
+               0 5px 18px rgba(6,16,31,.18),
+               0 0 14px rgba(228,189,88,.13);
+    overflow:hidden;
+    transition:.25s ease;
+}
+
+.logo-monogram::before{
+    content:"";
+    position:absolute;
+    inset:4px;
+    border:1px solid rgba(228,189,88,.28);
+    border-radius:8px;
+}
+
+.logo-monogram::after{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    top:-9px;
+    right:-9px;
+    border-radius:50%;
+    background:rgba(228,189,88,.22);
+    filter:blur(6px);
+}
+
+.logo-monogram span{
+    position:absolute;
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-2px;
+    color:#f6d889;
+    text-shadow:0 0 5px rgba(228,189,88,.55),
+                0 0 13px rgba(228,189,88,.22);
+}
+
+.logo-monogram span:first-child{
+    font-size:24px;
+    transform:translate(-5px,-2px);
+}
+
+.logo-monogram span:last-child{
+    font-size:24px;
+    transform:translate(4px,3px);
+    color:#fff1bd;
+}
+
+.logo-brand-wrap{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.logo-main{
+    font-size:22px;
+    letter-spacing:1.35px;
+    padding-bottom:6px;
+}
+
+.logo-main::after{
+    max-width:235px;
+    height:1px;
+    bottom:0;
+    box-shadow:0 0 8px rgba(88,166,255,.18),
+               0 0 8px rgba(230,189,85,.14);
+}
+
+.logo-sub{
+    margin-top:5px;
+    font-size:8px;
+    letter-spacing:2.7px;
+}
+
+.logo:hover .logo-monogram{
+    transform:translateY(-1px);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),
+               0 7px 22px rgba(6,16,31,.22),
+               0 0 18px rgba(228,189,88,.20);
+}
+
+.logo:hover .logo-main{
+    filter:brightness(1.06);
+}
+
+@media (max-width:760px){
+    .logo{gap:8px;}
+    .logo-monogram{
+        width:36px;
+        height:36px;
+        flex-basis:36px;
+        border-radius:9px;
+    }
+    .logo-monogram span:first-child,
+    .logo-monogram span:last-child{font-size:20px;}
+    .logo-monogram span:first-child{transform:translate(-4px,-2px);}
+    .logo-monogram span:last-child{transform:translate(3px,3px);}
+    .logo-main{font-size:17px;letter-spacing:1px;}
+    .logo-sub{font-size:6.8px;letter-spacing:2px;margin-top:4px;}
+    .logo-main::after{max-width:185px;}
+}
+
+/* Premium top-corner brand */
+.logo-main{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:0;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:1.2px;
+    line-height:1.05;
+    position:relative;
+    padding-bottom:7px;
+}
+
+.logo-main::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    max-width:245px;
+    height:1px;
+    background:linear-gradient(90deg,#ff5b6e 0%,#58a6ff 48%,#e6bd55 100%);
+    box-shadow:0 0 9px rgba(88,166,255,.25);
+}
+
+.logo-main .firm-word-as{
+    font-size:1em;
+}
+
+.logo-main .firm-word-amp{
+    font-size:.9em;
+}
+
+.logo-main .firm-word-assoc{
+    font-size:.98em;
+}
+
+/* Hero brand keeps the active-light sequence but uses three distinct colors */
+#brandWord1{
+    --brand-color:#ff5b6e;
+}
+#brandWord2{
+    --brand-color:#58a6ff;
+}
+#brandWord3{
+    --brand-color:#e6bd55;
+}
+
+.brand-word{
+    color:var(--brand-color,#f7f8fa);
+    text-shadow:
+        0 0 6px color-mix(in srgb, var(--brand-color,#f7f8fa) 35%, transparent),
+        0 0 16px color-mix(in srgb, var(--brand-color,#f7f8fa) 18%, transparent);
+}
+
+.brand-word.active-light{
+    animation:brandColorLight 1.4s ease-in-out;
+}
+
+@keyframes brandColorLight{
+    0%{
+        color:var(--brand-color,#fff);
+        text-shadow:0 0 4px color-mix(in srgb, var(--brand-color,#fff) 25%, transparent);
+        transform:translateY(0) scale(1);
+    }
+    35%{
+        color:#ffffff;
+        text-shadow:
+            0 0 8px var(--brand-color,#fff),
+            0 0 22px color-mix(in srgb, var(--brand-color,#fff) 65%, transparent),
+            0 0 40px color-mix(in srgb, var(--brand-color,#fff) 35%, transparent);
+        transform:translateY(-1px) scale(1.02);
+    }
+    65%{
+        color:#ffffff;
+        text-shadow:
+            0 0 11px var(--brand-color,#fff),
+            0 0 28px color-mix(in srgb, var(--brand-color,#fff) 70%, transparent);
+    }
+    100%{
+        color:var(--brand-color,#fff);
+        text-shadow:
+            0 0 6px color-mix(in srgb, var(--brand-color,#fff) 35%, transparent),
+            0 0 16px color-mix(in srgb, var(--brand-color,#fff) 18%, transparent);
+        transform:translateY(0) scale(1);
+    }
+}
+
+@media(max-width:700px){
+    .logo-main{
+        font-size:18px;
+        letter-spacing:.9px;
+        padding-bottom:6px;
+    }
+    .logo-main::after{max-width:205px;}
+}
+
+
+/* HERO FIRM NAME — ENHANCED VISIBILITY */
+.hero-brand{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(228,189,88,.34);
+    background:
+        radial-gradient(circle at 18% 50%,rgba(255,72,98,.10),transparent 34%),
+        radial-gradient(circle at 52% 50%,rgba(82,157,255,.10),transparent 34%),
+        radial-gradient(circle at 82% 50%,rgba(228,189,88,.13),transparent 36%),
+        linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        inset 0 0 32px rgba(228,189,88,.045),
+        0 0 22px rgba(228,189,88,.08),
+        0 20px 60px rgba(0,0,0,.20);
+}
+.hero-brand::before{
+    content:"";
+    position:absolute;
+    left:10%; right:10%; bottom:0; height:1px;
+    background:linear-gradient(90deg,transparent,rgba(255,91,110,.75),rgba(88,166,255,.85),rgba(230,189,85,.9),transparent);
+    box-shadow:0 0 12px rgba(88,166,255,.35);
+}
+.hero-brand .brand-word{
+    z-index:1;
+    font-weight:950;
+    letter-spacing:2.2px;
+    text-shadow:0 0 8px currentColor,0 0 18px currentColor;
+}
+.hero-brand #brandWord1{color:#ff7180;}
+.hero-brand #brandWord2{color:#6eafff;}
+.hero-brand #brandWord3{color:#f0cb69;}
+.hero-brand .brand-separator{
+    font-size:24px;
+    text-shadow:0 0 8px rgba(88,166,255,.85),0 0 20px rgba(88,166,255,.38);
+}
+.hero-brand .brand-word.active-light{
+    animation:heroBrandLight 1.4s ease-in-out;
+}
+@keyframes heroBrandLight{
+    0%,100%{transform:translateY(0) scale(1);filter:brightness(1);}
+    35%{transform:translateY(-2px) scale(1.035);filter:brightness(1.28);text-shadow:0 0 9px currentColor,0 0 22px currentColor,0 0 38px currentColor;}
+    65%{transform:translateY(-1px) scale(1.02);filter:brightness(1.38);text-shadow:0 0 12px currentColor,0 0 30px currentColor,0 0 48px currentColor;}
+}
+@media(max-width:700px){
+    .hero-brand{width:100%;justify-content:center;padding:18px 14px;gap:7px;}
+    .hero-brand .brand-word{font-size:clamp(16px,5vw,22px);letter-spacing:1.5px;}
+    .hero-brand .brand-separator{font-size:21px;}
+}
+
 </style>
 </head>
 
@@ -2214,12 +2542,16 @@ footer{
 
             <a href="#home" class="logo">
 
-                <span class="logo-main">
-                    A.S. & ASSOCIATES
+                <span class="logo-monogram" aria-hidden="true"><span>A</span><span>S</span></span>
+
+                <span class="logo-brand-wrap">
+                <span class="logo-main firm-name" aria-label="A.S. & ASSOCIATES">
+                    <span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span>
                 </span>
 
                 <span class="logo-sub">
                     TAX & ACCOUNTING SOLUTIONS
+                </span>
                 </span>
 
             </a>
@@ -2434,7 +2766,7 @@ footer{
         <div class="hero-card">
 
             <div class="hero-card-label">
-                Why A.S. & ASSOCIATES
+                Why <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span>
             </div>
 
             <h3>
@@ -2508,7 +2840,7 @@ footer{
         <div class="section-head">
             <span class="section-kicker">Business Location</span>
             <h2 class="section-title">New Delhi</h2>
-            <p class="section-text">A.S. & ASSOCIATES — Tax & Accounting Solutions</p>
+            <p class="section-text"><span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span> — Tax & Accounting Solutions</p>
         </div>
         <div class="location-panel">
             <div class="location-icon">⌖</div>
@@ -2993,7 +3325,7 @@ footer{
             </h2>
 
             <p>
-                A.S. & ASSOCIATES is focused on providing
+                <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span> is focused on providing
                 structured support across taxation,
                 accounting, GST, TDS, compliance and
                 business-related financial requirements.
@@ -3090,7 +3422,7 @@ footer{
 
             <h2 class="section-title">
                 The People Behind
-                A.S. & ASSOCIATES
+                <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span>
             </h2>
 
             <p class="section-text">
@@ -3373,7 +3705,7 @@ footer{
             <p class="section-text">
                 Fill in the basic details and your
                 request will be sent directly to
-                A.S. & ASSOCIATES through WhatsApp.
+                <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span> through WhatsApp.
             </p>
 
 
@@ -3582,7 +3914,7 @@ footer{
                 </p>
 
                 <p>
-                    A.S. & ASSOCIATES
+                    <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span>
                     <br>
                     Tax & Accounting Solutions
                 </p>
@@ -3633,7 +3965,7 @@ footer{
                 </div>
 
                 <h3>
-                    A.S. & ASSOCIATES
+                    <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span>
                 </h3>
 
                 <p>
@@ -3778,7 +4110,7 @@ footer{
         <div class="footer-brand">
 
             <div class="footer-brand-name">
-                A.S. & ASSOCIATES
+                <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span>
             </div>
 
             <div class="footer-brand-tag">
@@ -3897,7 +4229,7 @@ footer{
         <div>
             © <span id="year"></span>
             <strong>
-                A.S. & ASSOCIATES
+                <span class="firm-name"><span class="firm-word-as">A.S.</span><span class="firm-word-amp">&</span><span class="firm-word-assoc">ASSOCIATES</span></span>
             </strong>
             All Rights Reserved.
         </div>
