@@ -3772,11 +3772,8 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 /* Remove the old first welcome scene. The next scene now carries the welcome. */
 #welcomeScreen .scene-one{display:none!important;animation:none!important;}
 #welcomeScreen .scene-two{
-  animation:welcomeSceneTwoReordered 8.40s ease-in-out forwards!important;
+  animation:welcomeSceneTwoReordered 10.20s ease-in-out forwards!important;
   display:flex!important;
-}
-#welcomeScreen .scene-three{
-  animation:welcomeSceneThreeReordered 7.80s 7.65s ease-in-out forwards!important;
 }
 .scene-two-welcome{
   position:absolute;top:9%;left:50%;transform:translateX(-50%);
@@ -3791,17 +3788,10 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   82%{opacity:1;transform:scale(1.01)}
   100%{opacity:0;visibility:hidden;transform:scale(1.06);filter:blur(3px)}
 }
-@keyframes welcomeSceneThreeReordered{
-  0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.96);filter:blur(5px)}
-  16%{opacity:1;transform:translateY(0) scale(1.04);filter:blur(0)}
-  84%{opacity:1;transform:translateY(0) scale(1.04)}
-  100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.08);filter:blur(3px)}
-}
 @media(max-width:700px){
   .scene-two-welcome{top:10%;font-size:14px;letter-spacing:3.5px;}
   .scene-two-welcome span{margin-top:8px;font-size:7px;letter-spacing:1.2px;}
-  #welcomeScreen .scene-two{animation:welcomeSceneTwoReordered 8.40s ease-in-out forwards!important;}
-  #welcomeScreen .scene-three{animation:welcomeSceneThreeReordered 7.80s 7.65s ease-in-out forwards!important;}
+  #welcomeScreen .scene-two{animation:welcomeSceneTwoReordered 10.20s ease-in-out forwards!important;}
 }
 </style>
 </head>
@@ -3851,31 +3841,7 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
         </div>
     </div>
 
-    <!-- SCENE 3: Founders -->
-    <div class="welcome-scene scene-three">
-        <div class="founder-panel">
-            <div class="founder-kicker">MEET OUR FOUNDERS</div>
-            <div class="founder-hindi">हमारे संस्थापकों से मिलिए</div>
-            <div class="founder-rule"></div>
-            <div class="founder-grid">
-                <div class="founder-card-mini">
-                    <span class="founder-initial">AKJ</span>
-                    <strong>Aditya Kumar Jha</strong>
-                    <small>Founder &amp; Lead</small>
-                </div>
-                <div class="founder-card-mini">
-                    <span class="founder-initial">SK</span>
-                    <strong>Shatrughan Kumar</strong>
-                    <small>Founder</small>
-                </div>
-                <div class="founder-card-mini">
-                    <span class="founder-initial">SJ</span>
-                    <strong>Shivam Kumar Jha</strong>
-                    <small>Founder</small>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 </div>
 </div>
@@ -5652,10 +5618,10 @@ function hideWelcomeScreen(){
 
 // Always release the welcome screen, even if another page resource is slow.
 document.addEventListener("DOMContentLoaded", function(){
-    setTimeout(hideWelcomeScreen, 16500);
+    setTimeout(hideWelcomeScreen, 10500);
 });
 window.addEventListener("load", function(){
-    setTimeout(hideWelcomeScreen, 16500);
+    setTimeout(hideWelcomeScreen, 10500);
 });
 
 
