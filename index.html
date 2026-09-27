@@ -2606,11 +2606,11 @@ footer{
     overflow:hidden;
 }
 #welcomeScreen::before{
-    inset:4.5%;
-    border:1px solid rgba(221,186,92,.20);
-    border-radius:4px;
-    box-shadow:inset 0 0 110px rgba(255,255,255,.018),0 0 100px rgba(210,169,67,.07);
-    animation:cinematicFrame 4.8s ease-in-out infinite alternate;
+    inset:0;
+    border:0;
+    border-radius:0;
+    box-shadow:inset 0 0 150px rgba(255,255,255,.018),0 0 110px rgba(210,169,67,.06);
+    animation:cinematicFrame 6s ease-in-out infinite alternate;
 }
 #welcomeScreen::after{
     content:"";
@@ -2638,9 +2638,9 @@ footer{
     transform:translateY(18px) scale(.985);
     z-index:2;
 }
-.welcome-scene.scene-one{animation:welcomeSceneOne 4.50s ease-in-out forwards;}
-.welcome-scene.scene-two{animation:welcomeSceneTwo 4.80s 4.15s ease-in-out forwards;}
-.welcome-scene.scene-three{animation:welcomeSceneThree 5.20s 8.35s ease-in-out forwards;}
+.welcome-scene.scene-one{animation:welcomeSceneOne 6.80s ease-in-out forwards;}
+.welcome-scene.scene-two{animation:welcomeSceneTwo 6.80s 6.15s ease-in-out forwards;}
+.welcome-scene.scene-three{animation:welcomeSceneThree 7.80s 12.15s ease-in-out forwards;}
 .welcome-panel{width:min(900px,92vw);}
 .welcome-monogram{
     width:92px;height:92px;margin:0 auto 24px;
@@ -2693,9 +2693,9 @@ footer{
 .founder-initial{width:46px;height:46px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border:1px solid rgba(226,193,103,.46);border-radius:50%;color:#f0d78b;font-size:12px;letter-spacing:.5px;box-shadow:0 0 20px rgba(226,193,103,.08)}
 .founder-card-mini strong{display:block;color:#f0eee7;font-family:Georgia,'Times New Roman',serif;font-size:14px;font-weight:500;white-space:nowrap}
 .founder-card-mini small{display:block;margin-top:7px;color:rgba(211,220,232,.54);font-size:8px;letter-spacing:1.7px;text-transform:uppercase}
-@keyframes welcomeSceneOne{0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.975);filter:blur(5px)}13%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}76%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;visibility:hidden;transform:translateY(-12px) scale(1.02);filter:blur(3px)}}
-@keyframes welcomeSceneTwo{0%{opacity:0;visibility:visible;transform:scale(.93);filter:blur(7px)}16%{opacity:1;transform:scale(1);filter:blur(0)}78%{opacity:1;transform:scale(1)}100%{opacity:0;visibility:hidden;transform:scale(1.045);filter:blur(4px)}}
-@keyframes welcomeSceneThree{0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.975);filter:blur(5px)}13%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}80%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.015);filter:blur(3px)}}
+@keyframes welcomeSceneOne{0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.975);filter:blur(5px)}16%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}82%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;visibility:hidden;transform:translateY(-12px) scale(1.02);filter:blur(3px)}}
+@keyframes welcomeSceneTwo{0%{opacity:0;visibility:visible;transform:scale(.93);filter:blur(7px)}18%{opacity:1;transform:scale(1);filter:blur(0)}84%{opacity:1;transform:scale(1)}100%{opacity:0;visibility:hidden;transform:scale(1.045);filter:blur(4px)}}
+@keyframes welcomeSceneThree{0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.975);filter:blur(5px)}16%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}84%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.015);filter:blur(3px)}}
 @keyframes cinematicFrame{from{opacity:.58;transform:scale(.996)}to{opacity:1;transform:scale(1)}}
 @keyframes cinematicSweep{to{transform:rotate(360deg)}}
 @keyframes cinematicMonogram{0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,.025),0 0 42px rgba(211,174,77,.10),inset 0 0 24px rgba(255,255,255,.025)}50%{box-shadow:0 0 0 1px rgba(255,255,255,.04),0 0 72px rgba(211,174,77,.20),inset 0 0 34px rgba(255,255,255,.035)}}
@@ -2703,15 +2703,15 @@ footer{
 @media(max-width:700px){
     #welcomeScreen::before{inset:4.5%;}
     .welcome-scene{padding:18px}
-    .welcome-monogram{width:68px;height:68px;margin-bottom:20px}
-    .welcome-monogram span{font-size:29px}
+    .welcome-monogram{width:84px;height:84px;margin-bottom:25px}
+    .welcome-monogram span{font-size:35px}
     .welcome-small{font-size:8px;letter-spacing:4px}
     .welcome-hindi{font-size:8px;letter-spacing:1.4px}
-    .welcome-title{font-size:clamp(25px,8.1vw,43px);letter-spacing:1.7px}
-    .welcome-line{margin:19px auto 14px}
+    .welcome-title{font-size:clamp(29px,9vw,48px);letter-spacing:2px}
+    .welcome-line{margin:23px auto 17px}
     .welcome-sub{font-size:7px;letter-spacing:2.2px}
     .welcome-tagline{font-size:7px;letter-spacing:1.5px}
-    .brand-reveal-ring{width:min(310px,78vw);height:min(310px,78vw)}
+    .brand-reveal-ring{width:min(340px,82vw);height:min(340px,82vw)}
     .brand-reveal-as{font-size:72px}
     .brand-reveal-name{font-size:22px;letter-spacing:2px;margin-top:22px}
     .brand-reveal-name small{font-size:7px;letter-spacing:3px;margin-top:11px}
@@ -2719,9 +2719,9 @@ footer{
     .founder-hindi{font-size:8px;letter-spacing:1.5px}
     .founder-rule{margin:15px auto 17px}
     .founder-grid{gap:6px}
-    .founder-card-mini{padding:13px 4px 12px}
-    .founder-initial{width:29px;height:29px;font-size:8px;margin-bottom:7px}
-    .founder-card-mini strong{font-size:8px}
+    .founder-card-mini{padding:17px 5px 15px}
+    .founder-initial{width:34px;height:34px;font-size:9px;margin-bottom:9px}
+    .founder-card-mini strong{font-size:8.8px}
     .founder-card-mini small{font-size:6.5px;letter-spacing:.7px}
 }
 
@@ -3703,43 +3703,43 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   transform:translateY(18px) scale(1.035);
 }
 #welcomeScreen .welcome-scene.scene-one{
-  animation:welcomeSceneOneZoom 4.50s ease-in-out forwards!important;
+  animation:welcomeSceneOneZoom 6.80s ease-in-out forwards!important;
 }
 #welcomeScreen .welcome-scene.scene-two{
-  animation:welcomeSceneTwoZoom 4.80s 4.15s ease-in-out forwards!important;
+  animation:welcomeSceneTwoZoom 6.80s 6.15s ease-in-out forwards!important;
 }
 #welcomeScreen .welcome-scene.scene-three{
-  animation:welcomeSceneThreeZoom 5.20s 8.35s ease-in-out forwards!important;
+  animation:welcomeSceneThreeZoom 7.80s 12.15s ease-in-out forwards!important;
 }
 
 @keyframes welcomeSceneOneZoom{
   0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.995);filter:blur(5px)}
-  13%{opacity:1;transform:translateY(0) scale(1.10);filter:blur(0)}
-  76%{opacity:1;transform:translateY(0) scale(1.10)}
+  17%{opacity:1;transform:translateY(0) scale(1.10);filter:blur(0)}
+  84%{opacity:1;transform:translateY(0) scale(1.10)}
   100%{opacity:0;visibility:hidden;transform:translateY(-12px) scale(1.14);filter:blur(3px)}
 }
 @keyframes welcomeSceneTwoZoom{
   0%{opacity:0;visibility:visible;transform:scale(.96);filter:blur(7px)}
-  16%{opacity:1;transform:scale(1.08);filter:blur(0)}
-  78%{opacity:1;transform:scale(1.08)}
+  18%{opacity:1;transform:scale(1.08);filter:blur(0)}
+  85%{opacity:1;transform:scale(1.08)}
   100%{opacity:0;visibility:hidden;transform:scale(1.13);filter:blur(4px)}
 }
 @keyframes welcomeSceneThreeZoom{
   0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.995);filter:blur(5px)}
-  13%{opacity:1;transform:translateY(0) scale(1.06);filter:blur(0)}
-  80%{opacity:1;transform:translateY(0) scale(1.06)}
+  17%{opacity:1;transform:translateY(0) scale(1.06);filter:blur(0)}
+  85%{opacity:1;transform:translateY(0) scale(1.06)}
   100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.09);filter:blur(3px)}
 }
 
 @media(max-width:700px){
   #welcomeScreen .welcome-scene.scene-one{
-    animation:welcomeSceneOneMobileZoom 4.50s ease-in-out forwards!important;
+    animation:welcomeSceneOneMobileZoom 6.80s ease-in-out forwards!important;
   }
   #welcomeScreen .welcome-scene.scene-two{
-    animation:welcomeSceneTwoMobileZoom 4.80s 4.15s ease-in-out forwards!important;
+    animation:welcomeSceneTwoMobileZoom 6.80s 6.15s ease-in-out forwards!important;
   }
   #welcomeScreen .welcome-scene.scene-three{
-    animation:welcomeSceneThreeMobileZoom 5.20s 8.35s ease-in-out forwards!important;
+    animation:welcomeSceneThreeMobileZoom 7.80s 12.15s ease-in-out forwards!important;
   }
   .scene-one .welcome-panel{padding:28px 18px 30px!important;}
   .scene-one .welcome-monogram{width:128px!important;height:128px!important;}
@@ -3751,20 +3751,20 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 }
 @keyframes welcomeSceneOneMobileZoom{
   0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.96);filter:blur(5px)}
-  13%{opacity:1;transform:translateY(0) scale(1.08);filter:blur(0)}
-  76%{opacity:1;transform:translateY(0) scale(1.08)}
+  17%{opacity:1;transform:translateY(0) scale(1.08);filter:blur(0)}
+  84%{opacity:1;transform:translateY(0) scale(1.08)}
   100%{opacity:0;visibility:hidden;transform:translateY(-12px) scale(1.12);filter:blur(3px)}
 }
 @keyframes welcomeSceneTwoMobileZoom{
   0%{opacity:0;visibility:visible;transform:scale(.90);filter:blur(7px)}
-  16%{opacity:1;transform:scale(1.08);filter:blur(0)}
-  78%{opacity:1;transform:scale(1.08)}
+  18%{opacity:1;transform:scale(1.08);filter:blur(0)}
+  85%{opacity:1;transform:scale(1.08)}
   100%{opacity:0;visibility:hidden;transform:scale(1.13);filter:blur(4px)}
 }
 @keyframes welcomeSceneThreeMobileZoom{
   0%{opacity:0;visibility:visible;transform:translateY(18px) scale(.94);filter:blur(5px)}
-  13%{opacity:1;transform:translateY(0) scale(1.04);filter:blur(0)}
-  80%{opacity:1;transform:translateY(0) scale(1.04)}
+  17%{opacity:1;transform:translateY(0) scale(1.04);filter:blur(0)}
+  85%{opacity:1;transform:translateY(0) scale(1.04)}
   100%{opacity:0;visibility:hidden;transform:translateY(-10px) scale(1.08);filter:blur(3px)}
 }
 </style>
@@ -5615,10 +5615,10 @@ function hideWelcomeScreen(){
 
 // Always release the welcome screen, even if another page resource is slow.
 document.addEventListener("DOMContentLoaded", function(){
-    setTimeout(hideWelcomeScreen, 15100);
+    setTimeout(hideWelcomeScreen, 21500);
 });
 window.addEventListener("load", function(){
-    setTimeout(hideWelcomeScreen, 15100);
+    setTimeout(hideWelcomeScreen, 21500);
 });
 
 
