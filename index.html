@@ -27,146 +27,41 @@
 
 
 <style id="critical-welcome-css">
-html,body{margin:0;padding:0;background:#02070d!important;}
-#welcomeScreen{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 76%,rgba(213,166,67,.14),transparent 25%),linear-gradient(180deg,#02070d 0%,#07111a 52%,#010408 100%);color:#fff;opacity:1;visibility:visible;}
-#welcomeScreen .welcome-scene{display:flex;align-items:center;justify-content:center;width:100%;height:100%;text-align:center;}
-#welcomeScreen .scene-one{display:none!important;}
-#welcomeScreen .scene-two{display:flex!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important;}
-#welcomeScreen .scene-two-welcome{position:absolute;top:10%;left:50%;transform:translateX(-50%);font:600 14px/1.2 Georgia,serif;letter-spacing:3px;color:#ead09a;white-space:nowrap;}
-#welcomeScreen .scene-two-welcome span{display:block;margin-top:8px;font-size:7px;letter-spacing:1.2px;color:#d7c39a;}
-#welcomeScreen .brand-reveal-ring{width:min(340px,84vw);height:min(340px,84vw);border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(231,188,82,.45);box-shadow:0 0 55px rgba(231,188,82,.12),inset 0 0 45px rgba(231,188,82,.05);}
-#welcomeScreen .brand-reveal-inner{text-align:center;color:#f3dfab;}
-#welcomeScreen .brand-reveal-as{font:700 78px/1 Georgia,serif;letter-spacing:2px;color:#e7c56b;}
-#welcomeScreen .brand-reveal-name{font:700 24px/1.2 Arial,sans-serif;letter-spacing:1px;color:#eee6d7;}
-#welcomeScreen .brand-reveal-name small{display:block;margin-top:10px;font-size:9px;letter-spacing:2px;color:#cdbb8e;}
-#welcomeScreen .welcome-petal,#welcomeScreen .welcome-aura{display:none!important;}
-
-/* =========================================================
-   FINAL WELCOME DESIGN — single cinematic brand reveal
-========================================================= */
-#welcomeScreen{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  background:
-    radial-gradient(circle at 50% 46%,rgba(235,195,103,.10),transparent 18%),
-    radial-gradient(ellipse at 50% 92%,rgba(224,179,74,.24),transparent 22%),
-    linear-gradient(180deg,#02070d 0%,#07131d 48%,#010407 100%)!important;
-}
-#welcomeScreen .scene-one{
-  display:flex!important;
-  position:relative!important;
-  inset:auto!important;
-  width:100%!important;
-  height:100%!important;
-  align-items:center!important;
-  justify-content:center!important;
-  opacity:1!important;
-  visibility:visible!important;
-  transform:none!important;
-  animation:none!important;
-  padding:24px!important;
-}
-#welcomeScreen .scene-two{display:none!important}
-#welcomeScreen .welcome-panel{
-  width:min(94vw,900px)!important;
-  max-width:900px!important;
-  padding:30px 22px 34px!important;
-  position:relative!important;
-  transform:scale(.86)!important;
-  opacity:0!important;
-  animation:welcomePanelIn 1.15s cubic-bezier(.18,.78,.18,1) .18s forwards!important;
-}
-#welcomeScreen .welcome-panel::before{
-  content:"";
-  position:absolute;
-  left:50%;top:50%;
-  width:min(78vw,620px);height:min(78vw,620px);
-  transform:translate(-50%,-50%) scale(.72);
-  border-radius:50%;
-  border:1px solid rgba(231,190,89,.25);
-  box-shadow:0 0 90px rgba(226,181,72,.13),inset 0 0 80px rgba(226,181,72,.035);
-  opacity:0;
-  animation:welcomeRingIn 1.4s ease-out .05s forwards;
-  pointer-events:none;
-}
-#welcomeScreen .welcome-small{
-  position:relative;z-index:2;
-  font-size:clamp(11px,2.2vw,17px)!important;
-  letter-spacing:clamp(3px,1vw,7px)!important;
-  color:#f0d58e!important;
-  opacity:0;
-  transform:translateY(14px);
-  animation:welcomeTextIn .8s ease-out .48s forwards!important;
-}
-#welcomeScreen .welcome-hindi{font-size:clamp(10px,1.8vw,14px)!important;color:rgba(245,228,191,.78)!important}
-#welcomeScreen .welcome-monogram{
-  position:relative;z-index:2;
-  width:clamp(105px,22vw,150px)!important;
-  height:clamp(105px,22vw,150px)!important;
-  margin:22px auto 26px!important;
-  border-radius:50%!important;
-  background:radial-gradient(circle,rgba(255,255,255,.045),rgba(0,0,0,.16))!important;
-  border:1px solid rgba(232,191,91,.46)!important;
-  box-shadow:0 0 90px rgba(226,181,72,.22),inset 0 0 38px rgba(255,255,255,.025)!important;
-  opacity:0;
-  transform:scale(.55) rotate(-8deg);
-  animation:welcomeLogoIn 1.25s cubic-bezier(.16,.82,.18,1) .58s forwards, welcomeLogoPulse 2.8s ease-in-out 1.9s infinite!important;
-}
-#welcomeScreen .welcome-monogram::before{border-radius:50%!important;border-color:rgba(232,191,91,.20)!important}
-#welcomeScreen .welcome-monogram span{
-  font-family:Georgia,'Times New Roman',serif!important;
-  font-size:clamp(38px,8vw,58px)!important;
-  color:#f0d38d!important;
-  background:none!important;
-  text-shadow:0 0 25px rgba(238,198,101,.38),0 0 55px rgba(238,198,101,.14)!important;
-}
-#welcomeScreen .welcome-title{
-  position:relative;z-index:2;
-  font-family:Georgia,'Times New Roman',serif!important;
-  font-weight:500!important;
-  font-size:clamp(37px,8vw,76px)!important;
-  line-height:1.04!important;
-  letter-spacing:clamp(2px,.6vw,7px)!important;
-  white-space:nowrap!important;
-  color:#eee4cf!important;
-  text-shadow:0 8px 35px rgba(0,0,0,.65)!important;
-  opacity:0;
-  transform:translateY(22px) scale(.82);
-  animation:welcomeBrandIn 1.35s cubic-bezier(.16,.82,.18,1) .88s forwards!important;
-}
-#welcomeScreen .welcome-as{color:#e9c675!important}
-#welcomeScreen .welcome-amp{color:#9ec8ef!important;text-shadow:0 0 20px rgba(111,177,235,.25)!important}
-#welcomeScreen .welcome-assoc{color:#e9c675!important;text-shadow:0 0 24px rgba(238,198,101,.22)!important}
-#welcomeScreen .welcome-line{
-  position:relative;z-index:2;
-  width:min(280px,48vw)!important;
-  margin:20px auto 15px!important;
-  opacity:0;
-  transform:scaleX(.2);
-  animation:welcomeLineIn .8s ease-out 1.45s forwards!important;
-}
-#welcomeScreen .welcome-sub{
-  position:relative;z-index:2;
-  font-size:clamp(8px,1.7vw,11px)!important;
-  letter-spacing:clamp(2px,.8vw,5px)!important;
-  color:rgba(239,225,195,.76)!important;
-  opacity:0;
-  transform:translateY(10px);
-  animation:welcomeTextIn .8s ease-out 1.58s forwards!important;
-}
-@keyframes welcomePanelIn{to{opacity:1;transform:scale(1)}}
-@keyframes welcomeRingIn{to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+html,body{margin:0;padding:0;background:#02060b!important;}
+#welcomeScreen{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 44%,rgba(235,194,101,.13),transparent 20%),radial-gradient(circle at 50% 100%,rgba(210,160,55,.20),transparent 30%),linear-gradient(115deg,#010409 0%,#07131d 48%,#010307 100%);color:#fff;opacity:1;visibility:visible;}
+#welcomeScreen::before{content:"";position:absolute;inset:-20%;background:linear-gradient(105deg,transparent 28%,rgba(238,198,101,.10) 40%,transparent 51%,transparent 66%,rgba(238,198,101,.07) 76%,transparent 84%);transform:translateX(-18%);animation:welcomeLightSweep 2.2s ease-out .15s forwards;pointer-events:none;}
+#welcomeScreen::after{content:"";position:absolute;width:min(72vw,760px);height:min(72vw,760px);border-radius:50%;border:1px solid rgba(231,190,89,.18);box-shadow:0 0 100px rgba(226,181,72,.10),inset 0 0 90px rgba(226,181,72,.025);opacity:0;animation:welcomeHalo 1.5s ease-out .2s forwards;pointer-events:none;}
+#welcomeScreen .welcome-scene{display:flex;align-items:center;justify-content:center;width:100%;height:100%;text-align:center;position:relative;z-index:3;}
+#welcomeScreen .scene-one{display:flex!important;opacity:1!important;visibility:visible!important;}
+#welcomeScreen .scene-two{display:none!important;}
+#welcomeScreen .welcome-panel{position:relative;width:min(96vw,1050px);padding:30px 18px 42px;opacity:0;transform:scale(.78);animation:welcomeMainIn 1.15s cubic-bezier(.16,.82,.18,1) .08s forwards;}
+#welcomeScreen .welcome-panel::before,#welcomeScreen .welcome-panel::after{content:"";position:absolute;top:12%;bottom:12%;width:1px;background:linear-gradient(180deg,transparent,rgba(235,194,101,.75),transparent);box-shadow:0 0 18px rgba(235,194,101,.32);opacity:0;animation:sideLightIn .9s ease-out .35s forwards;}
+#welcomeScreen .welcome-panel::before{left:5%;transform:translateX(-55px)}
+#welcomeScreen .welcome-panel::after{right:5%;transform:translateX(55px)}
+#welcomeScreen .welcome-small{position:relative;z-index:2;font:600 clamp(11px,1.7vw,17px)/1.2 Georgia,serif;letter-spacing:clamp(4px,1vw,8px);color:#f0d58e;opacity:0;transform:translateY(18px);animation:welcomeTextIn .75s ease-out .48s forwards;}
+#welcomeScreen .welcome-hindi{display:block;margin-top:8px;font:400 clamp(9px,1.5vw,13px)/1.2 Arial,sans-serif;letter-spacing:1.5px;color:rgba(245,228,191,.70);}
+#welcomeScreen .welcome-monogram{position:relative;z-index:2;width:clamp(110px,19vw,165px);height:clamp(110px,19vw,165px);margin:24px auto 28px;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:1px;background:radial-gradient(circle,rgba(255,255,255,.055),rgba(0,0,0,.18));border:1px solid rgba(232,191,91,.55);box-shadow:0 0 70px rgba(226,181,72,.22),inset 0 0 45px rgba(255,255,255,.025);opacity:0;transform:scale(.35) rotate(-12deg);animation:welcomeLogoIn 1.05s cubic-bezier(.16,.82,.18,1) .55s forwards,welcomeLogoPulse 2.5s ease-in-out 1.8s infinite;}
+#welcomeScreen .welcome-monogram::before{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(232,191,91,.20);box-shadow:0 0 35px rgba(232,191,91,.12);}
+#welcomeScreen .welcome-monogram span{font:700 clamp(40px,7vw,62px)/1 Georgia,serif;color:#f0d38d;text-shadow:0 0 25px rgba(238,198,101,.38),0 0 55px rgba(238,198,101,.14);}
+#welcomeScreen .welcome-title{position:relative;z-index:2;font:500 clamp(42px,8.2vw,88px)/1 Georgia,'Times New Roman',serif;letter-spacing:clamp(2px,.7vw,8px);white-space:nowrap;color:#eee4cf;text-shadow:0 10px 38px rgba(0,0,0,.7);opacity:0;transform:translateY(28px) scale(.72);animation:welcomeBrandIn 1.15s cubic-bezier(.16,.82,.18,1) .88s forwards;}
+#welcomeScreen .welcome-as{color:#e9c675;text-shadow:0 0 25px rgba(238,198,101,.22);}.welcome-amp{color:#9ec8ef!important;text-shadow:0 0 22px rgba(111,177,235,.28)!important}.welcome-assoc{color:#f0d58e;text-shadow:0 0 28px rgba(238,198,101,.25);}
+#welcomeScreen .welcome-line{position:relative;z-index:2;width:min(330px,48vw);height:1px;margin:22px auto 14px;background:linear-gradient(90deg,transparent,#e7c56b,transparent);box-shadow:0 0 12px rgba(231,197,107,.35);opacity:0;transform:scaleX(.05);animation:welcomeLineIn .7s ease-out 1.55s forwards;}
+#welcomeScreen .welcome-sub{position:relative;z-index:2;font:600 clamp(8px,1.45vw,12px)/1.2 Arial,sans-serif;letter-spacing:clamp(2px,.8vw,5px);color:rgba(239,225,195,.78);opacity:0;transform:translateY(10px);animation:welcomeTextIn .7s ease-out 1.68s forwards;}
+#welcomeScreen .welcome-petal{position:absolute;z-index:4;font-size:clamp(19px,3vw,30px);filter:drop-shadow(0 0 9px rgba(238,198,101,.35));opacity:0;animation:lotusFloat 2.8s ease-in-out infinite;}
+#welcomeScreen .welcome-petal:nth-child(1){left:7%;top:25%;animation-delay:.35s}.welcome-petal:nth-child(2){left:13%;top:68%;animation-delay:.9s}.welcome-petal:nth-child(3){left:24%;top:14%;animation-delay:1.25s}.welcome-petal:nth-child(4){right:7%;top:27%;animation-delay:.6s}.welcome-petal:nth-child(5){right:13%;top:70%;animation-delay:1.05s}.welcome-petal:nth-child(6){right:24%;top:13%;animation-delay:1.45s}.welcome-petal:nth-child(7){left:50%;bottom:7%;transform:translateX(-50%);animation-delay:1.8s}
+@keyframes welcomeLightSweep{to{transform:translateX(18%)}}
+@keyframes welcomeHalo{to{opacity:1;transform:scale(1)}}
+@keyframes welcomeMainIn{to{opacity:1;transform:scale(1)}}
+@keyframes sideLightIn{to{opacity:1;transform:translateX(0)}}
 @keyframes welcomeLogoIn{to{opacity:1;transform:scale(1) rotate(0)}}
 @keyframes welcomeBrandIn{to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes welcomeTextIn{to{opacity:1;transform:translateY(0)}}
 @keyframes welcomeLineIn{to{opacity:1;transform:scaleX(1)}}
-@keyframes welcomeLogoPulse{0%,100%{box-shadow:0 0 90px rgba(226,181,72,.22),inset 0 0 38px rgba(255,255,255,.025)}50%{box-shadow:0 0 120px rgba(226,181,72,.34),inset 0 0 42px rgba(255,255,255,.035)}}
-@media(max-width:600px){
-  #welcomeScreen .welcome-title{font-size:clamp(30px,8.5vw,48px)!important;letter-spacing:1.5px!important}
-  #welcomeScreen .welcome-panel{padding-left:8px!important;padding-right:8px!important}
-}
-
+@keyframes welcomeLogoPulse{0%,100%{box-shadow:0 0 70px rgba(226,181,72,.22),inset 0 0 45px rgba(255,255,255,.025)}50%{box-shadow:0 0 105px rgba(226,181,72,.36),inset 0 0 48px rgba(255,255,255,.035)}}
+@keyframes lotusFloat{0%{opacity:0;transform:translateY(15px) scale(.7) rotate(-8deg)}18%,75%{opacity:.78}50%{transform:translateY(-12px) scale(1) rotate(8deg)}100%{opacity:0;transform:translateY(-28px) scale(.72) rotate(-4deg)}}
+#welcomeScreen.hide{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .55s ease,visibility 0s linear .55s!important;}
+@media(max-width:600px){#welcomeScreen .welcome-title{font-size:clamp(31px,8.7vw,52px);letter-spacing:1.5px}#welcomeScreen .welcome-panel{padding-left:6px;padding-right:6px}#welcomeScreen .welcome-petal:nth-child(3),#welcomeScreen .welcome-petal:nth-child(6){display:none}}
+@media(prefers-reduced-motion:reduce){#welcomeScreen *{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 </style>
 </head>
 
@@ -204,16 +99,6 @@ html,body{margin:0;padding:0;background:#02070d!important;}
         </div>
     </div>
 
-    <!-- SCENE 2: Welcome + Brand reveal -->
-    <div class="welcome-scene scene-two">
-        <div class="scene-two-welcome">WELCOME TO<span>• आपका स्वागत है •</span></div>
-        <div class="brand-reveal-ring">
-            <div class="brand-reveal-inner">
-                <div class="brand-reveal-as">AS</div>
-                <div class="brand-reveal-name">A.S. &amp; ASSOCIATES<small>TAX&nbsp;&nbsp;•&nbsp;&nbsp;ACCOUNTING&nbsp;&nbsp;•&nbsp;&nbsp;COMPLIANCE</small></div>
-            </div>
-        </div>
-    </div>
 
 
 
