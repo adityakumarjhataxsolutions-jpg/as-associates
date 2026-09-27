@@ -2593,6 +2593,136 @@ footer{
     .hero-brand .brand-separator{font-size:21px;}
 }
 
+
+/* =========================================================
+   CINEMATIC PREMIUM WELCOME — refined, understated trailer feel
+========================================================= */
+#welcomeScreen{
+    background:
+        radial-gradient(circle at 50% 46%, rgba(221,181,82,.075), transparent 22%),
+        radial-gradient(circle at 18% 20%, rgba(52,105,190,.10), transparent 28%),
+        linear-gradient(180deg,#03070d 0%,#07101d 48%,#02050a 100%);
+    transition:opacity 1.05s cubic-bezier(.22,1,.36,1),visibility 1.05s ease;
+}
+#welcomeScreen::before{
+    inset:5.5%;
+    border:1px solid rgba(218,184,91,.20);
+    border-radius:2px;
+    box-shadow:0 0 0 1px rgba(255,255,255,.018), inset 0 0 90px rgba(255,255,255,.018), 0 0 90px rgba(207,169,73,.055);
+    animation:cinematicFrame 5.5s ease-in-out infinite alternate;
+}
+#welcomeScreen::after{
+    width:68vmin;height:68vmin;
+    background:conic-gradient(from 0deg,transparent 0 62%,rgba(214,180,81,.055) 68%,transparent 76% 100%);
+    filter:blur(10px);
+    opacity:.7;
+    animation:cinematicSweep 10s linear infinite;
+}
+.welcome-content{
+    padding:25px 22px;
+    max-width:1000px;
+    transform:translateY(-1vh);
+    animation:cinematicContent 1.5s cubic-bezier(.16,1,.3,1) both;
+}
+.welcome-content::before{
+    content:"";
+    position:absolute;
+    left:50%;top:50%;
+    width:min(560px,92vw);height:min(250px,42vw);
+    transform:translate(-50%,-48%);
+    background:radial-gradient(ellipse,rgba(230,193,91,.075),transparent 68%);
+    filter:blur(8px);
+    z-index:-1;
+}
+.welcome-monogram{
+    width:78px;height:78px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    border:1px solid rgba(226,193,103,.52);
+    background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.008));
+    box-shadow:0 0 0 1px rgba(255,255,255,.025),0 0 45px rgba(211,174,77,.11), inset 0 0 24px rgba(255,255,255,.025);
+    transform:none;
+    animation:cinematicMonogram 3.8s ease-in-out infinite;
+}
+.welcome-monogram::before{
+    inset:7px;
+    border:1px solid rgba(224,191,102,.18);
+    border-radius:50%;
+}
+.welcome-monogram span{
+    font-size:32px;
+    font-weight:600;
+    background:linear-gradient(135deg,#fff9df 5%,#d9b85e 48%,#fff4c8 90%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 0 22px rgba(226,192,96,.16);
+}
+.welcome-monogram span:first-child{transform:translateX(-6px) translateY(-2px);}
+.welcome-monogram span:last-child{transform:translateX(6px) translateY(2px);}
+.welcome-small{
+    margin-bottom:17px;
+    color:rgba(224,196,120,.88);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:7px;
+    opacity:0;
+    animation:cinematicSmall .9s .35s ease-out forwards;
+}
+.welcome-title{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:clamp(34px,7vw,76px);
+    font-weight:500;
+    letter-spacing:clamp(2px,.5vw,7px);
+    line-height:1.05;
+    opacity:0;
+    animation:cinematicTitle 1.35s .55s cubic-bezier(.16,1,.3,1) forwards;
+}
+.welcome-as,.welcome-amp,.welcome-assoc{position:relative;}
+.welcome-as{color:#d85a6c!important;text-shadow:0 0 24px rgba(216,90,108,.16)!important;}
+.welcome-amp{color:#7198d7!important;text-shadow:0 0 24px rgba(113,152,215,.16)!important;}
+.welcome-assoc{color:#e2c36d!important;text-shadow:0 0 26px rgba(226,195,109,.17)!important;}
+.welcome-line{
+    width:min(210px,42vw);
+    height:1px;
+    margin:25px auto 19px;
+    background:linear-gradient(90deg,transparent,rgba(221,188,98,.72),transparent);
+    box-shadow:0 0 12px rgba(221,188,98,.18);
+    opacity:0;
+    animation:cinematicLine 1s 1.15s ease-out forwards;
+}
+.welcome-sub{
+    color:rgba(207,216,227,.62);
+    font-size:10px;
+    font-weight:500;
+    letter-spacing:4px;
+    opacity:0;
+    animation:cinematicSub 1s 1.35s ease-out forwards;
+}
+.welcome-petal{
+    color:rgba(231,204,135,.24);
+    font-size:13px;
+    opacity:.42;
+    filter:blur(.15px);
+}
+.aura-one{background:radial-gradient(circle,rgba(207,65,88,.075),transparent 68%);}
+.aura-two{background:radial-gradient(circle,rgba(61,106,184,.075),transparent 68%);}
+@keyframes cinematicFrame{from{opacity:.55;transform:scale(.995)}to{opacity:1;transform:scale(1)}}
+@keyframes cinematicSweep{to{transform:rotate(360deg)}}
+@keyframes cinematicContent{from{opacity:0;transform:translateY(2vh) scale(.985)}to{opacity:1;transform:translateY(-1vh) scale(1)}}
+@keyframes cinematicMonogram{0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,.025),0 0 38px rgba(211,174,77,.09),inset 0 0 24px rgba(255,255,255,.025)}50%{box-shadow:0 0 0 1px rgba(255,255,255,.035),0 0 58px rgba(211,174,77,.16),inset 0 0 30px rgba(255,255,255,.035)}}
+@keyframes cinematicSmall{from{opacity:0;letter-spacing:11px;transform:translateY(7px)}to{opacity:1;letter-spacing:7px;transform:translateY(0)}}
+@keyframes cinematicTitle{from{opacity:0;transform:translateY(18px);filter:blur(7px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes cinematicLine{from{opacity:0;transform:scaleX(.2)}to{opacity:1;transform:scaleX(1)}}
+@keyframes cinematicSub{from{opacity:0;transform:translateY(8px);letter-spacing:7px}to{opacity:1;transform:translateY(0);letter-spacing:4px}}
+@media(max-width:600px){
+    #welcomeScreen::before{inset:5%;border-radius:2px;}
+    .welcome-monogram{width:68px;height:68px;margin-bottom:22px;}
+    .welcome-monogram span{font-size:28px;}
+    .welcome-small{font-size:8px;letter-spacing:5px;}
+    .welcome-title{font-size:clamp(27px,8.2vw,44px);letter-spacing:2px;}
+    .welcome-sub{font-size:8px;letter-spacing:2.5px;}
+    .welcome-line{margin:21px auto 16px;}
+}
+
 </style>
 </head>
 
@@ -2624,7 +2754,7 @@ footer{
         </div>
 
         <div class="welcome-small">
-            Welcome To
+            WELCOME TO
         </div>
 
         <div class="welcome-title">
@@ -2634,7 +2764,7 @@ footer{
         <div class="welcome-line"></div>
 
         <div class="welcome-sub">
-            TAX & ACCOUNTING SOLUTIONS
+            TAX  •  ACCOUNTING  •  COMPLIANCE
         </div>
 
     </div>
