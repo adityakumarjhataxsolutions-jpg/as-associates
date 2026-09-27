@@ -492,6 +492,60 @@ html,body{margin:0;padding:0;background:#02060b!important;}
 }
 </style>
 
+
+<style id="cinematic-welcome-final">
+/* FINAL CINEMATIC WELCOME — no box/card/side borders */
+#welcomeScreen{
+  position:fixed!important;inset:0!important;z-index:2147483647!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  overflow:hidden!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;
+  background:
+    radial-gradient(circle at 50% 46%,rgba(232,194,104,.13),transparent 17%),
+    radial-gradient(circle at 18% 52%,rgba(45,91,120,.13),transparent 29%),
+    radial-gradient(circle at 82% 52%,rgba(45,91,120,.11),transparent 29%),
+    linear-gradient(115deg,#010306 0%,#07131d 47%,#010306 100%)!important;
+}
+#welcomeScreen::before{content:""!important;position:absolute!important;inset:-35%!important;background:linear-gradient(105deg,transparent 37%,rgba(238,198,101,.09) 46%,transparent 53%)!important;transform:translateX(-55%)!important;animation:cinematicSweep 3.2s ease-out .15s forwards!important;pointer-events:none!important;}
+#welcomeScreen::after{content:""!important;position:absolute!important;width:min(78vw,820px)!important;height:min(78vw,820px)!important;border-radius:50%!important;border:1px solid rgba(231,190,89,.12)!important;box-shadow:0 0 110px rgba(226,181,72,.08),inset 0 0 100px rgba(226,181,72,.025)!important;opacity:0!important;animation:cinematicHalo 2.2s ease-out .35s forwards!important;pointer-events:none!important;}
+#welcomeScreen .cinematic-bg-glow{position:absolute;width:38vw;height:70vh;filter:blur(55px);opacity:.16;pointer-events:none;}
+#welcomeScreen .cinematic-glow-left{left:-18vw;background:radial-gradient(ellipse,rgba(62,122,157,.45),transparent 68%);}
+#welcomeScreen .cinematic-glow-right{right:-18vw;background:radial-gradient(ellipse,rgba(62,122,157,.38),transparent 68%);}
+#welcomeScreen .cinematic-light-line{position:absolute;top:12%;height:76%;width:1px;background:linear-gradient(180deg,transparent,rgba(232,194,104,.42),rgba(232,194,104,.08),transparent);box-shadow:0 0 24px rgba(232,194,104,.15);opacity:0;animation:cinematicLineIn 1.6s ease-out .4s forwards;pointer-events:none;}
+#welcomeScreen .cinematic-light-left{left:8%;transform:translateX(-80px)}
+#welcomeScreen .cinematic-light-right{right:8%;transform:translateX(80px)}
+#welcomeScreen .cinematic-vignette{position:absolute;inset:0;background:radial-gradient(circle at center,transparent 35%,rgba(0,0,0,.56) 100%);pointer-events:none;}
+#welcomeScreen .cinematic-welcome{position:relative;z-index:5;width:min(94vw,1100px);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateY(-1vh);}
+#welcomeScreen .cinematic-kicker{font:600 clamp(9px,1.15vw,15px)/1 Arial,sans-serif;letter-spacing:clamp(4px,.9vw,9px);color:rgba(239,215,161,.76);opacity:0;transform:translateY(18px);animation:cinematicFadeUp .8s ease-out .25s forwards;}
+#welcomeScreen .cinematic-welcome-to{display:flex;justify-content:center;align-items:center;margin-top:25px;font:500 clamp(37px,7vw,86px)/.95 Georgia,'Times New Roman',serif;letter-spacing:clamp(3px,1vw,10px);color:#f3ead8;text-shadow:0 0 28px rgba(238,198,101,.16),0 12px 42px rgba(0,0,0,.8);white-space:nowrap;}
+#welcomeScreen .cinematic-welcome-to span{display:inline-block;opacity:0;transform:translateY(45px);animation:cinematicLetterUp .62s cubic-bezier(.16,.82,.18,1) forwards;}
+#welcomeScreen .cinematic-welcome-to span:nth-child(1){animation-delay:.45s}.cinematic-welcome-to span:nth-child(2){animation-delay:.51s}.cinematic-welcome-to span:nth-child(3){animation-delay:.57s}.cinematic-welcome-to span:nth-child(4){animation-delay:.63s}.cinematic-welcome-to span:nth-child(5){animation-delay:.69s}.cinematic-welcome-to span:nth-child(6){animation-delay:.75s}.cinematic-welcome-to span:nth-child(7){animation-delay:.81s}.cinematic-welcome-to span:nth-child(9){animation-delay:.93s}.cinematic-welcome-to span:nth-child(10){animation-delay:.99s}
+#welcomeScreen .cinematic-welcome-to .space{width:.35em;animation:none!important;opacity:1!important;transform:none!important;}
+#welcomeScreen .cinematic-rule{width:min(440px,60vw);height:1px;margin:26px auto 20px;overflow:hidden;position:relative;}
+#welcomeScreen .cinematic-rule span{position:absolute;left:50%;top:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#e6c46e,transparent);box-shadow:0 0 13px rgba(230,196,110,.55);transform:translateX(-50%) scaleX(0);animation:cinematicRule 1s ease-out 1.12s forwards;}
+#welcomeScreen .cinematic-monogram{width:clamp(72px,10vw,104px);height:clamp(72px,10vw,104px);border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(230,193,101,.46);box-shadow:0 0 55px rgba(226,181,72,.19),inset 0 0 28px rgba(255,255,255,.025);background:radial-gradient(circle,rgba(255,255,255,.035),rgba(0,0,0,.28));opacity:0;transform:scale(.45);animation:cinematicLogo .9s cubic-bezier(.16,.82,.18,1) 1.28s forwards;}
+#welcomeScreen .cinematic-monogram span{font:700 clamp(27px,4vw,42px)/1 Georgia,serif;color:#efcf82;text-shadow:0 0 24px rgba(238,198,101,.38);}
+#welcomeScreen .cinematic-firm{margin-top:22px;display:flex;align-items:baseline;justify-content:center;gap:clamp(7px,1vw,15px);font:500 clamp(30px,5.8vw,72px)/1 Georgia,'Times New Roman',serif;letter-spacing:clamp(1px,.45vw,6px);white-space:nowrap;opacity:0;transform:translateY(38px) scale(.9);animation:cinematicFirm .95s cubic-bezier(.16,.82,.18,1) 1.7s forwards;}
+#welcomeScreen .cinematic-as{color:#f0c96e;text-shadow:0 0 26px rgba(238,198,101,.3)}
+#welcomeScreen .cinematic-amp{color:#9ec8ef;text-shadow:0 0 22px rgba(111,177,235,.28)}
+#welcomeScreen .cinematic-assoc{color:#f2d990;text-shadow:0 0 30px rgba(238,198,101,.25)}
+#welcomeScreen .cinematic-subline{margin-top:18px;font:600 clamp(7px,1vw,11px)/1 Arial,sans-serif;letter-spacing:clamp(2px,.65vw,5px);color:rgba(239,225,195,.68);opacity:0;transform:translateY(13px);animation:cinematicFadeUp .75s ease-out 2.35s forwards;}
+@keyframes cinematicSweep{to{transform:translateX(55%)}}
+@keyframes cinematicHalo{0%{opacity:0;transform:scale(.82)}100%{opacity:1;transform:scale(1)}}
+@keyframes cinematicLineIn{to{opacity:1;transform:translateX(0)}}
+@keyframes cinematicFadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes cinematicLetterUp{to{opacity:1;transform:translateY(0)}}
+@keyframes cinematicRule{to{transform:translateX(-50%) scaleX(1)}}
+@keyframes cinematicLogo{to{opacity:1;transform:scale(1)}}
+@keyframes cinematicFirm{to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){
+  #welcomeScreen .cinematic-light-left{left:4%}#welcomeScreen .cinematic-light-right{right:4%}
+  #welcomeScreen .cinematic-welcome-to{font-size:clamp(28px,8.5vw,52px);letter-spacing:2px;margin-top:20px}
+  #welcomeScreen .cinematic-firm{font-size:clamp(22px,7vw,42px);gap:5px;letter-spacing:1px}
+  #welcomeScreen .cinematic-subline{letter-spacing:2px;font-size:6px}
+}
+@media(prefers-reduced-motion:reduce){#welcomeScreen .cinematic-welcome-to span,#welcomeScreen .cinematic-kicker,#welcomeScreen .cinematic-monogram,#welcomeScreen .cinematic-firm,#welcomeScreen .cinematic-subline{animation:none!important;opacity:1!important;transform:none!important}}
+</style>
+
 </head>
 
 
@@ -502,42 +556,36 @@ html,body{margin:0;padding:0;background:#02060b!important;}
      WELCOME SCREEN
 ======================================================== -->
 
-<div id="welcomeScreen">
+<div id="welcomeScreen" aria-label="A.S. & ASSOCIATES welcome">
+    <div class="cinematic-bg-glow cinematic-glow-left"></div>
+    <div class="cinematic-bg-glow cinematic-glow-right"></div>
+    <div class="cinematic-light-line cinematic-light-left"></div>
+    <div class="cinematic-light-line cinematic-light-right"></div>
+    <div class="cinematic-vignette"></div>
 
-    <div class="welcome-petal">🪷</div>
-    <div class="welcome-petal">🪷</div>
-    <div class="welcome-petal">🪷</div>
-    <div class="welcome-petal">🪷</div>
-    <div class="welcome-petal">🪷</div>
-    <div class="welcome-petal">🪷</div>
-    <div class="welcome-petal">🪷</div>
+    <div class="cinematic-welcome">
+        <div class="cinematic-kicker">TAX & ACCOUNTING SOLUTIONS</div>
 
-    <div class="welcome-aura aura-one"></div>
-    <div class="welcome-aura aura-two"></div>
-
-    <!-- PREMIUM WELCOME BOARD -->
-    <div class="welcome-scene scene-one">
-        <div class="welcome-orbit orbit-left" aria-hidden="true"><i></i><b></b></div>
-        <div class="welcome-orbit orbit-right" aria-hidden="true"><i></i><b></b></div>
-        <div class="welcome-stage">
-            <div class="welcome-board-glow" aria-hidden="true"></div>
-            <div class="welcome-board">
-                <div class="welcome-small">WELCOME TO</div>
-                <div class="welcome-word">WELCOME TO</div>
-                <div class="welcome-divider"><span></span><em>🪷</em><span></span></div>
-                <div class="welcome-monogram" aria-hidden="true"><span>A</span><span>S</span></div>
-                <div class="welcome-title">
-                    <span class="welcome-as">A.S.</span> <span class="welcome-amp">&amp;</span> <span class="welcome-assoc">ASSOCIATES</span>
-                </div>
-                <div class="welcome-line"></div>
-                <div class="welcome-sub">TAX&nbsp;&nbsp;•&nbsp;&nbsp;ACCOUNTING&nbsp;&nbsp;•&nbsp;&nbsp;COMPLIANCE</div>
-            </div>
+        <div class="cinematic-welcome-to" aria-label="WELCOME TO">
+            <span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span>
+            <span class="space"></span>
+            <span>T</span><span>O</span>
         </div>
+
+        <div class="cinematic-rule"><span></span></div>
+
+        <div class="cinematic-monogram" aria-hidden="true">
+            <span>A</span><span>S</span>
+        </div>
+
+        <div class="cinematic-firm" aria-label="A.S. & ASSOCIATES">
+            <span class="cinematic-as">A.S.</span>
+            <span class="cinematic-amp">&amp;</span>
+            <span class="cinematic-assoc">ASSOCIATES</span>
+        </div>
+
+        <div class="cinematic-subline">ACCOUNTING &nbsp;•&nbsp; GST &nbsp;•&nbsp; INCOME TAX &nbsp;•&nbsp; TDS</div>
     </div>
-
-
-
-
 </div>
 
 
