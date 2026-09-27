@@ -3772,7 +3772,8 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 /* Remove the old first welcome scene. The next scene now carries the welcome. */
 #welcomeScreen .scene-one{display:none!important;animation:none!important;}
 #welcomeScreen .scene-two{
-  animation:welcomeSceneTwoReordered 7.20s ease-in-out forwards!important;
+  animation:welcomeSceneTwoReordered 9.50s ease-in-out forwards!important;
+  animation-delay:0s!important;
   display:flex!important;
 }
 .scene-two-welcome{
@@ -3791,7 +3792,27 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 @media(max-width:700px){
   .scene-two-welcome{top:10%;font-size:14px;letter-spacing:3.5px;}
   .scene-two-welcome span{margin-top:8px;font-size:7px;letter-spacing:1.2px;}
-  #welcomeScreen .scene-two{animation:welcomeSceneTwoReordered 7.20s ease-in-out forwards!important;}
+  #welcomeScreen .scene-two{animation:welcomeSceneTwoReordered 9.50s ease-in-out forwards!important;animation-delay:0s!important;}
+}
+</style>
+<style id="welcome-final-timing-clean">
+/* FINAL WELCOME TIMING — one clean scene, no inherited background timing */
+#welcomeScreen .scene-one,
+#welcomeScreen .scene-three{
+  display:none!important;
+  animation:none!important;
+  animation-delay:0s!important;
+}
+#welcomeScreen .scene-two{
+  display:flex!important;
+  animation:welcomeSceneTwoReordered 9.50s ease-in-out forwards!important;
+  animation-delay:0s!important;
+}
+@media(max-width:700px){
+  #welcomeScreen .scene-two{
+    animation:welcomeSceneTwoReordered 9.50s ease-in-out forwards!important;
+    animation-delay:0s!important;
+  }
 }
 </style>
 </head>
@@ -5616,12 +5637,15 @@ function hideWelcomeScreen(){
     }
 }
 
-// Always release the welcome screen, even if another page resource is slow.
+// Release after the single welcome scene finishes. No separate background timing.
+let welcomeReleased = false;
+function releaseWelcomeOnce(){
+    if(welcomeReleased) return;
+    welcomeReleased = true;
+    hideWelcomeScreen();
+}
 document.addEventListener("DOMContentLoaded", function(){
-    setTimeout(hideWelcomeScreen, 7600);
-});
-window.addEventListener("load", function(){
-    setTimeout(hideWelcomeScreen, 7600);
+    setTimeout(releaseWelcomeOnce, 9800);
 });
 
 
