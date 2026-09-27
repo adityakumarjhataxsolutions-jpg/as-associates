@@ -40,6 +40,133 @@ html,body{margin:0;padding:0;background:#02070d!important;}
 #welcomeScreen .brand-reveal-name{font:700 24px/1.2 Arial,sans-serif;letter-spacing:1px;color:#eee6d7;}
 #welcomeScreen .brand-reveal-name small{display:block;margin-top:10px;font-size:9px;letter-spacing:2px;color:#cdbb8e;}
 #welcomeScreen .welcome-petal,#welcomeScreen .welcome-aura{display:none!important;}
+
+/* =========================================================
+   FINAL WELCOME DESIGN — single cinematic brand reveal
+========================================================= */
+#welcomeScreen{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:
+    radial-gradient(circle at 50% 46%,rgba(235,195,103,.10),transparent 18%),
+    radial-gradient(ellipse at 50% 92%,rgba(224,179,74,.24),transparent 22%),
+    linear-gradient(180deg,#02070d 0%,#07131d 48%,#010407 100%)!important;
+}
+#welcomeScreen .scene-one{
+  display:flex!important;
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:100%!important;
+  align-items:center!important;
+  justify-content:center!important;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important;
+  animation:none!important;
+  padding:24px!important;
+}
+#welcomeScreen .scene-two{display:none!important}
+#welcomeScreen .welcome-panel{
+  width:min(94vw,900px)!important;
+  max-width:900px!important;
+  padding:30px 22px 34px!important;
+  position:relative!important;
+  transform:scale(.86)!important;
+  opacity:0!important;
+  animation:welcomePanelIn 1.15s cubic-bezier(.18,.78,.18,1) .18s forwards!important;
+}
+#welcomeScreen .welcome-panel::before{
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  width:min(78vw,620px);height:min(78vw,620px);
+  transform:translate(-50%,-50%) scale(.72);
+  border-radius:50%;
+  border:1px solid rgba(231,190,89,.25);
+  box-shadow:0 0 90px rgba(226,181,72,.13),inset 0 0 80px rgba(226,181,72,.035);
+  opacity:0;
+  animation:welcomeRingIn 1.4s ease-out .05s forwards;
+  pointer-events:none;
+}
+#welcomeScreen .welcome-small{
+  position:relative;z-index:2;
+  font-size:clamp(11px,2.2vw,17px)!important;
+  letter-spacing:clamp(3px,1vw,7px)!important;
+  color:#f0d58e!important;
+  opacity:0;
+  transform:translateY(14px);
+  animation:welcomeTextIn .8s ease-out .48s forwards!important;
+}
+#welcomeScreen .welcome-hindi{font-size:clamp(10px,1.8vw,14px)!important;color:rgba(245,228,191,.78)!important}
+#welcomeScreen .welcome-monogram{
+  position:relative;z-index:2;
+  width:clamp(105px,22vw,150px)!important;
+  height:clamp(105px,22vw,150px)!important;
+  margin:22px auto 26px!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle,rgba(255,255,255,.045),rgba(0,0,0,.16))!important;
+  border:1px solid rgba(232,191,91,.46)!important;
+  box-shadow:0 0 90px rgba(226,181,72,.22),inset 0 0 38px rgba(255,255,255,.025)!important;
+  opacity:0;
+  transform:scale(.55) rotate(-8deg);
+  animation:welcomeLogoIn 1.25s cubic-bezier(.16,.82,.18,1) .58s forwards, welcomeLogoPulse 2.8s ease-in-out 1.9s infinite!important;
+}
+#welcomeScreen .welcome-monogram::before{border-radius:50%!important;border-color:rgba(232,191,91,.20)!important}
+#welcomeScreen .welcome-monogram span{
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-size:clamp(38px,8vw,58px)!important;
+  color:#f0d38d!important;
+  background:none!important;
+  text-shadow:0 0 25px rgba(238,198,101,.38),0 0 55px rgba(238,198,101,.14)!important;
+}
+#welcomeScreen .welcome-title{
+  position:relative;z-index:2;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-weight:500!important;
+  font-size:clamp(37px,8vw,76px)!important;
+  line-height:1.04!important;
+  letter-spacing:clamp(2px,.6vw,7px)!important;
+  white-space:nowrap!important;
+  color:#eee4cf!important;
+  text-shadow:0 8px 35px rgba(0,0,0,.65)!important;
+  opacity:0;
+  transform:translateY(22px) scale(.82);
+  animation:welcomeBrandIn 1.35s cubic-bezier(.16,.82,.18,1) .88s forwards!important;
+}
+#welcomeScreen .welcome-as{color:#e9c675!important}
+#welcomeScreen .welcome-amp{color:#9ec8ef!important;text-shadow:0 0 20px rgba(111,177,235,.25)!important}
+#welcomeScreen .welcome-assoc{color:#e9c675!important;text-shadow:0 0 24px rgba(238,198,101,.22)!important}
+#welcomeScreen .welcome-line{
+  position:relative;z-index:2;
+  width:min(280px,48vw)!important;
+  margin:20px auto 15px!important;
+  opacity:0;
+  transform:scaleX(.2);
+  animation:welcomeLineIn .8s ease-out 1.45s forwards!important;
+}
+#welcomeScreen .welcome-sub{
+  position:relative;z-index:2;
+  font-size:clamp(8px,1.7vw,11px)!important;
+  letter-spacing:clamp(2px,.8vw,5px)!important;
+  color:rgba(239,225,195,.76)!important;
+  opacity:0;
+  transform:translateY(10px);
+  animation:welcomeTextIn .8s ease-out 1.58s forwards!important;
+}
+@keyframes welcomePanelIn{to{opacity:1;transform:scale(1)}}
+@keyframes welcomeRingIn{to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes welcomeLogoIn{to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes welcomeBrandIn{to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes welcomeTextIn{to{opacity:1;transform:translateY(0)}}
+@keyframes welcomeLineIn{to{opacity:1;transform:scaleX(1)}}
+@keyframes welcomeLogoPulse{0%,100%{box-shadow:0 0 90px rgba(226,181,72,.22),inset 0 0 38px rgba(255,255,255,.025)}50%{box-shadow:0 0 120px rgba(226,181,72,.34),inset 0 0 42px rgba(255,255,255,.035)}}
+@media(max-width:600px){
+  #welcomeScreen .welcome-title{font-size:clamp(30px,8.5vw,48px)!important;letter-spacing:1.5px!important}
+  #welcomeScreen .welcome-panel{padding-left:8px!important;padding-right:8px!important}
+}
+
 </style>
 </head>
 
@@ -1869,7 +1996,7 @@ function releaseWelcomeOnce(){
     welcomeReleased = true;
     hideWelcomeScreen();
 }
-setTimeout(releaseWelcomeOnce, 6500);
+setTimeout(releaseWelcomeOnce, 5000);
 
 
 /* =========================================================
