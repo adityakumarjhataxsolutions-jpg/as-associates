@@ -1122,6 +1122,45 @@ html,body{background:#000!important;}
                 <a href="#contact"><strong>View Contact Details →</strong></a>
             </div>
 
+            <div class="as-assistant-nav-slot"><div id="as-chat-widget-v1">
+  <section class="as-chat-panel" role="dialog" aria-label="A.S. & Associates Helpdesk" aria-modal="false">
+    <header class="as-chat-head"><div class="as-chat-mark">AS</div><div><div class="as-chat-title">A.S. &amp; ASSOCIATES HELP DESK</div><div class="as-chat-sub"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#63c58a;margin-right:5px"></span>Tax &amp; Accounting Support · Online</div></div><button class="as-chat-close" type="button" aria-label="Close chat">×</button></header>
+    <div class="as-chat-messages" aria-live="polite"><div class="as-msg as-bot">Namaste! 👋 Main A.S. &amp; ASSOCIATES ka virtual assistant hoon. Aap services, founders, documents, fees ya contact ke baare mein mujhse kuch bhi pooch sakte hain. Main turant basic information dunga; zarurat par team se connect karwaunga.</div></div>
+    <div class="as-chat-quick"><button type="button" data-q="GST return">GST Return</button><button type="button" data-q="ITR filing">ITR Filing</button><button type="button" data-q="Accounting services">Accounting</button><button type="button" data-q="Who are the founders?">Founders</button><button type="button" data-q="Contact details">Contact</button></div>
+    <form class="as-chat-compose"><input class="as-chat-input" type="text" maxlength="500" placeholder="Apna sawal yahan likhein…" aria-label="Type your message" autocomplete="off"><button class="as-chat-send" type="submit" aria-label="Send message">➤</button></form>
+    <div class="as-chat-note">Basic automated information · Sensitive details share na karein</div>
+  </section>
+  <button class="as-chat-launch" type="button" aria-label="Chat with our assistant" aria-expanded="false"><span aria-hidden="true">✦</span><span>Ask Our Assistant</span><span aria-hidden="true">⌄</span></button>
+</div>
+<script id="as-chat-widget-script-v1">
+(function(){
+  var root=document.getElementById('as-chat-widget-v1'); if(!root)return;
+  var panel=root.querySelector('.as-chat-panel'), launch=root.querySelector('.as-chat-launch'), close=root.querySelector('.as-chat-close'), form=root.querySelector('.as-chat-compose'), input=root.querySelector('.as-chat-input'), messages=root.querySelector('.as-chat-messages');
+  function openChat(){panel.classList.add('as-open');launch.setAttribute('aria-expanded','true');input.focus();}
+  function closeChat(){panel.classList.remove('as-open');launch.setAttribute('aria-expanded','false');launch.focus();}
+  function addMessage(text,who){var el=document.createElement('div');el.className='as-msg '+(who==='user'?'as-user':'as-bot');el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;}
+  function reply(q){var s=q.toLowerCase();
+    if(/founder|owner|team|who started|aditya|shatrughan|shivam/.test(s))return "A.S. & ASSOCIATES ke founders Aditya Kumar Jha, Shatrughan Kumar aur Shivam Kumar Jha hain. Aditya Kumar Jha firm ke primary lead hain. Hamari firm Tax & Accounting Solutions par focus karti hai.";
+    if(/service|kya karte|what do you do|offer|provide/.test(s))return "A.S. & ASSOCIATES mein GST registration/returns, Income Tax Return (ITR), TDS-related support, bookkeeping, day-to-day accounting, Tally, bank reconciliation aur financial statements se judi services milti hain. Aapko kis kaam mein help chahiye?";
+    if(/audit|mca|roc|company registration|llp|opc/.test(s))return "Audit support aur MCA/ROC ya company/LLP-related requirements ke liye pehle aapka exact case samajhna hoga. Jahan professional certification/CA sign-off zaroori ho, wahan eligible professional ke through kaam hota hai. Team se details confirm kar sakte hain.";
+    if(/gst|gstr|2b|3b|1\b/.test(s))return 'Hum GST registration, GST return filing (GSTR-1/3B), aur GST-related accounting support provide karte hain. Sahi service aur fee batane ke liye business type aur filing requirement samajhna hoga. Aap Contact option se team se baat kar sakte hain.';
+    if(/itr|income.?tax|return filing|tax return/.test(s))return 'Hum individual aur business ke liye Income Tax Return filing aur tax-related assistance provide karte hain. Documents aur fee case ke hisaab se decide hoti hai.';
+    if(/tds|tax deducted/.test(s))return 'Hum TDS-related work aur return support provide karte hain. Form 16/16A, challan aur transaction details ke hisaab se requirement check hoti hai.';
+    if(/account|book|tally|balance sheet|profit|loss|mis/.test(s))return 'Hum bookkeeping, day-to-day accounting, Tally, bank reconciliation aur financial statements se related services provide karte hain. Aapko monthly ya yearly accounting chahiye?';
+    if(/fee|price|charge|cost|kitna|rate/.test(s))return 'Service fee work volume, business type aur compliance requirement par depend karti hai. Apni requirement aur contact number share karne ke bajay, neeche diye gaye official number par call/WhatsApp karein.';
+    if(/document|paper|kya chahiye/.test(s))return 'Documents service ke hisaab se alag hote hain. Kripya yahan PAN, Aadhaar, bank details ya password share na karein. Team aapko required document list bata degi.';
+    if(/contact|phone|call|whatsapp|number|email|location|address/.test(s))return 'A.S. & ASSOCIATES\nCall/WhatsApp: +91 62058 96093\nEmail: adityakumarjha.taxsolutions@gmail.com\nLocation: New Delhi';
+    if(/hello|hi|namaste|hii/.test(s))return 'Namaste! 😊 Main aapka virtual assistant hoon. GST, ITR, TDS, accounting, founders ya fees—kuch bhi poochhiye.';
+    return 'Main is sawal ka pakka jawab abhi nahi de pa raha hoon, lekin aapki help karunga. Aap GST, ITR, TDS, accounting, founders, documents, fees ya contact ke baare mein pooch sakte hain. Specific case ke liye Call/WhatsApp: +91 62058 96093.';
+  }
+  function send(q){q=(q||'').trim();if(!q)return;addMessage(q,'user');input.value='';window.setTimeout(function(){addMessage(reply(q),'bot');},180);}
+  launch.addEventListener('click',function(){panel.classList.contains('as-open')?closeChat():openChat();});close.addEventListener('click',closeChat);
+  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
+  root.querySelectorAll('[data-q]').forEach(function(b){b.addEventListener('click',function(){send(b.getAttribute('data-q'));});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&panel.classList.contains('as-open'))closeChat();});
+})();
+</script></div>
+
             <a href="#request" class="get-started">Get Started</a>
 
         </div>
@@ -6962,44 +7001,17 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 @media(max-width:480px){#as-chat-widget-v1{right:10px;top:82px;bottom:auto}#as-chat-widget-v1 .as-chat-launch{min-width:148px;height:46px;font-size:12px}#as-chat-widget-v1 .as-chat-panel{position:fixed;right:8px;top:136px;bottom:10px;width:calc(100vw - 16px);height:auto;max-height:calc(100dvh - 146px);border-radius:18px}}
 
 </style>
-<div id="as-chat-widget-v1">
-  <section class="as-chat-panel" role="dialog" aria-label="A.S. & Associates Helpdesk" aria-modal="false">
-    <header class="as-chat-head"><div class="as-chat-mark">AS</div><div><div class="as-chat-title">A.S. &amp; ASSOCIATES HELP DESK</div><div class="as-chat-sub"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#63c58a;margin-right:5px"></span>Tax &amp; Accounting Support · Online</div></div><button class="as-chat-close" type="button" aria-label="Close chat">×</button></header>
-    <div class="as-chat-messages" aria-live="polite"><div class="as-msg as-bot">Namaste! 👋 Main A.S. &amp; ASSOCIATES ka virtual assistant hoon. Aap services, founders, documents, fees ya contact ke baare mein mujhse kuch bhi pooch sakte hain. Main turant basic information dunga; zarurat par team se connect karwaunga.</div></div>
-    <div class="as-chat-quick"><button type="button" data-q="GST return">GST Return</button><button type="button" data-q="ITR filing">ITR Filing</button><button type="button" data-q="Accounting services">Accounting</button><button type="button" data-q="Who are the founders?">Founders</button><button type="button" data-q="Contact details">Contact</button></div>
-    <form class="as-chat-compose"><input class="as-chat-input" type="text" maxlength="500" placeholder="Apna sawal yahan likhein…" aria-label="Type your message" autocomplete="off"><button class="as-chat-send" type="submit" aria-label="Send message">➤</button></form>
-    <div class="as-chat-note">Basic automated information · Sensitive details share na karein</div>
-  </section>
-  <button class="as-chat-launch" type="button" aria-label="Chat with our assistant" aria-expanded="false"><span aria-hidden="true">✦</span><span>Ask Our Assistant</span><span aria-hidden="true">⌄</span></button>
-</div>
-<script id="as-chat-widget-script-v1">
-(function(){
-  var root=document.getElementById('as-chat-widget-v1'); if(!root)return;
-  var panel=root.querySelector('.as-chat-panel'), launch=root.querySelector('.as-chat-launch'), close=root.querySelector('.as-chat-close'), form=root.querySelector('.as-chat-compose'), input=root.querySelector('.as-chat-input'), messages=root.querySelector('.as-chat-messages');
-  function openChat(){panel.classList.add('as-open');launch.setAttribute('aria-expanded','true');input.focus();}
-  function closeChat(){panel.classList.remove('as-open');launch.setAttribute('aria-expanded','false');launch.focus();}
-  function addMessage(text,who){var el=document.createElement('div');el.className='as-msg '+(who==='user'?'as-user':'as-bot');el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;}
-  function reply(q){var s=q.toLowerCase();
-    if(/founder|owner|team|who started|aditya|shatrughan|shivam/.test(s))return "A.S. & ASSOCIATES ke founders Aditya Kumar Jha, Shatrughan Kumar aur Shivam Kumar Jha hain. Aditya Kumar Jha firm ke primary lead hain. Hamari firm Tax & Accounting Solutions par focus karti hai.";
-    if(/service|kya karte|what do you do|offer|provide/.test(s))return "A.S. & ASSOCIATES mein GST registration/returns, Income Tax Return (ITR), TDS-related support, bookkeeping, day-to-day accounting, Tally, bank reconciliation aur financial statements se judi services milti hain. Aapko kis kaam mein help chahiye?";
-    if(/audit|mca|roc|company registration|llp|opc/.test(s))return "Audit support aur MCA/ROC ya company/LLP-related requirements ke liye pehle aapka exact case samajhna hoga. Jahan professional certification/CA sign-off zaroori ho, wahan eligible professional ke through kaam hota hai. Team se details confirm kar sakte hain.";
-    if(/gst|gstr|2b|3b|1\b/.test(s))return 'Hum GST registration, GST return filing (GSTR-1/3B), aur GST-related accounting support provide karte hain. Sahi service aur fee batane ke liye business type aur filing requirement samajhna hoga. Aap Contact option se team se baat kar sakte hain.';
-    if(/itr|income.?tax|return filing|tax return/.test(s))return 'Hum individual aur business ke liye Income Tax Return filing aur tax-related assistance provide karte hain. Documents aur fee case ke hisaab se decide hoti hai.';
-    if(/tds|tax deducted/.test(s))return 'Hum TDS-related work aur return support provide karte hain. Form 16/16A, challan aur transaction details ke hisaab se requirement check hoti hai.';
-    if(/account|book|tally|balance sheet|profit|loss|mis/.test(s))return 'Hum bookkeeping, day-to-day accounting, Tally, bank reconciliation aur financial statements se related services provide karte hain. Aapko monthly ya yearly accounting chahiye?';
-    if(/fee|price|charge|cost|kitna|rate/.test(s))return 'Service fee work volume, business type aur compliance requirement par depend karti hai. Apni requirement aur contact number share karne ke bajay, neeche diye gaye official number par call/WhatsApp karein.';
-    if(/document|paper|kya chahiye/.test(s))return 'Documents service ke hisaab se alag hote hain. Kripya yahan PAN, Aadhaar, bank details ya password share na karein. Team aapko required document list bata degi.';
-    if(/contact|phone|call|whatsapp|number|email|location|address/.test(s))return 'A.S. & ASSOCIATES\nCall/WhatsApp: +91 62058 96093\nEmail: adityakumarjha.taxsolutions@gmail.com\nLocation: New Delhi';
-    if(/hello|hi|namaste|hii/.test(s))return 'Namaste! 😊 Main aapka virtual assistant hoon. GST, ITR, TDS, accounting, founders ya fees—kuch bhi poochhiye.';
-    return 'Main is sawal ka pakka jawab abhi nahi de pa raha hoon, lekin aapki help karunga. Aap GST, ITR, TDS, accounting, founders, documents, fees ya contact ke baare mein pooch sakte hain. Specific case ke liye Call/WhatsApp: +91 62058 96093.';
-  }
-  function send(q){q=(q||'').trim();if(!q)return;addMessage(q,'user');input.value='';window.setTimeout(function(){addMessage(reply(q),'bot');},180);}
-  launch.addEventListener('click',function(){panel.classList.contains('as-open')?closeChat():openChat();});close.addEventListener('click',closeChat);
-  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
-  root.querySelectorAll('[data-q]').forEach(function(b){b.addEventListener('click',function(){send(b.getAttribute('data-q'));});});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&panel.classList.contains('as-open'))closeChat();});
-})();
-</script>
+<style id="as-assistant-top-premium">
+/* Compact premium assistant placed in the website's top navigation */
+.as-assistant-nav-slot{position:relative;display:flex;align-items:center;margin-left:12px;z-index:2147483000}
+#as-chat-widget-v1{position:relative;inset:auto;z-index:2147483000;color:#f5f2ea}
+#as-chat-widget-v1 .as-chat-launch{width:auto;min-width:0;height:40px;padding:0 14px;border-radius:24px;gap:8px;font-size:12px;letter-spacing:.25px;border:1px solid rgba(224,190,116,.85);background:linear-gradient(135deg,#263d52,#0a1420);box-shadow:0 5px 16px #0005;white-space:nowrap}
+#as-chat-widget-v1 .as-chat-launch span:first-child{font-size:15px}
+#as-chat-widget-v1 .as-chat-panel{position:absolute;top:50px;right:0;bottom:auto;width:min(370px,calc(100vw - 24px));height:min(520px,calc(100dvh - 90px))}
+@media(max-width:760px){.as-assistant-nav-slot{margin-left:6px}#as-chat-widget-v1 .as-chat-launch{height:36px;padding:0 10px;font-size:11px;gap:5px}#as-chat-widget-v1 .as-chat-panel{position:fixed;top:76px;right:10px;bottom:10px;width:calc(100vw - 20px);height:auto;max-height:calc(100dvh - 86px)}}
+@media(max-width:390px){#as-chat-widget-v1 .as-chat-launch{padding:0 8px;font-size:10px}}
+</style>
+
 
 </body>
 <style id="firm-board-line-removal">
