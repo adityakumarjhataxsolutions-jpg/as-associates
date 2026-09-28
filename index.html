@@ -7125,6 +7125,37 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 @keyframes welcomeLetterPopVisible{0%{transform:translateY(16px) scale(.18);filter:blur(4px);text-shadow:0 0 0 transparent}65%{transform:translateY(-3px) scale(1.12);filter:blur(0);text-shadow:0 0 18px rgba(255,83,35,.95),0 0 42px rgba(255,45,35,.6)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,83,35,.75),0 0 28px rgba(255,45,35,.4)}}
 @media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(38px,11.5vw,70px)!important;letter-spacing:-1px!important}}
 </style>
+
+<style id="welcome-actual-markup-visibility-fix">
+/* Target the REAL markup: #welcomeScreen > .welcome-word > span. */
+#welcomeScreen{background:#000!important;color:#f3ead7!important;}
+#welcomeScreen .welcome-word{
+  display:flex!important;justify-content:center!important;align-items:center!important;
+  position:relative!important;z-index:10!important;
+  width:100%!important;white-space:nowrap!important;
+  opacity:1!important;visibility:visible!important;
+  transform:none!important;animation:none!important;
+  color:#f3ead7!important;
+}
+#welcomeScreen .welcome-word span{
+  display:inline-block!important;position:relative!important;
+  opacity:0!important;visibility:visible!important;
+  color:#f3ead7!important;-webkit-text-fill-color:#f3ead7!important;
+  text-shadow:0 0 18px rgba(238,198,101,.22),0 5px 24px rgba(0,0,0,.9)!important;
+  transform:translateY(22px) scale(.88)!important;filter:blur(5px);
+  animation:actualWelcomeLetter .62s cubic-bezier(.16,.82,.18,1) forwards!important;
+}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.25s!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.38s!important}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.51s!important}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.64s!important}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:.77s!important}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:.90s!important}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.03s!important}
+@keyframes actualWelcomeLetter{0%{opacity:0;transform:translateY(22px) scale(.88);filter:blur(5px)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){#welcomeScreen .welcome-word span{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+</style>
+
 </body>
 <style id="firm-board-line-removal">
 /* Remove decorative corner/underline line from the firm name board */
@@ -7326,34 +7357,3 @@ html,body{background:#000!important;}
 @media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(40px,11.5vw,70px)!important;letter-spacing:-1px!important}}
 @media(prefers-reduced-motion:reduce){#welcomeScreen .welcome-word span{animation:none!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}}
 </style>
-
-<!-- WELCOME LETTER VISIBILITY PATCH: uses inline important styles to bypass conflicting legacy CSS -->
-<script id="welcome-letter-visibility-patch">
-/* Fix only the seven existing Welcome letters; keep the particle canvas and black screen unchanged. */
-(function(){
-  function revealWelcomeLetters(){
-    var screen=document.getElementById('welcomeScreen');
-    if(!screen) return;
-    var letters=screen.querySelectorAll('.welcome-word span');
-    if(!letters.length) return;
-    var reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    letters.forEach(function(letter,index){
-      letter.style.setProperty('display','inline-block','important');
-      letter.style.setProperty('visibility','visible','important');
-      letter.style.setProperty('transition','opacity .24s ease, transform .42s cubic-bezier(.16,.82,.2,1), filter .24s ease','important');
-      letter.style.setProperty('opacity',reduced?'1':'0','important');
-      letter.style.setProperty('transform',reduced?'translateY(0) scale(1)':'translateY(22px) scale(.78)','important');
-      letter.style.setProperty('filter',reduced?'blur(0)':'blur(5px)','important');
-      if(!reduced){
-        window.setTimeout(function(){
-          letter.style.setProperty('opacity','1','important');
-          letter.style.setProperty('transform','translateY(0) scale(1)','important');
-          letter.style.setProperty('filter','blur(0)','important');
-        },180 + index*240);
-      }
-    });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',revealWelcomeLetters,{once:true});
-  else revealWelcomeLetters();
-})();
-</script>
