@@ -6900,9 +6900,13 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   #welcomeScreen .welcome-sub{font-size:7px!important;letter-spacing:2px!important;}
 }
 </style>
+
+
+
+
 <!-- A.S. & ASSOCIATES: free FAQ chatbot (added without changing existing site content) -->
-<style id="as-chat-widget-v1">
-#as-chat-widget-v1{font-family:inherit;position:fixed;right:24px;bottom:24px;z-index:2147483000;color:#f5f2ea}
+<style id="as-chat-widget-style-v1">
+#as-chat-widget-v1{font-family:inherit;position:fixed;right:18px;bottom:142px;z-index:2147483000;color:#f5f2ea}
 #as-chat-widget-v1 *{box-sizing:border-box}
 #as-chat-widget-v1 .as-chat-launch{width:62px;height:62px;border:1px solid #c9a45c;border-radius:50%;background:linear-gradient(145deg,#172536,#080f19);color:#e7c77e;box-shadow:0 10px 30px #0006;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:25px}
 #as-chat-widget-v1 .as-chat-launch:hover{transform:translateY(-2px);box-shadow:0 14px 34px #0008}
@@ -6926,7 +6930,7 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 #as-chat-widget-v1 .as-chat-input:focus{border-color:#c9a45c}
 #as-chat-widget-v1 .as-chat-send{border:0;border-radius:50%;width:40px;height:40px;background:#c9a45c;color:#101720;font-size:17px;font-weight:700;cursor:pointer}
 #as-chat-widget-v1 .as-chat-note{text-align:center;color:#8291a0;font-size:10px;padding:0 10px 9px;background:#0d1825}
-@media(max-width:480px){#as-chat-widget-v1{right:14px;bottom:14px}#as-chat-widget-v1 .as-chat-panel{right:-4px;bottom:72px;width:calc(100vw - 28px);height:min(540px,calc(100dvh - 100px))}}
+@media(max-width:480px){#as-chat-widget-v1{right:14px;bottom:138px}#as-chat-widget-v1 .as-chat-panel{right:-4px;bottom:72px;width:calc(100vw - 28px);height:min(540px,calc(100dvh - 100px))}}
 @media(prefers-reduced-motion:reduce){#as-chat-widget-v1 .as-chat-panel{animation:none}#as-chat-widget-v1 .as-chat-launch:hover{transform:none}}
 
 /* Premium chatbot finish */
@@ -6955,18 +6959,18 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 #as-chat-widget-v1 .as-chat-send{width:44px;height:44px;flex:none;background:linear-gradient(145deg,#f0d493,#b88e48);box-shadow:0 5px 14px rgba(0,0,0,.28);font-size:19px;transition:transform .18s,filter .18s}
 #as-chat-widget-v1 .as-chat-send:hover{transform:translateY(-1px);filter:brightness(1.08)}
 #as-chat-widget-v1 .as-chat-note{padding:0 10px 12px;background:#0c1723;color:#8293a4;font-size:10px;letter-spacing:.1px}
-@media(max-width:480px){#as-chat-widget-v1{right:14px;bottom:14px}#as-chat-widget-v1 .as-chat-panel{right:-4px;bottom:78px;width:calc(100vw - 28px);height:min(570px,calc(100dvh - 104px));border-radius:20px}}
+@media(max-width:480px){#as-chat-widget-v1{right:14px;bottom:138px}#as-chat-widget-v1 .as-chat-panel{right:-4px;bottom:78px;width:calc(100vw - 28px);height:min(570px,calc(100dvh - 104px));border-radius:20px}}
 
 </style>
 <div id="as-chat-widget-v1">
-  <section class="as-chat-panel" role="dialog" aria-label="A.S. & Associates chat assistant" aria-modal="false">
-    <header class="as-chat-head"><div class="as-chat-mark">AS</div><div><div class="as-chat-title">A.S. &amp; ASSOCIATES</div><div class="as-chat-sub">Tax &amp; Accounting Assistant · Online</div></div><button class="as-chat-close" type="button" aria-label="Close chat">×</button></header>
-    <div class="as-chat-messages" aria-live="polite"><div class="as-msg as-bot">Namaste! 👋 A.S. &amp; ASSOCIATES mein aapka swagat hai. GST, ITR, accounting ya kisi service ke baare mein poochhiye.</div></div>
+  <section class="as-chat-panel" role="dialog" aria-label="A.S. & Associates Helpdesk" aria-modal="false">
+    <header class="as-chat-head"><div class="as-chat-mark">AS</div><div><div class="as-chat-title">A.S. &amp; ASSOCIATES HELP DESK</div><div class="as-chat-sub"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#63c58a;margin-right:5px"></span>Tax &amp; Accounting Support · Online</div></div><button class="as-chat-close" type="button" aria-label="Close chat">×</button></header>
+    <div class="as-chat-messages" aria-live="polite"><div class="as-msg as-bot">Namaste! 👋 A.S. &amp; ASSOCIATES Helpdesk mein swagat hai. GST, ITR, Accounting ya kisi service ke liye apna sawal bhejiye. Zarurat par hamari team se Call/WhatsApp par bhi baat kar sakte hain.</div></div>
     <div class="as-chat-quick"><button type="button" data-q="GST return">GST Return</button><button type="button" data-q="ITR filing">ITR Filing</button><button type="button" data-q="Accounting services">Accounting</button><button type="button" data-q="Contact details">Contact</button></div>
     <form class="as-chat-compose"><input class="as-chat-input" type="text" maxlength="500" placeholder="Apna sawal yahan likhein…" aria-label="Type your message" autocomplete="off"><button class="as-chat-send" type="submit" aria-label="Send message">➤</button></form>
     <div class="as-chat-note">Basic automated information · Sensitive details share na karein</div>
   </section>
-  <button class="as-chat-launch" type="button" aria-label="Open chat" aria-expanded="false">✦</button>
+  <button class="as-chat-launch" type="button" aria-label="Open chat" aria-expanded="false">☏</button>
 </div>
 <script id="as-chat-widget-script-v1">
 (function(){
