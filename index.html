@@ -922,6 +922,15 @@ html,body{background:#000!important;}
 @media(max-width:700px){#welcomeScreen .cinematic-welcome-to{font-size:clamp(28px,9.2vw,48px)!important;letter-spacing:2px!important}#welcomeScreen .cinematic-firm{font-size:clamp(20px,6.8vw,40px)!important;letter-spacing:1px!important;margin-top:32px!important}#welcomeScreen .cinematic-subline{letter-spacing:2px!important;font-size:8px!important}}
 </style>
 
+
+<style id="welcome-visible-animation-safety">
+/* Animated letters must not be locked invisible by !important. */
+#welcomeScreen .welcome-letter-row span{opacity:0;visibility:visible;animation-fill-mode:forwards!important;}
+#welcomeScreen .welcome-sequence-one{display:flex!important;visibility:visible!important;}
+#welcomeScreen .welcome-sequence-one.welcome-sequence-out{opacity:0!important;transform:scale(1.04)!important;filter:blur(8px)!important;}
+#welcomeScreen .welcome-sequence-two{display:flex!important;opacity:0!important;visibility:hidden!important;}
+#welcomeScreen .welcome-sequence-two.welcome-sequence-in{opacity:1!important;visibility:visible!important;transform:scale(1)!important;filter:blur(0)!important;}
+</style>
 </head>
 
 
@@ -933,24 +942,20 @@ html,body{background:#000!important;}
 ======================================================== -->
 
 <div id="welcomeScreen" aria-label="A.S. & ASSOCIATES welcome">
-  <div class="cinematic-welcome-final-bg"></div>
-  <div class="cinematic-welcome-final-content">
-    <div class="welcome-final-label">WELCOME TO</div>
-    <div class="welcome-final-letters" aria-label="WELCOME TO">
-      <span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span><i></i><span>T</span><span>O</span>
+  <div class="welcome-cinematic-bg" aria-hidden="true"></div>
+  <div class="welcome-sequence welcome-sequence-one" id="welcomeSequenceOne">
+    <div class="welcome-overline">WELCOME TO</div>
+    <div class="welcome-letter-row" aria-label="WELCOME TO">
+      <span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span><b></b><span>T</span><span>O</span>
     </div>
-    <div class="welcome-final-firm">
-      <span class="firm-a">A.S.</span><span class="firm-amp">&amp;</span><span class="firm-assoc">ASSOCIATES</span>
-    </div>
-    <div class="welcome-final-line"></div>
-    <div class="welcome-final-sub">TAX &amp; ACCOUNTING SOLUTIONS</div>
+  </div>
+  <div class="welcome-sequence welcome-sequence-two" id="welcomeSequenceTwo" aria-hidden="true">
+    <div class="welcome-firm-monogram"><span>A</span><span>S</span></div>
+    <div class="welcome-firm-name"><span class="firm-a">A.S.</span><span class="firm-amp">&amp;</span><span class="firm-assoc">ASSOCIATES</span></div>
+    <div class="welcome-firm-line"></div>
+    <div class="welcome-firm-sub">TAX &amp; ACCOUNTING SOLUTIONS</div>
   </div>
 </div>
-
-
-<!-- =======================================================
-     HEADER
-======================================================== -->
 
 <header>
 
@@ -2711,20 +2716,27 @@ document.getElementById("year").textContent =
 
 function hideWelcomeScreen(){
     const welcome = document.getElementById("welcomeScreen");
-    if(welcome){
-        welcome.classList.add("hide");
-        document.body.classList.add("site-ready");
-    }
+    if(welcome){ welcome.classList.add("hide"); document.body.classList.add("site-ready"); }
 }
 
-// Release after the single welcome scene finishes. No separate background timing.
 let welcomeReleased = false;
+const welcomeOne = document.getElementById("welcomeSequenceOne");
+const welcomeTwo = document.getElementById("welcomeSequenceTwo");
+
+setTimeout(function(){
+    if(welcomeOne && welcomeTwo){
+        welcomeOne.classList.add("welcome-sequence-out");
+        welcomeTwo.classList.add("welcome-sequence-in");
+        welcomeTwo.setAttribute("aria-hidden","false");
+    }
+}, 5400);
+
 function releaseWelcomeOnce(){
     if(welcomeReleased) return;
     welcomeReleased = true;
     hideWelcomeScreen();
 }
-setTimeout(releaseWelcomeOnce, 7600);
+setTimeout(releaseWelcomeOnce, 11200);
 
 
 /* =========================================================
@@ -6936,6 +6948,63 @@ html,body{background:#000!important;}
 @keyframes welcomeLineIn{to{transform:scaleX(1)}}
 @keyframes welcomeSubIn{to{opacity:1;transform:none}}
 @media(max-width:600px){#welcomeScreen .welcome-final-label{font-size:8px!important;letter-spacing:4px!important;margin-bottom:18px!important}#welcomeScreen .welcome-final-letters span{font-size:clamp(30px,9.5vw,50px)!important;letter-spacing:1px!important}#welcomeScreen .welcome-final-firm{font-size:clamp(20px,6.6vw,39px)!important;gap:4px!important;margin-top:42px!important;letter-spacing:1px!important}#welcomeScreen .welcome-final-sub{font-size:7px!important;letter-spacing:2px!important}}
+</style>
+
+<style id="welcome-final-sequence-fix">
+#welcomeScreen{position:fixed!important;inset:0!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#010204!important;color:#fff!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+#welcomeScreen .welcome-cinematic-bg{position:absolute!important;inset:0!important;background:radial-gradient(circle at 50% 48%,rgba(229,188,83,.08),transparent 18%),radial-gradient(circle at 50% 50%,rgba(18,32,45,.24),transparent 48%),linear-gradient(180deg,#000 0%,#02060a 52%,#000 100%)!important}
+#welcomeScreen .welcome-cinematic-bg:before{content:"";position:absolute;inset:-30%;background:linear-gradient(105deg,transparent 40%,rgba(235,194,91,.16) 50%,transparent 60%);transform:translateX(-45%);animation:welcomeCineSweep 3.2s ease-out .1s forwards!important}
+#welcomeScreen .welcome-sequence{position:absolute!important;inset:0!important;z-index:10!important;display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;text-align:center!important;width:100%!important;height:100%!important;pointer-events:none!important}
+#welcomeScreen .welcome-sequence-one{opacity:1!important;visibility:visible!important;transition:opacity .8s ease,transform .8s ease,filter .8s ease!important}.welcome-sequence-one.welcome-sequence-out{opacity:0!important;transform:scale(1.04)!important;filter:blur(8px)!important}
+#welcomeScreen .welcome-overline{font:600 clamp(9px,1.5vw,13px)/1 Arial,sans-serif!important;letter-spacing:clamp(5px,1.1vw,11px)!important;color:rgba(235,215,171,.72)!important;margin-bottom:24px!important;opacity:0!important;animation:welcomeOverlineIn .8s ease-out .2s forwards!important}
+#welcomeScreen .welcome-letter-row{display:flex!important;align-items:center!important;justify-content:center!important;white-space:nowrap!important;gap:clamp(1px,.5vw,6px)!important}.welcome-letter-row span{display:inline-block!important;opacity:0;visibility:visible!important;font:500 clamp(39px,9vw,100px)/.9 Georgia,'Times New Roman',serif!important;letter-spacing:clamp(1px,.4vw,6px)!important;transform:translateY(30px) scale(.78)!important;filter:blur(7px)!important;text-shadow:0 0 0 transparent!important;animation:welcomeLetterIn .95s cubic-bezier(.16,.82,.18,1) forwards!important}
+.welcome-letter-row span:nth-child(1){animation-delay:.45s!important;color:#f2c86d!important}.welcome-letter-row span:nth-child(2){animation-delay:.62s!important;color:#f3e1ac!important}.welcome-letter-row span:nth-child(3){animation-delay:.79s!important;color:#d6e6f2!important}.welcome-letter-row span:nth-child(4){animation-delay:.96s!important;color:#d9c9ef!important}.welcome-letter-row span:nth-child(5){animation-delay:1.13s!important;color:#e8cf88!important}.welcome-letter-row span:nth-child(6){animation-delay:1.30s!important;color:#c7dced!important}.welcome-letter-row span:nth-child(7){animation-delay:1.47s!important;color:#f0c86c!important}.welcome-letter-row span:nth-child(9){animation-delay:1.72s!important;color:#b9d8ef!important}.welcome-letter-row span:nth-child(10){animation-delay:1.89s!important;color:#e6c477!important}.welcome-letter-row b{width:clamp(9px,1.6vw,20px)!important;display:block!important}
+#welcomeScreen .welcome-sequence-two{opacity:0!important;visibility:hidden!important;transform:scale(.94)!important;filter:blur(9px)!important;transition:opacity 1.1s ease,transform 1.25s cubic-bezier(.16,.82,.18,1),filter 1.1s ease!important}.welcome-sequence-two.welcome-sequence-in{opacity:1!important;visibility:visible!important;transform:scale(1)!important;filter:blur(0)!important}
+#welcomeScreen .welcome-firm-monogram{width:clamp(92px,14vw,135px)!important;height:clamp(92px,14vw,135px)!important;border:1px solid rgba(235,196,102,.55)!important;border-radius:50%!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:1px!important;box-shadow:0 0 65px rgba(226,181,72,.20),inset 0 0 38px rgba(255,255,255,.025)!important;margin-bottom:26px!important}.welcome-firm-monogram span{font:700 clamp(32px,5vw,52px)/1 Georgia,serif!important;color:#efd18a!important;text-shadow:0 0 24px rgba(238,198,101,.36)!important}.welcome-firm-monogram span:first-child{transform:translateX(-7px) translateY(-4px)!important}.welcome-firm-monogram span:last-child{transform:translateX(7px) translateY(4px)!important}
+#welcomeScreen .welcome-firm-name{display:flex!important;align-items:baseline!important;justify-content:center!important;gap:clamp(5px,1vw,13px)!important;font:600 clamp(27px,6vw,72px)/1 Georgia,'Times New Roman',serif!important;letter-spacing:clamp(1px,.5vw,7px)!important}.welcome-firm-name .firm-a{color:#f0ca72!important;text-shadow:0 0 25px rgba(240,202,114,.38)!important}.welcome-firm-name .firm-amp{color:#9fc9ec!important;text-shadow:0 0 22px rgba(159,201,236,.30)!important}.welcome-firm-name .firm-assoc{color:#f1dfb5!important;text-shadow:0 0 28px rgba(241,223,181,.22)!important}.welcome-firm-line{width:min(330px,55vw)!important;height:1px!important;margin:24px auto 15px!important;background:linear-gradient(90deg,transparent,#e6c06a,transparent)!important;box-shadow:0 0 14px rgba(230,192,106,.34)!important}.welcome-firm-sub{font:600 clamp(8px,1.2vw,11px)/1 Arial,sans-serif!important;letter-spacing:clamp(2px,.7vw,5px)!important;color:rgba(237,224,196,.68)!important}
+#welcomeScreen.hide{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:opacity .6s ease,visibility 0s linear .6s!important}
+@keyframes welcomeCineSweep{to{transform:translateX(45%)}}@keyframes welcomeOverlineIn{from{opacity:0;transform:translateY(12px);filter:blur(4px)}to{opacity:1;transform:none;filter:blur(0)}}@keyframes welcomeLetterIn{0%{opacity:0;transform:translateY(30px) scale(.78);filter:blur(7px);text-shadow:0 0 0 transparent}55%{opacity:1;transform:translateY(-4px) scale(1.06);filter:blur(0);text-shadow:0 0 32px currentColor,0 0 65px currentColor}100%{opacity:1;transform:none;filter:blur(0);text-shadow:0 0 16px currentColor,0 0 35px currentColor}}
+@media(max-width:600px){.welcome-overline{letter-spacing:4px!important;margin-bottom:20px!important}.welcome-letter-row{gap:1px!important}.welcome-letter-row span{font-size:clamp(29px,9.2vw,48px)!important;letter-spacing:0!important}.welcome-letter-row b{width:7px!important}.welcome-firm-name{font-size:clamp(20px,6.5vw,39px)!important;gap:4px!important;letter-spacing:1px!important}}
+</style>
+
+<style id="welcome-letter-final-fix">
+/* FINAL WELCOME: true one-letter-at-a-time cinematic reveal */
+#welcomeScreen{background:#000!important;color:#fff!important;}
+#welcomeScreen .welcome-cinematic-bg{background:radial-gradient(circle at 50% 50%,rgba(224,184,76,.055),transparent 17%),radial-gradient(circle at 50% 50%,rgba(20,31,42,.16),transparent 48%),#000!important;}
+#welcomeScreen .welcome-cinematic-bg:before{background:linear-gradient(105deg,transparent 42%,rgba(236,196,93,.13) 50%,transparent 58%)!important;animation:welcomeCineSweep 4.5s ease-out .2s forwards!important;}
+/* Hide the static duplicate heading: the letters themselves are the welcome. */
+#welcomeScreen .welcome-overline{display:none!important;}
+#welcomeScreen .welcome-sequence-one{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important;}
+#welcomeScreen .welcome-letter-row{display:flex!important;align-items:center!important;justify-content:center!important;gap:clamp(2px,.55vw,8px)!important;width:100%!important;}
+#welcomeScreen .welcome-letter-row span{opacity:0;visibility:visible;display:inline-block!important;position:relative!important;font-family:Georgia,'Times New Roman',serif!important;font-weight:500!important;font-size:clamp(42px,9.5vw,105px)!important;line-height:.9!important;letter-spacing:clamp(1px,.3vw,4px)!important;transform:translateY(18px) scale(.72)!important;filter:blur(9px)!important;text-shadow:0 0 0 transparent!important;animation:welcomeLetterSequential 1.05s cubic-bezier(.16,.82,.18,1) forwards!important;}
+#welcomeScreen .welcome-letter-row span:nth-child(1){animation-delay:.45s!important;color:#f3c85f!important}
+#welcomeScreen .welcome-letter-row span:nth-child(2){animation-delay:.80s!important;color:#f6e0a4!important}
+#welcomeScreen .welcome-letter-row span:nth-child(3){animation-delay:1.15s!important;color:#b9d8ef!important}
+#welcomeScreen .welcome-letter-row span:nth-child(4){animation-delay:1.50s!important;color:#d7c2f0!important}
+#welcomeScreen .welcome-letter-row span:nth-child(5){animation-delay:1.85s!important;color:#f1cf78!important}
+#welcomeScreen .welcome-letter-row span:nth-child(6){animation-delay:2.20s!important;color:#c2dff0!important}
+#welcomeScreen .welcome-letter-row span:nth-child(7){animation-delay:2.55s!important;color:#f4c75d!important}
+#welcomeScreen .welcome-letter-row span:nth-child(9){animation-delay:3.00s!important;color:#a9d5f2!important}
+#welcomeScreen .welcome-letter-row span:nth-child(10){animation-delay:3.35s!important;color:#e9c76f!important}
+#welcomeScreen .welcome-letter-row b{display:block!important;width:clamp(10px,1.8vw,22px)!important;flex:0 0 auto!important;}
+@keyframes welcomeLetterSequential{
+  0%{opacity:0;visibility:hidden;transform:translateY(18px) scale(.72);filter:blur(9px);text-shadow:0 0 0 transparent}
+  32%{opacity:1;visibility:visible;transform:translateY(-2px) scale(1.08);filter:blur(0);text-shadow:0 0 28px currentColor,0 0 65px currentColor,0 0 100px color-mix(in srgb,currentColor 45%,transparent)}
+  60%{opacity:1;visibility:visible;transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 18px currentColor,0 0 42px currentColor}
+  100%{opacity:1;visibility:visible;transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 12px currentColor,0 0 30px currentColor}
+}
+/* Second scene: deliberate, slow firm-name reveal */
+#welcomeScreen .welcome-sequence-two{transition:opacity 1.25s ease,transform 1.5s cubic-bezier(.16,.82,.18,1),filter 1.25s ease!important;}
+#welcomeScreen .welcome-firm-monogram{box-shadow:0 0 35px rgba(230,190,80,.12),0 0 90px rgba(230,190,80,.10),inset 0 0 32px rgba(255,255,255,.025)!important;}
+#welcomeScreen .welcome-firm-name{font-weight:600!important;text-shadow:0 0 28px rgba(232,194,99,.12)!important;}
+#welcomeScreen .welcome-firm-name .firm-a{text-shadow:0 0 24px rgba(240,202,114,.55),0 0 55px rgba(240,202,114,.18)!important;}
+#welcomeScreen .welcome-firm-name .firm-amp{text-shadow:0 0 24px rgba(159,201,236,.55),0 0 55px rgba(159,201,236,.16)!important;}
+#welcomeScreen .welcome-firm-name .firm-assoc{text-shadow:0 0 28px rgba(241,223,181,.48),0 0 60px rgba(241,223,181,.14)!important;}
+@media(max-width:600px){
+ #welcomeScreen .welcome-letter-row{gap:1px!important}
+ #welcomeScreen .welcome-letter-row span{font-size:clamp(29px,9.5vw,49px)!important;letter-spacing:0!important}
+ #welcomeScreen .welcome-letter-row b{width:7px!important}
+}
 </style>
 
 </html>
