@@ -2871,7 +2871,7 @@ document.getElementById("year").textContent =
     setTimeout(()=>{window.removeEventListener("resize",resize);},600);
   }
   // Letters finish at 1.62s; hold briefly for the particle bloom, then reveal the site.
-  window.setTimeout(release, reduceMotion?900:3650);
+  window.setTimeout(release, reduceMotion?1200:4800);
 })();
 
 /* =========================================================
@@ -7274,3 +7274,21 @@ html,body{background:#000!important;}
   }
 </style>
 
+
+
+<style id="welcome-visible-final-fix">
+/* Keep WELCOME visibly above the particle canvas on every screen. */
+#welcomeScreen{background:#000!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+#welcomeScreen #welcomeParticles{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1!important;pointer-events:none!important;}
+#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:20!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;padding:0 12px!important;box-sizing:border-box!important;white-space:nowrap!important;opacity:1!important;visibility:visible!important;pointer-events:none!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(42px,11.5vw,112px)!important;font-weight:700!important;font-style:italic!important;line-height:1!important;letter-spacing:clamp(0px,.45vw,5px)!important;}
+#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;min-width:0!important;opacity:1!important;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 10px rgba(255,85,35,.65),0 0 28px rgba(255,48,35,.35)!important;filter:none!important;transform-origin:center!important;animation:welcomeLettersActuallyShow .8s cubic-bezier(.16,.82,.2,1) both!important;}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.12s!important;color:#ffb84d!important;-webkit-text-fill-color:#ffb84d!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.24s!important}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.36s!important}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.48s!important}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:.60s!important}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:.72s!important}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:.84s!important}
+@keyframes welcomeLettersActuallyShow{0%{transform:translateY(18px) scale(.78);filter:blur(5px);text-shadow:0 0 0 transparent}65%{transform:translateY(-2px) scale(1.08);filter:blur(0);text-shadow:0 0 18px rgba(255,82,35,.85),0 0 42px rgba(255,48,35,.45)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,82,35,.7),0 0 26px rgba(255,48,35,.35)}}
+@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(39px,11.2vw,68px)!important;letter-spacing:0!important;gap:0!important}}
+</style>
