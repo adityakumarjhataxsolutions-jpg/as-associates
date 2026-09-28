@@ -64,24 +64,7 @@ html,body{margin:0;padding:0;background:#02060b!important;}
 @media(prefers-reduced-motion:reduce){#welcomeScreen *{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 </style>
 
-<style id="welcome-emergency-fix">
-/* FINAL WELCOME VISIBILITY FIX */
-#welcomeScreen{display:flex!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;animation:none!important;background:radial-gradient(circle at 50% 44%,rgba(226,185,84,.14),transparent 24%),radial-gradient(ellipse at 50% 82%,rgba(205,151,43,.16),transparent 28%),linear-gradient(115deg,#01050a 0%,#07131d 50%,#010307 100%)!important;}
-#welcomeScreen .scene-one{display:flex!important;opacity:1!important;visibility:visible!important;position:relative!important;width:100%!important;height:100%!important;align-items:center!important;justify-content:center!important;animation:none!important;}
-#welcomeScreen .scene-two,#welcomeScreen .scene-three{display:none!important;animation:none!important;}
-#welcomeScreen .welcome-panel{opacity:1!important;transform:none!important;animation:none!important;width:min(96vw,1050px)!important;text-align:center!important;}
-#welcomeScreen .welcome-small{opacity:1!important;transform:none!important;animation:welcomeFixSmall .8s cubic-bezier(.16,.82,.18,1) both!important;}
-#welcomeScreen .welcome-monogram{opacity:1!important;transform:scale(1)!important;animation:welcomeFixLogo .95s cubic-bezier(.16,.82,.18,1) both!important;}
-#welcomeScreen .welcome-title{opacity:1!important;transform:none!important;animation:welcomeFixBrand 1.05s cubic-bezier(.16,.82,.18,1) .18s both!important;}
-#welcomeScreen .welcome-line{opacity:1!important;transform:scaleX(1)!important;animation:welcomeFixLine .7s ease .45s both!important;}
-#welcomeScreen .welcome-sub{opacity:1!important;transform:none!important;animation:welcomeFixSub .7s ease .58s both!important;}
-@keyframes welcomeFixSmall{from{opacity:0;transform:translateX(-45px);filter:blur(4px)}to{opacity:1;transform:translateX(0);filter:blur(0)}}
-@keyframes welcomeFixLogo{from{opacity:0;transform:scale(.45) rotate(-12deg);filter:blur(5px)}to{opacity:1;transform:scale(1) rotate(0);filter:blur(0)}}
-@keyframes welcomeFixBrand{from{opacity:0;transform:translateX(70px) scale(.72);filter:blur(5px)}to{opacity:1;transform:translateX(0) scale(1);filter:blur(0)}}
-@keyframes welcomeFixLine{from{opacity:0;transform:scaleX(.05)}to{opacity:1;transform:scaleX(1)}}
-@keyframes welcomeFixSub{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:700px){#welcomeScreen .welcome-panel{width:96vw!important;padding:25px 10px 32px!important;}#welcomeScreen .welcome-monogram{width:118px!important;height:118px!important;}#welcomeScreen .welcome-title{font-size:clamp(27px,8.8vw,46px)!important;white-space:nowrap!important;}#welcomeScreen .welcome-small{font-size:9px!important;letter-spacing:3.5px!important;}#welcomeScreen .welcome-sub{font-size:7px!important;letter-spacing:2px!important;}}
-</style>
+
 
 <style id="welcome-final-design">
 /* FINAL PREMIUM WELCOME BOARD */
@@ -157,82 +140,7 @@ html,body{margin:0;padding:0;background:#02060b!important;}
 }
 </style>
 
-<style id="welcome-guaranteed-final">
-/* GUARANTEED FINAL WELCOME — visible immediately, then animated */
-#welcomeScreen{
-  display:flex!important; opacity:1!important; visibility:visible!important;
-  background:
-    radial-gradient(circle at 50% 42%,rgba(232,190,91,.12),transparent 24%),
-    radial-gradient(circle at 50% 88%,rgba(55,105,135,.10),transparent 32%),
-    linear-gradient(135deg,#02050a 0%,#07121b 48%,#010307 100%)!important;
-}
-#welcomeScreen .welcome-scene{display:flex!important;opacity:1!important;visibility:visible!important;}
-#welcomeScreen .welcome-stage{position:relative!important;width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;}
-#welcomeScreen .welcome-board{
-  position:relative!important;z-index:20!important;display:block!important;
-  width:min(88vw,820px)!important;padding:42px 24px 36px!important;
-  border:1px solid rgba(235,199,112,.32)!important;border-radius:24px!important;
-  background:linear-gradient(145deg,rgba(15,27,37,.94),rgba(2,7,12,.96))!important;
-  box-shadow:0 30px 90px rgba(0,0,0,.72),0 0 70px rgba(220,176,72,.10),inset 0 1px rgba(255,255,255,.06)!important;
-  opacity:1!important;transform:translateZ(0)!important;overflow:hidden!important;
-  animation:welcomeBoardZoom 1.05s cubic-bezier(.16,.82,.18,1) .05s both!important;
-}
-#welcomeScreen .welcome-board:before{
-  content:"";position:absolute;inset:-80% -20%;z-index:-1;
-  background:linear-gradient(115deg,transparent 42%,rgba(240,202,116,.14) 50%,transparent 58%);
-  animation:welcomeSweep 2.2s ease-out .25s both!important;pointer-events:none;
-}
-#welcomeScreen .welcome-small{
-  position:relative!important;opacity:1!important;transform:translateX(0)!important;
-  animation:welcomeFromLeft .8s cubic-bezier(.16,.82,.18,1) .25s both!important;
-  font-size:clamp(9px,1.7vw,14px)!important;letter-spacing:clamp(3px,1vw,7px)!important;
-}
-#welcomeScreen .welcome-word{
-  position:relative!important;z-index:3!important;opacity:1!important;
-  transform:translateX(0)!important;animation:welcomeWordSide 1.05s cubic-bezier(.16,.82,.18,1) .38s both!important;
-  font-size:clamp(54px,12vw,112px)!important;line-height:.9!important;
-  letter-spacing:clamp(4px,1.3vw,13px)!important;color:#f5ead5!important;
-  text-shadow:0 0 30px rgba(235,195,100,.16),0 18px 50px rgba(0,0,0,.8)!important;
-}
-#welcomeScreen .welcome-hindi{opacity:1!important;transform:translateX(0)!important;animation:welcomeFromRight .7s ease-out .9s both!important;}
-#welcomeScreen .welcome-divider{opacity:1!important;transform:scaleX(1)!important;animation:welcomeDivider .8s ease-out 1.05s both!important;}
-#welcomeScreen .welcome-divider em{animation:welcomeLotus 1.8s ease-in-out 1.35s infinite!important;}
-#welcomeScreen .welcome-monogram{
-  opacity:1!important;transform:scale(1) rotate(0)!important;
-  animation:welcomeLogo 1s cubic-bezier(.16,.82,.18,1) 1.15s both!important;
-}
-#welcomeScreen .welcome-title{
-  opacity:1!important;transform:translateX(0) scale(1)!important;
-  animation:welcomeFirm 1.05s cubic-bezier(.16,.82,.18,1) 1.45s both!important;
-}
-#welcomeScreen .welcome-line{opacity:1!important;transform:scaleX(1)!important;animation:welcomeDivider .65s ease-out 2.15s both!important;}
-#welcomeScreen .welcome-sub{opacity:1!important;transform:translateY(0)!important;animation:welcomeSub .7s ease-out 2.25s both!important;}
-#welcomeScreen .welcome-orbit{opacity:1!important;animation:orbitSpin 7s linear infinite!important;}
-#welcomeScreen .welcome-orbit.orbit-right{animation:orbitSpinReverse 7s linear infinite!important;}
-#welcomeScreen .welcome-petal{opacity:1!important;animation:welcomePetal 3s ease-in-out infinite!important;}
-@keyframes welcomeBoardZoom{from{transform:scale(.88) translateY(18px)}to{transform:scale(1) translateY(0)}}
-@keyframes welcomeSweep{from{transform:translateX(-55%)}to{transform:translateX(55%)}}
-@keyframes welcomeFromLeft{from{transform:translateX(-90px);opacity:0}to{transform:translateX(0);opacity:1}}
-@keyframes welcomeFromRight{from{transform:translateX(70px);opacity:0}to{transform:translateX(0);opacity:1}}
-@keyframes welcomeWordSide{from{transform:translateX(-150px) rotateY(-22deg) scale(.72);opacity:.2}to{transform:translateX(0) rotateY(0) scale(1);opacity:1}}
-@keyframes welcomeDivider{from{transform:scaleX(.08);opacity:0}to{transform:scaleX(1);opacity:1}}
-@keyframes welcomeLogo{from{transform:scale(.35) rotate(-180deg);opacity:.2}to{transform:scale(1) rotate(0);opacity:1}}
-@keyframes welcomeFirm{from{transform:translateX(120px) scale(.7);opacity:.15}to{transform:translateX(0) scale(1);opacity:1}}
-@keyframes welcomeSub{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
-@keyframes welcomeLotus{0%,100%{transform:scale(1) rotate(-5deg)}50%{transform:scale(1.2) rotate(5deg)}}
-@keyframes welcomePetal{0%,100%{transform:translateY(8px) rotate(-5deg);opacity:.35}50%{transform:translateY(-12px) rotate(7deg);opacity:.9}}
-@keyframes orbitSpin{to{transform:rotate(360deg)}}
-@keyframes orbitSpinReverse{to{transform:rotate(-360deg)}}
-@media(max-width:700px){
-  #welcomeScreen .welcome-board{width:88vw!important;padding:34px 12px 28px!important;border-radius:20px!important;}
-  #welcomeScreen .welcome-word{font-size:clamp(48px,14vw,78px)!important;letter-spacing:4px!important;}
-  #welcomeScreen .welcome-title{font-size:clamp(24px,7vw,43px)!important;white-space:nowrap!important;}
-  #welcomeScreen .welcome-monogram{width:76px!important;height:76px!important;margin:8px auto 15px!important;}
-  #welcomeScreen .welcome-monogram span{font-size:30px!important;}
-  #welcomeScreen .orbit-left,#welcomeScreen .orbit-right{width:82px!important;height:82px!important;margin-top:-41px!important;}
-  #welcomeScreen .orbit-left{left:-28px!important}.welcome-orbit.orbit-right{right:-28px!important;}
-}
-</style>
+
 
 
 <style id="welcome-ultimate-fix">
@@ -946,57 +854,27 @@ html,body{background:#000!important;}
 </style>
 
 
-<style id="welcome-particle-cinematic">
-  html.welcome-lock, body.welcome-lock { overflow:hidden!important; background:#000!important; }
-  #welcomeScreen {
-    position:fixed!important; inset:0!important; z-index:2147483647!important;
-    display:flex!important; align-items:center!important; justify-content:center!important;
-    overflow:hidden!important; background:#000!important; color:#fff!important;
-    opacity:1!important; visibility:visible!important; pointer-events:auto!important;
-    transition:opacity .48s ease, visibility 0s linear .48s!important;
-  }
-  #welcomeScreen::before,#welcomeScreen::after { content:none!important; display:none!important; }
-  #welcomeParticles { position:absolute!important; inset:0!important; width:100%!important; height:100%!important; z-index:1!important; pointer-events:none!important; }
-  #welcomeScreen .welcome-word {
-    position:relative!important; z-index:2!important; display:flex!important; align-items:center!important;
-    justify-content:center!important; gap:clamp(0px,.35vw,5px)!important;
-    width:100%!important; padding:0 3vw!important; white-space:nowrap!important;
-    font-family:Georgia,'Times New Roman',serif!important; font-size:clamp(58px,11.5vw,168px)!important;
-    font-style:italic!important; font-weight:800!important; line-height:1!important;
-    letter-spacing:clamp(-5px,-.35vw,-1px)!important;
-  }
-  #welcomeScreen .welcome-word span {
-    display:inline-block!important; opacity:0!important;
-    background:linear-gradient(180deg,#ffb02e 0%,#ff6a16 38%,#ff342e 72%,#bd1429 100%)!important;
-    -webkit-background-clip:text!important; background-clip:text!important; color:transparent!important;
-    -webkit-text-fill-color:transparent!important;
-    text-shadow:0 0 0 transparent!important;
-    filter:drop-shadow(0 0 7px rgba(255,75,30,.18))!important;
-    transform:translateY(24px) scale(.78)!important;
-    animation:welcomeLetterIgnite .72s cubic-bezier(.16,.82,.2,1) forwards!important;
-  }
-  #welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s!important}
-  #welcomeScreen .welcome-word span:nth-child(2){animation-delay:.30s!important}
-  #welcomeScreen .welcome-word span:nth-child(3){animation-delay:.42s!important}
-  #welcomeScreen .welcome-word span:nth-child(4){animation-delay:.54s!important}
-  #welcomeScreen .welcome-word span:nth-child(5){animation-delay:.66s!important}
-  #welcomeScreen .welcome-word span:nth-child(6){animation-delay:.78s!important}
-  #welcomeScreen .welcome-word span:nth-child(7){animation-delay:.90s!important}
-  @keyframes welcomeLetterIgnite {
-    0% { opacity:0; transform:translateY(24px) scale(.78); filter:blur(8px) drop-shadow(0 0 0 rgba(255,65,30,0)); }
-    65% { opacity:1; filter:blur(0) drop-shadow(0 0 18px rgba(255,75,25,.5)); }
-    100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0) drop-shadow(0 0 10px rgba(255,65,25,.28)); }
-  }
-  #welcomeScreen.hide { opacity:0!important; visibility:hidden!important; pointer-events:none!important; }
-  @media(max-width:600px) {
-    #welcomeScreen .welcome-word { font-size:clamp(49px,12.5vw,82px)!important; gap:0!important; letter-spacing:-2px!important; }
-  }
-  @media(prefers-reduced-motion:reduce) {
-    #welcomeScreen .welcome-word span { animation-duration:.01ms!important; animation-delay:0s!important; opacity:1!important; transform:none!important; }
-  }
-</style>
 
-</head>
+
+\n<style id="welcome-letter-sequence-verified">
+/* One authoritative WELCOME letter animation. Other website sections remain unchanged. */
+html.welcome-lock,body.welcome-lock{overflow:hidden!important;background:#000!important;}
+#welcomeScreen{background:#000!important;}
+#welcomeScreen{position:fixed!important;inset:0!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;}
+#welcomeScreen #welcomeParticles{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1!important;pointer-events:none!important;}
+#welcomeScreen .welcome-word{position:relative!important;z-index:5!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:clamp(0px,.35vw,5px)!important;width:100%!important;padding:0 3vw!important;box-sizing:border-box!important;white-space:nowrap!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(58px,11.5vw,168px)!important;font-style:italic!important;font-weight:800!important;line-height:1!important;letter-spacing:clamp(-5px,-.35vw,-1px)!important;color:#ff9b42!important;pointer-events:none!important;}
+#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;min-width:0!important;opacity:0;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 12px rgba(255,85,35,.72),0 0 30px rgba(255,48,35,.4)!important;filter:blur(6px);transform:translateY(24px) scale(.78);animation:welcomeLettersVerified .72s cubic-bezier(.16,.82,.2,1) both;}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s;color:#ffbd55!important;-webkit-text-fill-color:#ffbd55!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.36s}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.54s}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.72s}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:.90s}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:1.08s}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.26s}
+@keyframes welcomeLettersVerified{0%{opacity:0;transform:translateY(24px) scale(.78);filter:blur(6px);text-shadow:0 0 0 transparent}65%{opacity:1;transform:translateY(-3px) scale(1.08);filter:blur(0);text-shadow:0 0 20px rgba(255,83,35,.95),0 0 46px rgba(255,45,35,.55)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 12px rgba(255,83,35,.75),0 0 30px rgba(255,45,35,.4)}}
+@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(40px,11.5vw,70px)!important;letter-spacing:-1px!important;gap:0!important}}
+@media(prefers-reduced-motion:reduce){#welcomeScreen .welcome-word span{animation:none;opacity:1;transform:none;filter:none}}
+</style>\n</head>
 
 
 <body>
@@ -7110,21 +6988,7 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 
 
 
-<style id="welcome-guaranteed-visible-final">
-/* Final fix: keep every letter paintable; animate position/scale, never opacity. */
-#welcomeScreen{display:flex!important;opacity:1!important;visibility:visible!important;background:#000!important;}
-#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:2147483646!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;box-sizing:border-box!important;padding:0 8px!important;gap:0!important;white-space:nowrap!important;opacity:1!important;visibility:visible!important;font-size:clamp(38px,11.5vw,100px)!important;line-height:1!important;letter-spacing:0!important;}
-#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;opacity:1!important;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 10px rgba(255,85,35,.72),0 0 26px rgba(255,48,35,.42)!important;filter:blur(0)!important;transform:translateY(0) scale(1)!important;animation:welcomeLetterPopVisible .58s cubic-bezier(.16,.82,.2,1) both!important;}
-#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.12s!important;color:#ffc05a!important;-webkit-text-fill-color:#ffc05a!important}
-#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.34s!important}
-#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.56s!important}
-#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.78s!important}
-#welcomeScreen .welcome-word span:nth-child(5){animation-delay:1s!important}
-#welcomeScreen .welcome-word span:nth-child(6){animation-delay:1.22s!important}
-#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.44s!important}
-@keyframes welcomeLetterPopVisible{0%{transform:translateY(16px) scale(.18);filter:blur(4px);text-shadow:0 0 0 transparent}65%{transform:translateY(-3px) scale(1.12);filter:blur(0);text-shadow:0 0 18px rgba(255,83,35,.95),0 0 42px rgba(255,45,35,.6)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,83,35,.75),0 0 28px rgba(255,45,35,.4)}}
-@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(38px,11.5vw,70px)!important;letter-spacing:-1px!important}}
-</style>
+
 </body>
 <style id="firm-board-line-removal">
 /* Remove decorative corner/underline line from the firm name board */
@@ -7240,90 +7104,11 @@ html,body{background:#000!important;}
 
 
 
-<style id="welcome-particle-cinematic">
-  html.welcome-lock, body.welcome-lock { overflow:hidden!important; background:#000!important; }
-  #welcomeScreen {
-    position:fixed!important; inset:0!important; z-index:2147483647!important;
-    display:flex!important; align-items:center!important; justify-content:center!important;
-    overflow:hidden!important; background:#000!important; color:#fff!important;
-    opacity:1!important; visibility:visible!important; pointer-events:auto!important;
-    transition:opacity .48s ease, visibility 0s linear .48s!important;
-  }
-  #welcomeScreen::before,#welcomeScreen::after { content:none!important; display:none!important; }
-  #welcomeParticles { position:absolute!important; inset:0!important; width:100%!important; height:100%!important; z-index:1!important; pointer-events:none!important; }
-  #welcomeScreen .welcome-word {
-    position:relative!important; z-index:2!important; display:flex!important; align-items:center!important;
-    justify-content:center!important; gap:clamp(0px,.35vw,5px)!important;
-    width:100%!important; padding:0 3vw!important; white-space:nowrap!important;
-    font-family:Georgia,'Times New Roman',serif!important; font-size:clamp(58px,11.5vw,168px)!important;
-    font-style:italic!important; font-weight:800!important; line-height:1!important;
-    letter-spacing:clamp(-5px,-.35vw,-1px)!important;
-  }
-  #welcomeScreen .welcome-word span {
-    display:inline-block!important; opacity:0!important;
-    background:linear-gradient(180deg,#ffb02e 0%,#ff6a16 38%,#ff342e 72%,#bd1429 100%)!important;
-    -webkit-background-clip:text!important; background-clip:text!important; color:transparent!important;
-    -webkit-text-fill-color:transparent!important;
-    text-shadow:0 0 0 transparent!important;
-    filter:drop-shadow(0 0 7px rgba(255,75,30,.18))!important;
-    transform:translateY(24px) scale(.78)!important;
-    animation:welcomeLetterIgnite .72s cubic-bezier(.16,.82,.2,1) forwards!important;
-  }
-  #welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s!important}
-  #welcomeScreen .welcome-word span:nth-child(2){animation-delay:.30s!important}
-  #welcomeScreen .welcome-word span:nth-child(3){animation-delay:.42s!important}
-  #welcomeScreen .welcome-word span:nth-child(4){animation-delay:.54s!important}
-  #welcomeScreen .welcome-word span:nth-child(5){animation-delay:.66s!important}
-  #welcomeScreen .welcome-word span:nth-child(6){animation-delay:.78s!important}
-  #welcomeScreen .welcome-word span:nth-child(7){animation-delay:.90s!important}
-  @keyframes welcomeLetterIgnite {
-    0% { opacity:0; transform:translateY(24px) scale(.78); filter:blur(8px) drop-shadow(0 0 0 rgba(255,65,30,0)); }
-    65% { opacity:1; filter:blur(0) drop-shadow(0 0 18px rgba(255,75,25,.5)); }
-    100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0) drop-shadow(0 0 10px rgba(255,65,25,.28)); }
-  }
-  #welcomeScreen.hide { opacity:0!important; visibility:hidden!important; pointer-events:none!important; }
-  @media(max-width:600px) {
-    #welcomeScreen .welcome-word { font-size:clamp(49px,12.5vw,82px)!important; gap:0!important; letter-spacing:-2px!important; }
-  }
-  @media(prefers-reduced-motion:reduce) {
-    #welcomeScreen .welcome-word span { animation-duration:.01ms!important; animation-delay:0s!important; opacity:1!important; transform:none!important; }
-  }
-</style>
 
 
 
-<style id="welcome-visible-final-fix">
-/* Keep WELCOME visibly above the particle canvas on every screen. */
-#welcomeScreen{background:#000!important;display:flex!important;align-items:center!important;justify-content:center!important;}
-#welcomeScreen #welcomeParticles{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1!important;pointer-events:none!important;}
-#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:20!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;padding:0 12px!important;box-sizing:border-box!important;white-space:nowrap!important;opacity:1!important;visibility:visible!important;pointer-events:none!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(42px,11.5vw,112px)!important;font-weight:700!important;font-style:italic!important;line-height:1!important;letter-spacing:clamp(0px,.45vw,5px)!important;}
-#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;min-width:0!important;opacity:1!important;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 10px rgba(255,85,35,.65),0 0 28px rgba(255,48,35,.35)!important;filter:none!important;transform-origin:center!important;animation:welcomeLettersActuallyShow .8s cubic-bezier(.16,.82,.2,1) both!important;}
-#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.12s!important;color:#ffb84d!important;-webkit-text-fill-color:#ffb84d!important}
-#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.24s!important}
-#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.36s!important}
-#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.48s!important}
-#welcomeScreen .welcome-word span:nth-child(5){animation-delay:.60s!important}
-#welcomeScreen .welcome-word span:nth-child(6){animation-delay:.72s!important}
-#welcomeScreen .welcome-word span:nth-child(7){animation-delay:.84s!important}
-@keyframes welcomeLettersActuallyShow{0%{transform:translateY(18px) scale(.78);filter:blur(5px);text-shadow:0 0 0 transparent}65%{transform:translateY(-2px) scale(1.08);filter:blur(0);text-shadow:0 0 18px rgba(255,82,35,.85),0 0 42px rgba(255,48,35,.45)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,82,35,.7),0 0 26px rgba(255,48,35,.35)}}
-@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(39px,11.2vw,68px)!important;letter-spacing:0!important;gap:0!important}}
-</style>
 
-<style id="welcome-letter-by-letter-final">
-/* Final reliable letter-by-letter WELCOME reveal */
-#welcomeScreen{background:#000!important;}
-#welcomeScreen #welcomeParticles{position:absolute!important;inset:0!important;z-index:1!important;pointer-events:none!important;}
-#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:50!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important;width:100%!important;padding:0 10px!important;box-sizing:border-box!important;white-space:nowrap!important;visibility:visible!important;opacity:1!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(42px,11.5vw,112px)!important;font-weight:700!important;font-style:italic!important;line-height:1!important;letter-spacing:0!important;pointer-events:none!important;}
-#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;min-width:0!important;visibility:visible!important;opacity:0!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 12px rgba(255,85,35,.72),0 0 30px rgba(255,48,35,.4)!important;filter:blur(5px)!important;transform:translateY(22px) scale(.72)!important;animation:welcomeLetterTypeFinal .62s cubic-bezier(.16,.82,.2,1) both!important;}
-#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s!important;color:#ffbd55!important;-webkit-text-fill-color:#ffbd55!important}
-#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.42s!important}
-#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.66s!important}
-#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.90s!important}
-#welcomeScreen .welcome-word span:nth-child(5){animation-delay:1.14s!important}
-#welcomeScreen .welcome-word span:nth-child(6){animation-delay:1.38s!important}
-#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.62s!important}
-@keyframes welcomeLetterTypeFinal{0%{opacity:0;visibility:visible;transform:translateY(22px) scale(.72);filter:blur(7px);text-shadow:0 0 0 transparent}55%{opacity:1;visibility:visible;transform:translateY(-3px) scale(1.09);filter:blur(0);text-shadow:0 0 20px rgba(255,83,35,.95),0 0 46px rgba(255,45,35,.55)}100%{opacity:1;visibility:visible;transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 12px rgba(255,83,35,.75),0 0 30px rgba(255,45,35,.4)}}
-@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(40px,11.5vw,70px)!important;letter-spacing:-1px!important}}
-@media(prefers-reduced-motion:reduce){#welcomeScreen .welcome-word span{animation:none!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}}
-</style>
+
+
+
 
