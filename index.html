@@ -6900,6 +6900,100 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
   #welcomeScreen .welcome-sub{font-size:7px!important;letter-spacing:2px!important;}
 }
 </style>
+<!-- A.S. & ASSOCIATES: free FAQ chatbot (added without changing existing site content) -->
+<style id="as-chat-widget-v1">
+#as-chat-widget-v1{font-family:inherit;position:fixed;right:24px;bottom:24px;z-index:2147483000;color:#f5f2ea}
+#as-chat-widget-v1 *{box-sizing:border-box}
+#as-chat-widget-v1 .as-chat-launch{width:62px;height:62px;border:1px solid #c9a45c;border-radius:50%;background:linear-gradient(145deg,#172536,#080f19);color:#e7c77e;box-shadow:0 10px 30px #0006;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:25px}
+#as-chat-widget-v1 .as-chat-launch:hover{transform:translateY(-2px);box-shadow:0 14px 34px #0008}
+#as-chat-widget-v1 .as-chat-panel{position:absolute;right:0;bottom:76px;width:min(370px,calc(100vw - 32px));height:min(520px,calc(100dvh - 120px));background:#0b1420;border:1px solid #b89552;border-radius:18px;box-shadow:0 18px 55px #0009;display:none;overflow:hidden}
+#as-chat-widget-v1 .as-chat-panel.as-open{display:flex;flex-direction:column;animation:asChatIn .18s ease-out}
+@keyframes asChatIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+#as-chat-widget-v1 .as-chat-head{padding:16px 16px 13px;background:linear-gradient(120deg,#17283a,#0b1420);border-bottom:1px solid #293747;display:flex;align-items:center;gap:11px}
+#as-chat-widget-v1 .as-chat-mark{width:38px;height:38px;flex:none;border:1px solid #c9a45c;border-radius:11px;display:grid;place-items:center;color:#e4c477;font-weight:700}
+#as-chat-widget-v1 .as-chat-title{font-size:14px;font-weight:700;letter-spacing:.35px;color:#f4e5c1}
+#as-chat-widget-v1 .as-chat-sub{font-size:11px;color:#aeb9c5;margin-top:3px}
+#as-chat-widget-v1 .as-chat-close{margin-left:auto;background:transparent;border:0;color:#d8dce1;font-size:24px;cursor:pointer;line-height:1;padding:4px}
+#as-chat-widget-v1 .as-chat-messages{padding:15px 13px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+#as-chat-widget-v1 .as-msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:13px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+#as-chat-widget-v1 .as-bot{align-self:flex-start;background:#172536;border:1px solid #293b4e;color:#edf0f3;border-bottom-left-radius:4px}
+#as-chat-widget-v1 .as-user{align-self:flex-end;background:#b89552;color:#101720;border-bottom-right-radius:4px}
+#as-chat-widget-v1 .as-chat-quick{padding:0 12px 10px;display:flex;flex-wrap:wrap;gap:6px}
+#as-chat-widget-v1 .as-chat-quick button{background:#111f2e;border:1px solid #806c48;color:#e4c477;border-radius:18px;padding:7px 10px;font-size:11px;cursor:pointer}
+#as-chat-widget-v1 .as-chat-quick button:hover{background:#243448}
+#as-chat-widget-v1 .as-chat-compose{padding:10px 11px 12px;border-top:1px solid #293747;display:flex;gap:8px;background:#0d1825}
+#as-chat-widget-v1 .as-chat-input{min-width:0;flex:1;border:1px solid #3a4b5e;border-radius:22px;background:#111f2e;color:#fff;padding:10px 13px;font:inherit;font-size:13px;outline:none}
+#as-chat-widget-v1 .as-chat-input:focus{border-color:#c9a45c}
+#as-chat-widget-v1 .as-chat-send{border:0;border-radius:50%;width:40px;height:40px;background:#c9a45c;color:#101720;font-size:17px;font-weight:700;cursor:pointer}
+#as-chat-widget-v1 .as-chat-note{text-align:center;color:#8291a0;font-size:10px;padding:0 10px 9px;background:#0d1825}
+@media(max-width:480px){#as-chat-widget-v1{right:14px;bottom:14px}#as-chat-widget-v1 .as-chat-panel{right:-4px;bottom:72px;width:calc(100vw - 28px);height:min(540px,calc(100dvh - 100px))}}
+@media(prefers-reduced-motion:reduce){#as-chat-widget-v1 .as-chat-panel{animation:none}#as-chat-widget-v1 .as-chat-launch:hover{transform:none}}
+
+/* Premium chatbot finish */
+#as-chat-widget-v1{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#f7f3e9}
+#as-chat-widget-v1 .as-chat-launch{width:66px;height:66px;border:1px solid rgba(226,190,112,.9);background:radial-gradient(circle at 30% 20%,#31445a 0,#142337 48%,#080e17 100%);color:#e9c77e;box-shadow:0 12px 34px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.14);font-size:27px;transition:transform .22s ease,box-shadow .22s ease}
+#as-chat-widget-v1 .as-chat-launch:hover{transform:translateY(-3px) scale(1.025);box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 0 5px rgba(201,164,92,.12)}
+#as-chat-widget-v1 .as-chat-panel{width:min(390px,calc(100vw - 32px));height:min(570px,calc(100dvh - 112px));background:linear-gradient(160deg,#101e2d 0%,#09121e 58%,#0b1420 100%);border:1px solid rgba(210,174,99,.72);border-radius:22px;box-shadow:0 26px 75px rgba(0,0,0,.58),0 0 0 1px rgba(255,255,255,.035) inset}
+#as-chat-widget-v1 .as-chat-head{position:relative;padding:19px 17px 17px;background:linear-gradient(115deg,#20354a 0%,#142538 55%,#101b29 100%);border-bottom:1px solid rgba(201,164,92,.28);gap:12px}
+#as-chat-widget-v1 .as-chat-head:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,#d0aa62 35%,#f0d99e 50%,#d0aa62 65%,transparent);opacity:.75}
+#as-chat-widget-v1 .as-chat-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(145deg,#293e52,#0b1724);border:1px solid #d0ad68;box-shadow:0 5px 15px #0005;color:#f0d18b;font-size:15px;letter-spacing:.5px}
+#as-chat-widget-v1 .as-chat-title{font-size:13px;letter-spacing:1px;color:#f4e4bf}
+#as-chat-widget-v1 .as-chat-sub{font-size:11px;color:#bdc8d2;letter-spacing:.15px}
+#as-chat-widget-v1 .as-chat-close{width:32px;height:32px;border:1px solid #ffffff20;border-radius:50%;background:#ffffff0a;font-size:21px;transition:background .2s}
+#as-chat-widget-v1 .as-chat-close:hover{background:#ffffff1c}
+#as-chat-widget-v1 .as-chat-messages{padding:18px 15px;background:radial-gradient(ellipse at top left,rgba(47,70,91,.18),transparent 58%);gap:12px}
+#as-chat-widget-v1 .as-msg{padding:11px 14px;border-radius:16px;font-size:13px;line-height:1.58;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+#as-chat-widget-v1 .as-bot{background:linear-gradient(145deg,#1c3043,#152536);border:1px solid rgba(173,190,205,.16);border-bottom-left-radius:5px;color:#f0f2f4}
+#as-chat-widget-v1 .as-user{background:linear-gradient(135deg,#e5c47e,#b9914e);color:#111a23;border:1px solid #f0d79d;border-bottom-right-radius:5px;font-weight:500}
+#as-chat-widget-v1 .as-chat-quick{padding:4px 14px 13px;gap:8px;background:#0b1521}
+#as-chat-widget-v1 .as-chat-quick button{background:linear-gradient(145deg,#192b3d,#101d2b);border:1px solid rgba(201,164,92,.55);color:#e8c77e;border-radius:20px;padding:8px 12px;font-size:11px;font-weight:600;letter-spacing:.1px;transition:all .18s}
+#as-chat-widget-v1 .as-chat-quick button:hover{background:#2a3e51;border-color:#e0bd74;transform:translateY(-1px)}
+#as-chat-widget-v1 .as-chat-compose{padding:12px 13px 10px;background:#0c1723;border-top:1px solid rgba(201,164,92,.22);align-items:center}
+#as-chat-widget-v1 .as-chat-input{height:44px;border:1px solid #405367;border-radius:24px;background:#142436;padding:0 16px;font-size:13px;box-shadow:inset 0 2px 5px #0003;transition:border .2s,box-shadow .2s}
+#as-chat-widget-v1 .as-chat-input:focus{border-color:#d2ae68;box-shadow:0 0 0 3px rgba(210,174,104,.12)}
+#as-chat-widget-v1 .as-chat-input::placeholder{color:#9aa9b7}
+#as-chat-widget-v1 .as-chat-send{width:44px;height:44px;flex:none;background:linear-gradient(145deg,#f0d493,#b88e48);box-shadow:0 5px 14px rgba(0,0,0,.28);font-size:19px;transition:transform .18s,filter .18s}
+#as-chat-widget-v1 .as-chat-send:hover{transform:translateY(-1px);filter:brightness(1.08)}
+#as-chat-widget-v1 .as-chat-note{padding:0 10px 12px;background:#0c1723;color:#8293a4;font-size:10px;letter-spacing:.1px}
+@media(max-width:480px){#as-chat-widget-v1{right:14px;bottom:14px}#as-chat-widget-v1 .as-chat-panel{right:-4px;bottom:78px;width:calc(100vw - 28px);height:min(570px,calc(100dvh - 104px));border-radius:20px}}
+
+</style>
+<div id="as-chat-widget-v1">
+  <section class="as-chat-panel" role="dialog" aria-label="A.S. & Associates chat assistant" aria-modal="false">
+    <header class="as-chat-head"><div class="as-chat-mark">AS</div><div><div class="as-chat-title">A.S. &amp; ASSOCIATES</div><div class="as-chat-sub">Tax &amp; Accounting Assistant · Online</div></div><button class="as-chat-close" type="button" aria-label="Close chat">×</button></header>
+    <div class="as-chat-messages" aria-live="polite"><div class="as-msg as-bot">Namaste! 👋 A.S. &amp; ASSOCIATES mein aapka swagat hai. GST, ITR, accounting ya kisi service ke baare mein poochhiye.</div></div>
+    <div class="as-chat-quick"><button type="button" data-q="GST return">GST Return</button><button type="button" data-q="ITR filing">ITR Filing</button><button type="button" data-q="Accounting services">Accounting</button><button type="button" data-q="Contact details">Contact</button></div>
+    <form class="as-chat-compose"><input class="as-chat-input" type="text" maxlength="500" placeholder="Apna sawal yahan likhein…" aria-label="Type your message" autocomplete="off"><button class="as-chat-send" type="submit" aria-label="Send message">➤</button></form>
+    <div class="as-chat-note">Basic automated information · Sensitive details share na karein</div>
+  </section>
+  <button class="as-chat-launch" type="button" aria-label="Open chat" aria-expanded="false">✦</button>
+</div>
+<script id="as-chat-widget-script-v1">
+(function(){
+  var root=document.getElementById('as-chat-widget-v1'); if(!root)return;
+  var panel=root.querySelector('.as-chat-panel'), launch=root.querySelector('.as-chat-launch'), close=root.querySelector('.as-chat-close'), form=root.querySelector('.as-chat-compose'), input=root.querySelector('.as-chat-input'), messages=root.querySelector('.as-chat-messages');
+  function openChat(){panel.classList.add('as-open');launch.setAttribute('aria-expanded','true');input.focus();}
+  function closeChat(){panel.classList.remove('as-open');launch.setAttribute('aria-expanded','false');launch.focus();}
+  function addMessage(text,who){var el=document.createElement('div');el.className='as-msg '+(who==='user'?'as-user':'as-bot');el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight;}
+  function reply(q){var s=q.toLowerCase();
+    if(/gst|gstr|2b|3b|1\b/.test(s))return 'Hum GST registration, GST return filing (GSTR-1/3B), aur GST-related accounting support provide karte hain. Sahi service aur fee batane ke liye business type aur filing requirement samajhna hoga. Aap Contact option se team se baat kar sakte hain.';
+    if(/itr|income.?tax|return filing|tax return/.test(s))return 'Hum individual aur business ke liye Income Tax Return filing aur tax-related assistance provide karte hain. Documents aur fee case ke hisaab se decide hoti hai.';
+    if(/tds|tax deducted/.test(s))return 'Hum TDS-related work aur return support provide karte hain. Form 16/16A, challan aur transaction details ke hisaab se requirement check hoti hai.';
+    if(/account|book|tally|balance sheet|profit|loss|mis/.test(s))return 'Hum bookkeeping, day-to-day accounting, Tally, bank reconciliation aur financial statements se related services provide karte hain. Aapko monthly ya yearly accounting chahiye?';
+    if(/fee|price|charge|cost|kitna|rate/.test(s))return 'Service fee work volume, business type aur compliance requirement par depend karti hai. Apni requirement aur contact number share karne ke bajay, neeche diye gaye official number par call/WhatsApp karein.';
+    if(/document|paper|kya chahiye/.test(s))return 'Documents service ke hisaab se alag hote hain. Kripya yahan PAN, Aadhaar, bank details ya password share na karein. Team aapko required document list bata degi.';
+    if(/contact|phone|call|whatsapp|number|email|location|address/.test(s))return 'A.S. & ASSOCIATES\nCall/WhatsApp: +91 62058 96093\nEmail: adityakumarjha.taxsolutions@gmail.com\nLocation: New Delhi';
+    if(/hello|hi|namaste|hii/.test(s))return 'Namaste! Aapko kis service mein help chahiye — GST, ITR, TDS ya Accounting?';
+    return 'Is sawal ka exact jawab dene ke liye hamari team se baat karein. Aap GST, ITR, TDS, Accounting, fees ya contact ke baare mein pooch sakte hain.\nCall/WhatsApp: +91 62058 96093';
+  }
+  function send(q){q=(q||'').trim();if(!q)return;addMessage(q,'user');input.value='';window.setTimeout(function(){addMessage(reply(q),'bot');},180);}
+  launch.addEventListener('click',function(){panel.classList.contains('as-open')?closeChat():openChat();});close.addEventListener('click',closeChat);
+  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
+  root.querySelectorAll('[data-q]').forEach(function(b){b.addEventListener('click',function(){send(b.getAttribute('data-q'));});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&panel.classList.contains('as-open'))closeChat();});
+})();
+</script>
+
 </body>
 <style id="firm-board-line-removal">
 /* Remove decorative corner/underline line from the firm name board */
