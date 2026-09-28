@@ -7109,6 +7109,22 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 </style>
 
 
+
+<style id="welcome-guaranteed-visible-final">
+/* Final fix: keep every letter paintable; animate position/scale, never opacity. */
+#welcomeScreen{display:flex!important;opacity:1!important;visibility:visible!important;background:#000!important;}
+#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:2147483646!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;box-sizing:border-box!important;padding:0 8px!important;gap:0!important;white-space:nowrap!important;opacity:1!important;visibility:visible!important;font-size:clamp(38px,11.5vw,100px)!important;line-height:1!important;letter-spacing:0!important;}
+#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;opacity:1!important;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 10px rgba(255,85,35,.72),0 0 26px rgba(255,48,35,.42)!important;filter:blur(0)!important;transform:translateY(0) scale(1)!important;animation:welcomeLetterPopVisible .58s cubic-bezier(.16,.82,.2,1) both!important;}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.12s!important;color:#ffc05a!important;-webkit-text-fill-color:#ffc05a!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.34s!important}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.56s!important}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.78s!important}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:1s!important}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:1.22s!important}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.44s!important}
+@keyframes welcomeLetterPopVisible{0%{transform:translateY(16px) scale(.18);filter:blur(4px);text-shadow:0 0 0 transparent}65%{transform:translateY(-3px) scale(1.12);filter:blur(0);text-shadow:0 0 18px rgba(255,83,35,.95),0 0 42px rgba(255,45,35,.6)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,83,35,.75),0 0 28px rgba(255,45,35,.4)}}
+@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(38px,11.5vw,70px)!important;letter-spacing:-1px!important}}
+</style>
 </body>
 <style id="firm-board-line-removal">
 /* Remove decorative corner/underline line from the firm name board */
