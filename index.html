@@ -931,6 +931,19 @@ html,body{background:#000!important;}
 #welcomeScreen .welcome-sequence-two{display:flex!important;opacity:0!important;visibility:hidden!important;}
 #welcomeScreen .welcome-sequence-two.welcome-sequence-in{opacity:1!important;visibility:visible!important;transform:scale(1)!important;filter:blur(0)!important;}
 </style>
+<style id="welcome-simple-lotus-final">
+#welcomeScreen{background:radial-gradient(ellipse at 50% 48%,rgba(197,154,67,.13),transparent 28%),linear-gradient(145deg,#02050a,#07121b 52%,#010307)!important;animation:none!important;transition:opacity .75s ease,visibility 0s linear .75s!important}
+#welcomeScreen .welcome-sequence-one{display:flex!important;flex-direction:column!important;gap:0!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}
+#welcomeScreen .welcome-overline{display:block!important;opacity:0!important;animation:welcomeOverlineIn .8s ease-out .15s forwards!important;letter-spacing:6px!important;color:#d8bd7b!important}
+#welcomeScreen .welcome-letter-row{gap:clamp(2px,.7vw,8px)!important}
+#welcomeScreen .welcome-letter-row span{font-size:clamp(43px,10vw,104px)!important;color:#f4ead4!important;text-shadow:0 0 9px rgba(255,255,255,.25),0 0 24px rgba(230,190,91,.5),0 0 55px rgba(230,190,91,.22)!important;animation:welcomeLetterSequential 1s cubic-bezier(.16,.82,.18,1) forwards!important}
+#welcomeScreen .welcome-letter-row span:nth-child(1){animation-delay:.35s!important;color:#f2cc76!important}#welcomeScreen .welcome-letter-row span:nth-child(2){animation-delay:.55s!important}#welcomeScreen .welcome-letter-row span:nth-child(3){animation-delay:.75s!important}#welcomeScreen .welcome-letter-row span:nth-child(4){animation-delay:.95s!important}#welcomeScreen .welcome-letter-row span:nth-child(5){animation-delay:1.15s!important}#welcomeScreen .welcome-letter-row span:nth-child(6){animation-delay:1.35s!important}#welcomeScreen .welcome-letter-row span:nth-child(7){animation-delay:1.55s!important;color:#f2cc76!important}
+#welcomeScreen .welcome-lotus{font-size:clamp(38px,6vw,58px);margin-top:32px;filter:drop-shadow(0 0 12px rgba(239,193,96,.55));opacity:0;animation:lotusReveal 1s ease-out 2.05s forwards,lotusPulse 2.2s ease-in-out 3s infinite}
+#welcomeScreen .welcome-dashboard-label{margin-top:24px;font:600 9px/1 Arial,sans-serif;letter-spacing:5px;color:rgba(231,207,157,.7);opacity:0;animation:welcomeOverlineIn .8s ease-out 2.6s forwards}
+#welcomeScreen .welcome-sequence-one.welcome-sequence-out{opacity:0!important;transform:scale(1.04)!important;filter:blur(8px)!important}
+@keyframes lotusReveal{from{opacity:0;transform:translateY(15px) scale(.7)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){#welcomeScreen .welcome-overline{font-size:8px!important;letter-spacing:4px!important}#welcomeScreen .welcome-letter-row span{font-size:clamp(35px,10vw,56px)!important;letter-spacing:0!important}#welcomeScreen .welcome-lotus{margin-top:25px}}
+</style>
 </head>
 
 
@@ -941,19 +954,12 @@ html,body{background:#000!important;}
      WELCOME SCREEN
 ======================================================== -->
 
-<div id="welcomeScreen" aria-label="A.S. & ASSOCIATES welcome">
+<div id="welcomeScreen" aria-label="Welcome">
   <div class="welcome-cinematic-bg" aria-hidden="true"></div>
   <div class="welcome-sequence welcome-sequence-one" id="welcomeSequenceOne">
-    <div class="welcome-overline">WELCOME TO</div>
-    <div class="welcome-letter-row" aria-label="WELCOME TO">
-      <span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span><b></b><span>T</span><span>O</span>
-    </div>
-  </div>
-  <div class="welcome-sequence welcome-sequence-two" id="welcomeSequenceTwo" aria-hidden="true">
-    <div class="welcome-firm-monogram"><span>A</span><span>S</span></div>
-    <div class="welcome-firm-name"><span class="firm-a">A.S.</span><span class="firm-amp">&amp;</span><span class="firm-assoc">ASSOCIATES</span></div>
-    <div class="welcome-firm-line"></div>
-    <div class="welcome-firm-sub">TAX &amp; ACCOUNTING SOLUTIONS</div>
+    <div class="welcome-overline">SITE OPENING</div>
+    <div class="welcome-letter-row welcome-simple-word" aria-label="WELCOME"><span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span></div>
+    <div class="welcome-lotus">🪷</div>
   </div>
 </div>
 
@@ -2765,20 +2771,15 @@ let welcomeReleased = false;
 const welcomeOne = document.getElementById("welcomeSequenceOne");
 const welcomeTwo = document.getElementById("welcomeSequenceTwo");
 
-setTimeout(function(){
-    if(welcomeOne && welcomeTwo){
-        welcomeOne.classList.add("welcome-sequence-out");
-        welcomeTwo.classList.add("welcome-sequence-in");
-        welcomeTwo.setAttribute("aria-hidden","false");
-    }
-}, 5400);
+/* Keep the welcome visible until the final letter animation completes. */
 
 function releaseWelcomeOnce(){
     if(welcomeReleased) return;
     welcomeReleased = true;
     hideWelcomeScreen();
 }
-setTimeout(releaseWelcomeOnce, 11200);
+/* Final letter finishes at about 4.4s; reveal the dashboard immediately after. */
+setTimeout(releaseWelcomeOnce, 4450);
 
 
 /* =========================================================
