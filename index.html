@@ -944,6 +944,58 @@ html,body{background:#000!important;}
 @keyframes lotusReveal{from{opacity:0;transform:translateY(15px) scale(.7)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:600px){#welcomeScreen .welcome-overline{font-size:8px!important;letter-spacing:4px!important}#welcomeScreen .welcome-letter-row span{font-size:clamp(35px,10vw,56px)!important;letter-spacing:0!important}#welcomeScreen .welcome-lotus{margin-top:25px}}
 </style>
+
+
+<style id="welcome-particle-cinematic">
+  html.welcome-lock, body.welcome-lock { overflow:hidden!important; background:#000!important; }
+  #welcomeScreen {
+    position:fixed!important; inset:0!important; z-index:2147483647!important;
+    display:flex!important; align-items:center!important; justify-content:center!important;
+    overflow:hidden!important; background:#000!important; color:#fff!important;
+    opacity:1!important; visibility:visible!important; pointer-events:auto!important;
+    transition:opacity .48s ease, visibility 0s linear .48s!important;
+  }
+  #welcomeScreen::before,#welcomeScreen::after { content:none!important; display:none!important; }
+  #welcomeParticles { position:absolute!important; inset:0!important; width:100%!important; height:100%!important; z-index:1!important; pointer-events:none!important; }
+  #welcomeScreen .welcome-word {
+    position:relative!important; z-index:2!important; display:flex!important; align-items:center!important;
+    justify-content:center!important; gap:clamp(0px,.35vw,5px)!important;
+    width:100%!important; padding:0 3vw!important; white-space:nowrap!important;
+    font-family:Georgia,'Times New Roman',serif!important; font-size:clamp(58px,11.5vw,168px)!important;
+    font-style:italic!important; font-weight:800!important; line-height:1!important;
+    letter-spacing:clamp(-5px,-.35vw,-1px)!important;
+  }
+  #welcomeScreen .welcome-word span {
+    display:inline-block!important; opacity:0!important;
+    background:linear-gradient(180deg,#ffb02e 0%,#ff6a16 38%,#ff342e 72%,#bd1429 100%)!important;
+    -webkit-background-clip:text!important; background-clip:text!important; color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+    text-shadow:0 0 0 transparent!important;
+    filter:drop-shadow(0 0 7px rgba(255,75,30,.18))!important;
+    transform:translateY(24px) scale(.78)!important;
+    animation:welcomeLetterIgnite .72s cubic-bezier(.16,.82,.2,1) forwards!important;
+  }
+  #welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s!important}
+  #welcomeScreen .welcome-word span:nth-child(2){animation-delay:.30s!important}
+  #welcomeScreen .welcome-word span:nth-child(3){animation-delay:.42s!important}
+  #welcomeScreen .welcome-word span:nth-child(4){animation-delay:.54s!important}
+  #welcomeScreen .welcome-word span:nth-child(5){animation-delay:.66s!important}
+  #welcomeScreen .welcome-word span:nth-child(6){animation-delay:.78s!important}
+  #welcomeScreen .welcome-word span:nth-child(7){animation-delay:.90s!important}
+  @keyframes welcomeLetterIgnite {
+    0% { opacity:0; transform:translateY(24px) scale(.78); filter:blur(8px) drop-shadow(0 0 0 rgba(255,65,30,0)); }
+    65% { opacity:1; filter:blur(0) drop-shadow(0 0 18px rgba(255,75,25,.5)); }
+    100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0) drop-shadow(0 0 10px rgba(255,65,25,.28)); }
+  }
+  #welcomeScreen.hide { opacity:0!important; visibility:hidden!important; pointer-events:none!important; }
+  @media(max-width:600px) {
+    #welcomeScreen .welcome-word { font-size:clamp(49px,12.5vw,82px)!important; gap:0!important; letter-spacing:-2px!important; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    #welcomeScreen .welcome-word span { animation-duration:.01ms!important; animation-delay:0s!important; opacity:1!important; transform:none!important; }
+  }
+</style>
+
 </head>
 
 
@@ -955,11 +1007,9 @@ html,body{background:#000!important;}
 ======================================================== -->
 
 <div id="welcomeScreen" aria-label="Welcome">
-  <div class="welcome-cinematic-bg" aria-hidden="true"></div>
-  <div class="welcome-sequence welcome-sequence-one" id="welcomeSequenceOne">
-    <div class="welcome-overline">SITE OPENING</div>
-    <div class="welcome-letter-row welcome-simple-word" aria-label="WELCOME"><span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span></div>
-    <div class="welcome-lotus">🪷</div>
+  <canvas id="welcomeParticles" aria-hidden="true"></canvas>
+  <div class="welcome-word" aria-label="Welcome">
+    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
   </div>
 </div>
 
@@ -2759,28 +2809,70 @@ document.getElementById("year").textContent =
 
 
 /* =========================================================
-   WELCOME SCREEN
+   CINEMATIC WELCOME — particle burst, then dashboard
 ========================================================= */
+(function(){
+  const welcome=document.getElementById("welcomeScreen");
+  const canvas=document.getElementById("welcomeParticles");
+  if(!welcome || !canvas) return;
+  document.documentElement.classList.add("welcome-lock");
+  document.body.classList.add("welcome-lock");
 
-function hideWelcomeScreen(){
-    const welcome = document.getElementById("welcomeScreen");
-    if(welcome){ welcome.classList.add("hide"); document.body.classList.add("site-ready"); }
-}
+  const ctx=canvas.getContext("2d");
+  let w=0,h=0,dpr=1,particles=[],raf=0;
+  const reduceMotion=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function resize(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    w=window.innerWidth; h=window.innerHeight;
+    canvas.width=Math.round(w*dpr); canvas.height=Math.round(h*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function burst(){
+    const cx=w/2, cy=h/2;
+    const count=Math.min(260,Math.max(130,Math.round(w*h/5200)));
+    for(let i=0;i<count;i++){
+      const a=Math.random()*Math.PI*2;
+      const speed=1.1+Math.random()*5.6;
+      particles.push({
+        x:cx+(Math.random()-.5)*Math.min(120,w*.12),
+        y:cy+(Math.random()-.5)*Math.min(34,h*.08),
+        vx:Math.cos(a)*speed, vy:Math.sin(a)*speed*.72,
+        life:55+Math.random()*65, max:120, size:.6+Math.random()*2.1,
+        hue:Math.random()<.65?Math.random()*24+8:Math.random()*12+345,
+        tw:Math.random()*Math.PI*2
+      });
+    }
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(let i=particles.length-1;i>=0;i--){
+      const p=particles[i]; p.x+=p.vx; p.y+=p.vy; p.vx*=.986; p.vy=p.vy*.986+.008; p.life--; p.tw+=.12;
+      if(p.life<=0){particles.splice(i,1);continue;}
+      const alpha=Math.min(1,p.life/22)*(.58+.32*Math.sin(p.tw));
+      ctx.beginPath();ctx.fillStyle=`hsla(${p.hue},100%,${58+Math.sin(p.tw)*12}%,${alpha})`;
+      ctx.shadowColor=`hsla(${p.hue},100%,58%,${alpha*.8})`;ctx.shadowBlur=7;
+      ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
+    }
+    ctx.shadowBlur=0;
+    if(particles.length) raf=requestAnimationFrame(draw);
+  }
+  resize(); window.addEventListener("resize",resize,{passive:true});
+  if(!reduceMotion){ setTimeout(()=>{burst();draw();},620); setTimeout(()=>{burst();draw();},1050); }
+  else { welcome.querySelectorAll(".welcome-word span").forEach(el=>{el.style.opacity="1";}); }
 
-let welcomeReleased = false;
-const welcomeOne = document.getElementById("welcomeSequenceOne");
-const welcomeTwo = document.getElementById("welcomeSequenceTwo");
-
-/* Keep the welcome visible until the final letter animation completes. */
-
-function releaseWelcomeOnce(){
-    if(welcomeReleased) return;
-    welcomeReleased = true;
-    hideWelcomeScreen();
-}
-/* Final letter finishes at about 4.4s; reveal the dashboard immediately after. */
-setTimeout(releaseWelcomeOnce, 4450);
-
+  let released=false;
+  function release(){
+    if(released)return; released=true;
+    welcome.classList.add("hide");
+    document.documentElement.classList.remove("welcome-lock");
+    document.body.classList.remove("welcome-lock","site-ready");
+    document.body.classList.add("site-ready");
+    if(raf)cancelAnimationFrame(raf);
+    setTimeout(()=>{window.removeEventListener("resize",resize);},600);
+  }
+  // Letters finish at 1.62s; hold briefly for the particle bloom, then reveal the site.
+  window.setTimeout(release, reduceMotion?1200:4800);
+})();
 
 /* =========================================================
    MOBILE MENU
@@ -7017,6 +7109,22 @@ footer{background:#010509!important;border-top:1px solid rgba(229,190,96,.10)!im
 </style>
 
 
+
+<style id="welcome-guaranteed-visible-final">
+/* Final fix: keep every letter paintable; animate position/scale, never opacity. */
+#welcomeScreen{display:flex!important;opacity:1!important;visibility:visible!important;background:#000!important;}
+#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:2147483646!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;box-sizing:border-box!important;padding:0 8px!important;gap:0!important;white-space:nowrap!important;opacity:1!important;visibility:visible!important;font-size:clamp(38px,11.5vw,100px)!important;line-height:1!important;letter-spacing:0!important;}
+#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;opacity:1!important;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 10px rgba(255,85,35,.72),0 0 26px rgba(255,48,35,.42)!important;filter:blur(0)!important;transform:translateY(0) scale(1)!important;animation:welcomeLetterPopVisible .58s cubic-bezier(.16,.82,.2,1) both!important;}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.12s!important;color:#ffc05a!important;-webkit-text-fill-color:#ffc05a!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.34s!important}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.56s!important}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.78s!important}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:1s!important}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:1.22s!important}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.44s!important}
+@keyframes welcomeLetterPopVisible{0%{transform:translateY(16px) scale(.18);filter:blur(4px);text-shadow:0 0 0 transparent}65%{transform:translateY(-3px) scale(1.12);filter:blur(0);text-shadow:0 0 18px rgba(255,83,35,.95),0 0 42px rgba(255,45,35,.6)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,83,35,.75),0 0 28px rgba(255,45,35,.4)}}
+@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(38px,11.5vw,70px)!important;letter-spacing:-1px!important}}
+</style>
 </body>
 <style id="firm-board-line-removal">
 /* Remove decorative corner/underline line from the firm name board */
@@ -7129,3 +7237,92 @@ html,body{background:#000!important;}
 
 
 <style id="remove-welcome-hindi-final">#welcomeScreen .welcome-hindi{display:none!important;}</style>
+
+
+
+<style id="welcome-particle-cinematic">
+  html.welcome-lock, body.welcome-lock { overflow:hidden!important; background:#000!important; }
+  #welcomeScreen {
+    position:fixed!important; inset:0!important; z-index:2147483647!important;
+    display:flex!important; align-items:center!important; justify-content:center!important;
+    overflow:hidden!important; background:#000!important; color:#fff!important;
+    opacity:1!important; visibility:visible!important; pointer-events:auto!important;
+    transition:opacity .48s ease, visibility 0s linear .48s!important;
+  }
+  #welcomeScreen::before,#welcomeScreen::after { content:none!important; display:none!important; }
+  #welcomeParticles { position:absolute!important; inset:0!important; width:100%!important; height:100%!important; z-index:1!important; pointer-events:none!important; }
+  #welcomeScreen .welcome-word {
+    position:relative!important; z-index:2!important; display:flex!important; align-items:center!important;
+    justify-content:center!important; gap:clamp(0px,.35vw,5px)!important;
+    width:100%!important; padding:0 3vw!important; white-space:nowrap!important;
+    font-family:Georgia,'Times New Roman',serif!important; font-size:clamp(58px,11.5vw,168px)!important;
+    font-style:italic!important; font-weight:800!important; line-height:1!important;
+    letter-spacing:clamp(-5px,-.35vw,-1px)!important;
+  }
+  #welcomeScreen .welcome-word span {
+    display:inline-block!important; opacity:0!important;
+    background:linear-gradient(180deg,#ffb02e 0%,#ff6a16 38%,#ff342e 72%,#bd1429 100%)!important;
+    -webkit-background-clip:text!important; background-clip:text!important; color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+    text-shadow:0 0 0 transparent!important;
+    filter:drop-shadow(0 0 7px rgba(255,75,30,.18))!important;
+    transform:translateY(24px) scale(.78)!important;
+    animation:welcomeLetterIgnite .72s cubic-bezier(.16,.82,.2,1) forwards!important;
+  }
+  #welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s!important}
+  #welcomeScreen .welcome-word span:nth-child(2){animation-delay:.30s!important}
+  #welcomeScreen .welcome-word span:nth-child(3){animation-delay:.42s!important}
+  #welcomeScreen .welcome-word span:nth-child(4){animation-delay:.54s!important}
+  #welcomeScreen .welcome-word span:nth-child(5){animation-delay:.66s!important}
+  #welcomeScreen .welcome-word span:nth-child(6){animation-delay:.78s!important}
+  #welcomeScreen .welcome-word span:nth-child(7){animation-delay:.90s!important}
+  @keyframes welcomeLetterIgnite {
+    0% { opacity:0; transform:translateY(24px) scale(.78); filter:blur(8px) drop-shadow(0 0 0 rgba(255,65,30,0)); }
+    65% { opacity:1; filter:blur(0) drop-shadow(0 0 18px rgba(255,75,25,.5)); }
+    100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0) drop-shadow(0 0 10px rgba(255,65,25,.28)); }
+  }
+  #welcomeScreen.hide { opacity:0!important; visibility:hidden!important; pointer-events:none!important; }
+  @media(max-width:600px) {
+    #welcomeScreen .welcome-word { font-size:clamp(49px,12.5vw,82px)!important; gap:0!important; letter-spacing:-2px!important; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    #welcomeScreen .welcome-word span { animation-duration:.01ms!important; animation-delay:0s!important; opacity:1!important; transform:none!important; }
+  }
+</style>
+
+
+
+<style id="welcome-visible-final-fix">
+/* Keep WELCOME visibly above the particle canvas on every screen. */
+#welcomeScreen{background:#000!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+#welcomeScreen #welcomeParticles{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1!important;pointer-events:none!important;}
+#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:20!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;padding:0 12px!important;box-sizing:border-box!important;white-space:nowrap!important;opacity:1!important;visibility:visible!important;pointer-events:none!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(42px,11.5vw,112px)!important;font-weight:700!important;font-style:italic!important;line-height:1!important;letter-spacing:clamp(0px,.45vw,5px)!important;}
+#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;min-width:0!important;opacity:1!important;visibility:visible!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 10px rgba(255,85,35,.65),0 0 28px rgba(255,48,35,.35)!important;filter:none!important;transform-origin:center!important;animation:welcomeLettersActuallyShow .8s cubic-bezier(.16,.82,.2,1) both!important;}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.12s!important;color:#ffb84d!important;-webkit-text-fill-color:#ffb84d!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.24s!important}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.36s!important}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.48s!important}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:.60s!important}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:.72s!important}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:.84s!important}
+@keyframes welcomeLettersActuallyShow{0%{transform:translateY(18px) scale(.78);filter:blur(5px);text-shadow:0 0 0 transparent}65%{transform:translateY(-2px) scale(1.08);filter:blur(0);text-shadow:0 0 18px rgba(255,82,35,.85),0 0 42px rgba(255,48,35,.45)}100%{transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 10px rgba(255,82,35,.7),0 0 26px rgba(255,48,35,.35)}}
+@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(39px,11.2vw,68px)!important;letter-spacing:0!important;gap:0!important}}
+</style>
+
+<style id="welcome-letter-by-letter-final">
+/* Final reliable letter-by-letter WELCOME reveal */
+#welcomeScreen{background:#000!important;}
+#welcomeScreen #welcomeParticles{position:absolute!important;inset:0!important;z-index:1!important;pointer-events:none!important;}
+#welcomeScreen .welcome-word{position:absolute!important;inset:0!important;z-index:50!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important;width:100%!important;padding:0 10px!important;box-sizing:border-box!important;white-space:nowrap!important;visibility:visible!important;opacity:1!important;font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(42px,11.5vw,112px)!important;font-weight:700!important;font-style:italic!important;line-height:1!important;letter-spacing:0!important;pointer-events:none!important;}
+#welcomeScreen .welcome-word span{display:inline-block!important;flex:0 1 auto!important;min-width:0!important;visibility:visible!important;opacity:0!important;color:#ff9b42!important;-webkit-text-fill-color:#ff9b42!important;background:none!important;text-shadow:0 0 12px rgba(255,85,35,.72),0 0 30px rgba(255,48,35,.4)!important;filter:blur(5px)!important;transform:translateY(22px) scale(.72)!important;animation:welcomeLetterTypeFinal .62s cubic-bezier(.16,.82,.2,1) both!important;}
+#welcomeScreen .welcome-word span:nth-child(1){animation-delay:.18s!important;color:#ffbd55!important;-webkit-text-fill-color:#ffbd55!important}
+#welcomeScreen .welcome-word span:nth-child(2){animation-delay:.42s!important}
+#welcomeScreen .welcome-word span:nth-child(3){animation-delay:.66s!important}
+#welcomeScreen .welcome-word span:nth-child(4){animation-delay:.90s!important}
+#welcomeScreen .welcome-word span:nth-child(5){animation-delay:1.14s!important}
+#welcomeScreen .welcome-word span:nth-child(6){animation-delay:1.38s!important}
+#welcomeScreen .welcome-word span:nth-child(7){animation-delay:1.62s!important}
+@keyframes welcomeLetterTypeFinal{0%{opacity:0;visibility:visible;transform:translateY(22px) scale(.72);filter:blur(7px);text-shadow:0 0 0 transparent}55%{opacity:1;visibility:visible;transform:translateY(-3px) scale(1.09);filter:blur(0);text-shadow:0 0 20px rgba(255,83,35,.95),0 0 46px rgba(255,45,35,.55)}100%{opacity:1;visibility:visible;transform:translateY(0) scale(1);filter:blur(0);text-shadow:0 0 12px rgba(255,83,35,.75),0 0 30px rgba(255,45,35,.4)}}
+@media(max-width:600px){#welcomeScreen .welcome-word{font-size:clamp(40px,11.5vw,70px)!important;letter-spacing:-1px!important}}
+@media(prefers-reduced-motion:reduce){#welcomeScreen .welcome-word span{animation:none!important;opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}}
+</style>
